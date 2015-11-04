@@ -20,7 +20,7 @@
 
 		//SETTINGS EXTRA : MIDI DEVICE
 		{
-			"url":"[player]/midi/midiAPCmini.json",
+			"url":"[player]midi/midiAPCmini.json",
 			"include":"data",
 			"rule":"over"
 		},
