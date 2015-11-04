@@ -1,6 +1,9 @@
 *.exe
+*.fla
 /*/*.swf
 cloud2/
 Thumbs.db
 .DS_Store
 MIDI2.jar
+/VYYSync_Data/
+VJYSync.exe
