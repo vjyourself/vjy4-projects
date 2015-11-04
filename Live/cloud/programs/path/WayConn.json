@@ -1,0 +1,182 @@
+{
+	"data":{
+		"name":"WayConn",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"WayConn":{
+			"streams":[
+				
+				// Pads
+				{
+					"cn":"StreamObjs",
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"Pad",
+						"matColor":["Stepper",[0xffffff,0x000000]],
+						"trans":{
+							"x":0,
+							"y":["Stepper",[-100,-98,-102,-99,-101]],
+							"scaleX":["Func",{"v0":3,"v1":5,"step":0.1,"func":"sin"}]
+						}
+					},
+					
+					"gap":40,
+					"rotate":false
+				},
+				
+				// Pillars SHORT
+				{	"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"Pipe2",
+						//"mat":["Stepper",["MusicColor1","MusicColor2","MusicColor3"]],
+						"matColor":["Stepper",[0xffffff,0x000000]],
+						"trans":{
+							"x":["Stepper",[160,-160]],
+							"y":["Func",{"v0":-50,"v1":-150,"step":0.1,"func":"sin"}]
+				
+						}
+					},
+					
+					"gap":120,
+					"rotate":false
+				},
+				
+				// Pillar Capitals SHORT
+				{	"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":["Stepper",["geomSphere","geomCube","geomOcta"]],
+						//"mat":["Stepper",["MusicColor1","MusicColor2","MusicColor3"]],
+						"matColor":{"col":["Cloud","CCol",{"q":"whity"},{}],"alpha":0.7},
+						"trans":{
+							"scale":3,
+							"x":["Stepper",[160,-160]],
+							"y":["Func",{"v0":50,"v1":-50,"step":0.1,"func":"sin"}]
+						}
+
+					},
+					
+					"gap":120,
+					"rotate":true
+				},
+				/*
+				//Pillars TALL
+				{	"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"Pipe",
+						//"mat":["Stepper",["MusicColor1","MusicColor2","MusicColor3"]],
+						"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+						"trans":{
+							"x":["Stepper",[320,-320]],
+							"y":100,
+							"scale":1.5,
+							"scaleY":3
+						}
+					},
+					
+					"gap":240,
+					"rotate":false
+				},
+				
+				//Pillars TALL Capitals
+				{	"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"rabbit",
+						//"mat":["Stepper",["MusicColor1","MusicColor2","MusicColor3"]],
+						"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+						"trans":{
+							"x":["Stepper",[320,-320]],
+							"y":300,
+							"z":-30,
+							"scale":1
+						}
+					},
+					
+					"gap":240,
+					"rotate":false
+				},
+				
+				//OBJ in MIDDLE
+				{	"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"rabbit",
+						//"mat":["Stepper",["MusicColor1","MusicColor2","MusicColor3"]],
+						//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+						"mat":["Cloud","C3D",{"q":"Stars"},{}],
+						"trans":{
+							"x":0,
+							"y":300,
+							"scale":2,
+							"scaleX":3,
+							"rotationX":200,
+							"rotationY":180
+						}
+					},
+					
+					"gap":4000,
+					"rotate":false
+				},
+				
+				//Pipe Wires
+				{
+					"cn":"StreamPipe",
+					"prgPipe":{
+						"cn":"PathPipe",
+						"params":{
+							"radius":300,
+							"height":120,
+							"circSeg":12,
+							"circSegShift":0.5,
+							"curve0":1,
+							"curve1":1,
+							"fillPerc":1
+						},
+						"wf":{"color":0xffffff},
+						"wf_visible":true
+					},
+
+					"elemLength":400
+				},
+				
+				//PIPE Music Wave
+					{
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":400,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":1,
+								"curve1":1,
+								"twist0":90
+							},
+						"mesh":{"mat":"MusicWaveADD"}
+						}
+					},
+				*/
+			],
+		
+			"params":{	
+				"pathFunc":"Random",
+				"pathCurveLength":200,
+				"cycleLength":3000
+			}
+			}
+		}
+	}
+}

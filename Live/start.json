@@ -1,0 +1,58 @@
+{
+	"blocks":[
+		//PROJ DESCRIPTION
+		{
+			"data":{
+				"proj":{
+					"name":"Test Builder",
+					"id":"Test"
+				}
+			},
+			"rule":"over"
+		},
+
+		//SETTINGS
+		{
+			"url":"[player]settings.json",
+			"include":"data",
+			"rule":"over"
+		},
+
+		//SETTINGS EXTRA : MIDI DEVICE
+		{
+			"url":"[player]/midi/midiAPCmini.json",
+			"include":"data",
+			"rule":"over"
+		},
+
+		//GAME
+		{
+			"url":"[cloud1]games/game_Builder.json",
+			"include":"data",
+			"rule":"over"
+		},
+		
+		//CLOUD
+		{
+			"url":"[player]cloud.json",
+			"include":"data",
+			"rule":"over"
+		},
+
+		//GAME INIT SCENE
+		{
+			"include":"data",
+			"target":"game.elems.5.init.scene",
+			"rule":"over",
+			"data":"Test"
+			//"data":"FunkyLadders",
+			//"data":"CentralCubes"
+			//"data":"TestPath"
+			//"data":"TestMIDI"
+			//"data":"Retrito"
+			
+		}
+
+	]
+	
+}

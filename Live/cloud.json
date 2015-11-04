@@ -1,0 +1,258 @@
+{"sys":{"cloud":{
+
+"R3D":{
+        "musicMaterials":true,
+        "globalBlend":"DEF",
+        "videoMaterials":{
+            "enabled":false,
+            "videos":{
+                //"videoA":"videos/tumblr2.mp4"
+            }
+        }
+},
+    
+//CLOUD 2 (Admin) Packages *************************************************************************
+"load2":[
+   // "export/world4/Test" 
+    "export/world4/mimikrifirst"
+],
+
+//CLOUD 1 Packages ********************************************************************
+"load1":[
+    //"images/all_stars.json",
+    "comp/preset.json",
+    "R3D/GeomGlobal4.json",
+    "R3D/GeomObjBasic.json",
+   // "R3D/GeomObj.json",
+    "R3D/MatGlobal.json",
+    "R3D/TexGlobal.json",
+    "R3D/TexGlobalCycles.json",
+   // "videos/videoCycles.json"
+],
+
+
+//CLOUD 1 Resources -> Packages ********************************************************
+"res1":{
+    
+    //SPACES ***************************************************************************
+    "spaces":{
+        //Test
+        "test":[
+            "Test/TestObj1",
+            "Test/TestMesh3",
+            "Test/TestMesh2",
+            "Test/TestMesh1",
+            "Test/TestWF1",
+            "Test/TestWF2",
+            "Test/TestWF3",
+            "Test/TestWF4",
+            "Test/TestWF5",
+            "Test/TestWF6"
+        ],
+        //Road
+        "road":[
+            "Road/Road1",
+            "Road/Road2",
+            "Road/Road3",
+            "Road/Road4"
+        ],
+
+        //TribalAwakening
+        "pipe":[
+            "Pipe/_B_PipeAB",
+            "Pipe/_B_PipeAB_Sewer",
+            "Pipe/_B_PipeAB_Armadillo"
+        ],
+
+        //Retro Regulator
+        "regulator":[
+            "Regulator/_B_Regulator",
+            "Regulator/_B_Regulator2",
+            "Regulator/StairwayTo",
+            "Regulator/StairwayTo2"
+            ],
+
+        //Funky Ladders
+        "hex":[
+            "Hose/_B_HexPipeBall",
+            "Hose/_B_HexPipeBall3",
+            "Hose/_B_HexPipeBall2"
+        ],
+
+        //Space Bollards
+        "bollards":[
+            "Hose/_B_SpaceBollards",
+            "Hose/_B_SpaceBollards2",
+            "Hose/SpiralZoo2",
+            "Hose/SpiralZoo"
+        ],
+        
+        //Semantic GRid
+        "wide":[
+            "Grid/_B_SemanticGrid",
+            "Grid/_B_SemanticGrid2",
+            "Grid/_B_SemanticGrid3"
+        ],
+        
+        //Evenly Spaced Doughnuts
+        "doughnuts":[
+            "Doughnuts/_B_SpaceDoughnuts1",
+            "Doughnuts/_B_SpaceDoughnuts2",
+            "Doughnuts/_B_SpaceDoughnuts3",
+            "Doughnuts/_B_SpaceDoughnuts4",
+            "Doughnuts/_B_SpaceDoughnuts5"
+        ],
+
+         //POSTERS
+        "posters":[
+            "Poster/DiamondSpider",
+            "Poster/DiamondSpider2",
+            "Poster/DiamondSpider3",
+            "Poster/DiamondSpider3Wide",
+            "Poster/DatabasePlanes"
+        ],
+
+        //MAD CUBES
+        "MadCubes":[
+            "ObjField/MadCubes0",
+            "ObjField/MadCubes1",
+            "ObjField/MadCubes2",
+            "ObjField/MadCubes3"
+        ],
+
+        //BALLS Spiral Crash
+        "balls":[
+            "Balls/SpiralCrash",
+            "Balls/SpiralCrash2",
+            "Balls/SpiralCrash3",
+            "Balls/BallsSpiralRandom"
+        ],
+
+        //WIRE
+        "wire":[
+            "MinimalWire/EJ1",
+            "MinimalWire/EJ2",
+            "MinimalWire/RandomWires"
+            
+        ],
+        
+        //Exp
+        "exp":[
+            "Exp/WayWarm",
+            "Exp/MutaPatt",
+            "Exp/EdgyHoles"
+        ],
+
+        //OBJFLOW
+        "ObjFlow":[
+            "ObjFlow/FlyingBars",
+            "ObjFlow/FlyingGeom",
+            "ObjFlow/FlyingAnimals",
+            //"ObjFlow/MadBombs",
+            //"ObjFlow/MadFrogs",
+            //"ObjFlow/MadCow",
+            //"ObjFlow/MadChairs",
+            //"ObjFlow/MadMirage"
+        ]
+       
+    },
+    
+    //TEXTURE THEMES ******************************************************************
+    "textures":{
+        "themes":[
+            "stars,stars",
+             "road"
+        ],
+    },
+
+    //COLORS *******************************************************************
+    "colors":[
+        "Orange",
+        "PinkOrange",
+        "WOrangePink",
+        "Pink",
+        "Fire",
+        "Red",
+        "Klat",
+        "Huppy",
+        "Blue",
+        "csigabeka",
+        "Pusss1",
+        "Fresh Sun",
+        "Green",
+        "Whity",
+        "CGA"
+        
+    ],
+
+    //LIGHTS ********************************************************************
+    "lights":[
+        "Flashy_Regular",
+        "Flashy_Slow",
+        "Flashy_Norm",
+        
+        "Running_Norm",
+        //"Running_Slow",
+        "Running_NormEqual",
+        "Running_NormEqual_R",
+        "Running_FastEqual_R",
+        
+        "DualRot_Norm",
+        "DualRot_Fast",
+        //"TriRot_Slow",
+        "TriRot_Norm",
+        "TriRot_Fast",
+        "TriDir",
+        "PointDir_Norm",
+        "PointDir_Hard",
+        "PointDir_Dark"
+       // "PointDir_Dark2"
+    ],
+
+    //PATHS ********************************************************************
+    "paths":[
+        "Nice",
+        "Curvy",
+        "Straight",
+        "Spiral",
+        "SpiralSoft",
+        "RandomSoftCurves",
+        "LinearTurn",
+        "Test",
+        "Complex"
+    ],
+
+    //FILTERS ********************************************************************
+    "filters":[
+        "Normal",
+        "Shine1",
+        "Shine2",
+        "Shine3"
+    ],
+
+    "blends":[
+        "NORMAL",
+        "ADD"
+    ],
+    
+    //SCENES ********************************************************************
+    "scenes":[
+        //"Discovery",
+        //"All4"
+        "Test",
+        "SpaceExp/FunkyLadders",
+        "SpaceExp/SpaceBollards",
+        "SpaceExp/SemanticGrid",
+        "SpaceExp/RetroRegulator",
+        "SpaceExp/SpacedDoughnuts",
+        "SpaceExp/TribalAwakening"
+    ],
+
+    //TIMELINES ****************************************************************
+    "timelines":[]
+
+},
+
+
+
+}}}

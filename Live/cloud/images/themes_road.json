@@ -1,0 +1,11 @@
+{
+    "data":{
+    "name":"TexVJYCoreCycles",
+    "target":"C3D",
+    
+    "data":{
+		"road":[{"n":"Road","meta":{"name":"road"}},"road1","road2","road3"]
+        
+    }
+    }
+}

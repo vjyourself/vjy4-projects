@@ -1,0 +1,67 @@
+{
+    "sys":{
+
+		//MUSIC SOURCE : Mic / MP3 *****************************************************
+		"music":{
+	    	"play":{"src":"Mic"},
+	    	"meta":{"wave_gain":2,"peak_gain":1,"damping_gain":1,"damping_mul":0.7,
+	    		"rhythm":{"tack":1000,"start":0},
+	    		"struct":{"struct":[]}
+	    	}
+		},
+
+
+		//INPUT OUTPUT DEVICES ***************************************************
+		"io":{
+			"lastActiveBase":"gamepad",
+
+	    	"auto":{"enabled":false,"timeout":2400},
+	    	"mkb":{"enabled":true},
+	    	"touch":{"enabled":false},
+	    	"gamepad":{"enabled":true},
+	    	"midi":{
+	    		"enabled":false,
+	    		"connection":{
+	    			"type":"MIDI2.jar",
+					"url":"127.0.0.1",
+					"port":10000
+	    		},
+	    		"device":{}
+	    	},
+	    	"arduino":{
+	    		"enabled":false,
+	    		"via":"ethernet",
+	    		"ip":"192.168.2.66",
+	    		"map":["A","B","X","Y","LB","RB","LT","RT"]
+	    	}
+	 	},
+
+		//SCREEN SETTINGS **************************************************************
+		"screen":{
+			"In3D":{
+				// none / split / VR
+				"mode":"none",
+				"mode_split":{
+					// horizontal / vertical
+					"split":"horizontal",
+					"eyeDistance":10
+				}
+			},
+
+	    	"fullscreen":true,
+	    	"browser":false,
+	    	"mouse":true,
+	    	//"logo":false,
+	    	//"logoX":"left",
+	    	//"logoY":"top",
+	    	//"fpsmeter":false,
+	    
+	    	"gui":{
+	    		"console":false,
+	    		"consoleMini":true
+	    	},
+	    	"landing":true,
+	    	"saveImage":{"url":"http://localhost/cloud/save/saveImage.php?folder=vjy"}
+	    }
+	}
+}

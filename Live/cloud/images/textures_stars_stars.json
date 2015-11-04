@@ -1,0 +1,33 @@
+{
+    "data":{
+    "name":"TexVJYCore",
+    "images":"images/",
+    "target":"R3D",
+    "path":"tex",
+    
+    "data":[
+        {"file":"stars/img_151.jpg","name":"id235","mirr":false},
+{"file":"stars/img_152.jpg","name":"id236","mirr":false},
+{"file":"stars/img_153.jpg","name":"id237","mirr":false},
+{"file":"stars/img_154.jpg","name":"id238","mirr":false},
+{"file":"stars/img_155.jpg","name":"id239","mirr":false},
+{"file":"stars/img_156.jpg","name":"id240","mirr":false},
+{"file":"stars/img_157.jpg","name":"id241","mirr":false},
+{"file":"stars/img_158.jpg","name":"id242","mirr":false},
+{"file":"stars/img_159.jpg","name":"id243","mirr":false},
+{"file":"stars/img_160.jpg","name":"id244","mirr":false},
+{"file":"stars/img_161.jpg","name":"id245","mirr":false},
+{"file":"stars/img_162.jpg","name":"id246","mirr":false},
+{"file":"stars/img_163.jpg","name":"id247","mirr":false},
+{"file":"stars/img_164.jpg","name":"id248","mirr":false},
+{"file":"stars/img_6.jpg","name":"id1173","mirr":false},
+{"file":"stars/img_19.jpg","name":"id1186","mirr":false},
+{"file":"stars/img_20.jpg","name":"id1187","mirr":false},
+{"file":"stars/img_21.jpg","name":"id1188","mirr":false},
+{"file":"stars/img_22.jpg","name":"id1189","mirr":false},
+{"file":"stars/img_17.jpg","name":"id1184","mirr":false}
+
+        
+    ]
+    }
+}

@@ -1,0 +1,72 @@
+
+{
+	"data":{
+		"name":"SpaceBollards",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"SpaceBollards":{
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				
+				"streams":[
+					
+					//Pillars TALL Capitals
+					{	"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"geomOcta",
+						"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}],
+						//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+						"trans":{
+							"x":["Stepper",[160,-160]],
+							"y":["Stepper",[160,160,-160,-160]],
+							"z":0,
+							"scale":10
+						}
+					},
+					
+					"gap":240,
+					"rotate":true
+					},
+					//OBJ Rings
+					{
+						"cn":"StreamObjs",
+						"prgPos":{"x":0,"y":0},
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":["Stepper",["geomTorus5","geomTorus4"]],
+							"mat":"MusicColorBlack"					
+						},
+					
+						"gap":1600,
+					},
+					//PIPE Music Wave
+					{
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":100,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":90
+							},
+						"mesh":{"mat":"MusicWaveADD"}
+						}
+					},
+				]
+			}		}
+	}
+}
