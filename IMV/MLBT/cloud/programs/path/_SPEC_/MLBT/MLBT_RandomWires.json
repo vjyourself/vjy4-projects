@@ -1,0 +1,84 @@
+
+{
+	"data":{
+		"name":"MLBT_RandomWires",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MLBT_RandomWires":{
+				
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"streams":[
+						{"cn":"StreamPipe","name":"WF Pipe","elemLength":300,
+					"prg":{
+						"cn":"PipeBasic",
+							"planeCount":3,
+							"segCount":3,
+
+
+							"angleStart":0,
+							"angleSpread":360,
+							"angleShift":0,
+
+							"box0":{
+								"width":["Stepper",[2200,2200,600,600,200,200,20,600],{"delay":3}],
+								"height":["Stepper",[2200,2200,600,600,200,200,20,600],{"delay":3}],
+							"x":0,
+								"y":0
+							},
+
+							"noise":{
+								"x":0,
+								"y":0,
+								"z":0
+							},
+
+							"shape":"random",
+							"circleParams":{},
+							"starParams":{"innerPerc":0.6},
+							"sinParams":{"freqX":3,"freqY":1},
+							"planeParams":{},
+
+
+							"wf":{
+								"visible":true,
+								"color":"#ffffff",
+								"thickness":1,
+								"lines":{
+									"plane":true,
+									"planeClose":false,
+									"planeFirst":false,
+									"long":true
+								},
+								"scaleDown":1
+							},
+
+							"mesh":{"visible":false}
+					}
+					},
+				
+				
+					
+
+					{
+						"cn":"StreamObjs",
+						"name":"Music Balls",
+						"gap":100,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"geomSphere",
+							"mat":"MusicColorBlack",
+							"trans":{
+								"scale":["Stepper",[3,3,3,3],{"delay":1}],
+								"_prg":[["x","y"],"Random2D",{"radius":1400,"hole":100}]}
+						}
+					},
+					
+				
+				]
+			}
+		}
+	}
+}

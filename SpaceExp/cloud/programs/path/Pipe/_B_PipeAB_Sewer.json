@@ -1,0 +1,146 @@
+
+{
+	"data":{
+		"name":"_B_PipeAB_Sewer",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"_B_PipeAB_Sewer":{
+				"n":"Sewer",
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				"bind":[
+					{"ch":0,"tar":"pipe1","prop":"scale","v0":1,"v1":0},
+					{"ch":1,"tar":"pipe2","prop":"scale","v0":1,"v1":0},
+					{"ch":2,"tar":"torusSide","prop":"scale","v0":0,"v1":2},
+
+					// {"ch":1,"tar":"spikeSide","prop":"scale","v0":0,"v1":3},
+					// {"ch":2,"tar":"Pipe","prop":"texDistro","v0":0,"v1":1},
+					// {"ch":2,"tar":"objRings","prop":"scale","v0":1,"v1":2},
+					{"ch":3,"tar":"turos","prop":"rotY","v0":0,"v1":24},
+					{"ch":3,"tar":"turos","prop":"rotZ","v0":0,"v1":24}
+				],
+				
+				"streams":[
+					
+					//PIPE Graff 1
+					{
+						"context":{"color":"","texture":"A"},
+						"cn":"StreamPipe",
+						"id":"pipe1",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":120,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"curve":0,
+								"fillPerc":1,
+								"curve0":["Stepper",[0,0,0,0.5,1,1,1,0.5]],
+								"curve1":["Stepper",[0,0,0.5,1,1,1,0.5,0]]
+							},
+						"mesh":{"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":true}]}
+						}
+					},
+					
+					//PIPE Graff 2
+					{
+						"context":{"color":"","texture":"A"},
+						"cn":"StreamPipe",
+						"id":"pipe2",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":120,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":90
+							},
+						"mesh":{"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":1,"startRnd":true}]},
+						}
+					},
+					//Torus Sides
+					{	
+						"id":"torusSide",
+						"context":{"color":"","texture":""},
+						"cn":"StreamObjs",
+						"gap":150,
+						"prgObj":{
+					 		"cn":"SimpleObj",
+							"geom":"geomTorus4",
+							//"mat":["Cloud","C3D",{"q":"StreetArtEastLondon"},{"delay":6,"startRnd":true}],
+							"mat":{"color":"#ffffff","alpha":0.7},
+							"trans":{
+								"x":["Stepper",[120,0,-120,0]],
+								"y":["Stepper",[0,120,0,-120]],
+								"scale":0.5
+							},
+							"rotY": 0.2
+						}
+					},
+					//PIPE Music Wave
+					/*
+					{
+						"context":{"color":"","texture":""},
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":100,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":90
+							},
+						"mesh":{"mat":"MusicWaveADD"},
+						}
+					},*/
+
+					//OBJ Sign
+			
+					{
+						"cn":"StreamObjs",
+						
+						"context":{"color":"","texture":"B"},
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"Plane",
+							"mat":["Cloud","C3D",{"q":"multiB"},{"delay":1,"start":0,"startRnd":false}]
+						},
+						"rotateZ":0.2,
+						"gap":1600
+					},
+
+					//OBJ Rings
+					{
+						"context":{"color":"","texture":""},
+						"cn":"StreamObjs",
+						"id": "turos",
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":["Stepper",["geomTorus5"]],
+							"mat":"MusicColorBlack"					
+						},
+						"rotateZ":0.4,
+						"gap":1600,
+					}
+				]
+			}		}
+	}
+}

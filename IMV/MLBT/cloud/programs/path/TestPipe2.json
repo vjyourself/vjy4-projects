@@ -1,0 +1,43 @@
+{
+	"data":{
+		"name":"TestPipe2",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"TestPipe2":{
+			"streams":[
+				
+				{	"cn":"StreamPipe",
+					"prgPipe":{
+						"cn":"PathPipe",
+						"params":{
+							"radius":86,
+							"height":120,
+							"circSeg":12,
+							"circSegShift":0.5,
+							"curve0":1,
+							"curve1":1,
+							"fillPerc":1
+						},
+						"wf":{"color":0xffffff},
+						"wf_visible":true
+						//"mesh_visible":true,
+						//"mesh":{
+						//	"mat":"MusicColor1"
+						//}
+					},
+
+					"elemLength":400
+				}
+			],
+		
+			"params":{	
+				"pathFunc":"Random",
+				"pathCurveLength":200,
+				"cycleLength":2400
+			}
+			}
+		}
+	}
+}

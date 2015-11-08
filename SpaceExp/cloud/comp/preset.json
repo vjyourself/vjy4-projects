@@ -1,0 +1,174 @@
+{
+    "includes":[],
+    "data":{
+        "name":"PresetComp",
+        "target":"presets",
+        "path":"comp",
+        
+        "data":{
+            
+            "Empty":{
+                "elems":[
+                  
+                ],
+                "params":{
+
+                }
+            },
+
+            "BackBoxGrid":{
+                "elems":[
+                    {"n":"context","cn":"vjyourself4.games.ContextLocal"},
+                    {"n":"lights","cn":"vjyourself4.three.lights.Lights","colorStream":"A"},
+                    {"n":"box","cn":"vjyourself4.comp.CompBox","textureStream":"A"},
+                    {"n":"gridBox","cn":"vjyourself4.comp.CompGridBox"},
+                    {"n":"ctrlSky","cn":"vjyourself4.ctrl.CtrlSky"}
+                ],
+                "paramsDef":{},
+                "paramsDesc":{
+                    "context":{
+                        "texA":{"name":"texture","delay":"Int"},
+                        "colA":{"name":"color","delay":"Int"}
+                    },
+                    "lights":{
+                        "mode":"light"
+                    },
+                    "gridBox":{
+                        "visible":"Boolean"
+                    }
+                }
+            },
+
+            "BackBoxBallGrid":{
+                "elems":[
+                    {"n":"context","cn":"vjyourself4.games.ContextLocal"},
+                    {"n":"lights","cn":"vjyourself4.three.lights.Lights","colorStream":"A"},
+                    {"n":"box","cn":"vjyourself4.comp.CompBox","textureStream":"A"},
+                    {"n":"ball","cn":"vjyourself4.comp.CompBox","textureStream":"B","geom":"Sphere","rotate":0.1},
+                    {"n":"gridBox","cn":"vjyourself4.comp.CompGridBox"},
+                    {"n":"ctrlSky","cn":"vjyourself4.ctrl.CtrlSky"}
+                ],
+                "paramsDef":{
+                  
+                },
+                "paramsDesc":{
+                    "context":{
+                        "texA":{"name":"texture","delay":"Int"},
+                        "texB":{"name":"texture","delay":"Int"},
+                        "colA":{"name":"color","delay":"Int"}
+                    },
+                    "lights":{
+                        "mode":"light"
+                    },
+                    "ball":{
+                        "visible":"Boolean"
+                    },
+                    "gridBox":{
+                        "visible":"Boolean"
+                    }
+                }
+            },
+            
+            "SkyBox":{
+                "elems":[
+                    {"n":"context","cn":"vjyourself4.games.ContextLocal"},
+                   // {"n":"lights","cn":"vjyourself4.three.lights.Lights","colorStream":"A"},
+                    {"n":"box","cn":"vjyourself4.comp.CompBox","textureStream":"A"},
+                   
+                    {"n":"ctrlSky","cn":"vjyourself4.ctrl.CtrlSky"}
+                ],
+                "params":{
+
+                }
+            },
+
+            "CentralObjs":{
+                "elems":[
+                    {"n":"central","cn":"vjyourself4.comp.CompCentralObjs"}
+                ],
+                "params":{
+
+                }
+            },
+
+            "PathSpace":{
+                "elems":[
+                    {"n":"context","cn":"vjyourself4.games.ContextLocal"},
+                    {"n":"GP","cn":"vjyourself4.games.GP.GPSinglePath",
+                        "path":{
+                            //"type":"Straight",
+                            "type":"RandomSoftCurves",
+                        "baseLength":300
+                    }
+                    },
+                    {"n":"lights","cn":"vjyourself4.three.lights.Lights","colorStream":"A","path":"GP.path","global":true}
+                ],
+                "paramsDef":{},
+                "paramsDesc":{
+                    "context":{
+                        "texA":{"name":"texture","delay":"Int"},
+                        "texB":{"name":"texture","delay":"Int"},
+                        "colA":{"name":"color","delay":"Int"}
+                    },
+                "GP":{
+                    "space":"space",
+                    "ctrl":{
+                        "speedMin":"Number",
+                        "speedMax":"Number"
+                    }
+                },
+                "lights":{
+                    "mode":"light"
+                    }
+                }
+            },
+            
+            "ForeOverlayAni":{
+                "elems":[
+                    {"n":"overlay","cn":"vjyourself4.overlay.OverlayAniChannels",
+                        "channels":[
+                    {"cn":"AniBite","type":"timeline","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniLookIn","type":"timeline","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniHippno","type":"onoff","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniFlashWhite","type":"custom","scale":"stretch","width":960,"height":540}
+                        ]
+                    },
+                ],
+                "params":{
+
+                }
+            },
+
+            "ForeOverlayAniSeq":{
+                "elems":[
+                 {"n":"overlayFlash","cn":"vjyourself4.overlay.OverlayAniChannels",
+                        "channels":[
+                    {"cn":"AniBite","type":"timeline","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniLookIn","type":"timeline","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniHippno","type":"onoff","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniFlashWhite","type":"custom","scale":"stretch","width":960,"height":540}
+                        ]
+                    },
+                    {"n":"overlay","cn":"vjyourself4.overlay.OverlayAniSeq",
+                        "defLength":5,
+                        "channels":[
+                    {"cn":"AniBrands_ChipTune","length":4.5,"type":"timeline","scale":"stretch","width":960,"height":540},
+                    
+                    {"cn":"AniChipTune1","type":"stepper","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniChipTune2","type":"stepper","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniChipTune3","type":"stepper","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniChipTune4","type":"timeline","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniChipTune5","type":"timeline","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniChipTune6","type":"stepper","scale":"stretch","width":960,"height":540},
+                    {"cn":"AniChipTune7","type":"stepper","scale":"stretch","width":960,"height":540}
+                        ]
+                    },
+                ],
+                "params":{
+                    
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+	"blocks":[
+		//PROJ DESCRIPTION
+		{
+			"data":{
+				"proj":{
+					"name":"Space Exp",
+					"id":"SpaceExp"
+				}
+			},
+			"rule":"over"
+		},
+
+		//SETTINGS
+		{
+			"url":"[player]settings.json",
+			"include":"data",
+			"rule":"over"
+		},
+
+		//GAME
+		{
+			"url":"[cloud1]games/game_Exp.json",
+			"include":"data",
+			"rule":"over"
+		},
+		
+		//CLOUD
+		{
+			"url":"[player]cloud.json",
+			"include":"data",
+			"rule":"over"
+		},
+
+		//GAME INIT SCENE
+		{
+			"include":"data",
+			"target":"game.elems.5.init.scene",
+			"rule":"over",
+			"data":"SpaceBollards"
+		}
+
+	]
+	
+}

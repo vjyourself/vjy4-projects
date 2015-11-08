@@ -1,0 +1,110 @@
+
+{
+	"data":{
+		"name":"MadMirage",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MadMirage":{
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"streams":[
+				{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":3000,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							//"geom":"Bar3",
+							"geom":"Mirage",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotZ":1,
+							"trans":{
+								"scale":4,
+								"x":0,
+								"y":0,
+								//"x":0,
+								//"y":-50,
+								"rotationY":0
+								},
+
+						}
+					},{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":160,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							//"geom":"Bar3",
+							"geom":"Mirage",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotZ":0.5,
+							"trans":{
+								"scale":2,
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":90,"alphaStep":100}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":0
+								},
+
+						}
+					},
+
+					{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":120,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Mirage",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotZ":0.5,
+							"rotX":0.3,
+							"trans":{
+								"scale":["Stepper",[4],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":600,"alphaStep":50}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					},
+
+					{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":200,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Mirage",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotZ":0.5,
+							"rotX":0.3,
+							"trans":{
+								"scale":["Stepper",[4,2],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":1200,"alphaStep":137}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					}
+				]
+			}
+		}
+	}
+}

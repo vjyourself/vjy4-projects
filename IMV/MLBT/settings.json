@@ -1,0 +1,101 @@
+{
+    "sys":{
+	
+		//CONNECT TO ARDUINO **********************************************************
+		/*
+		"arduino":{
+	    	"via":"ethernet",
+	    	"ip":"192.168.2.66",
+	    	"map":["A","B","X","Y",
+               "LB","RB","LT","RT"]
+		},
+		*/
+		
+
+		//CONNECT TO MIDI **************************************************************
+		/*
+		"midi":{
+			"type":"MIDI2.jar",
+			"url":"127.0.0.1",
+			"port":10000
+		},
+		*/
+
+
+		//MUSIC SOURCE : Mic / MP3 *****************************************************
+		"music":{
+	    	//"play":{"src":"Mic"}
+		    "autoStart":false,
+		    "play":{"url":"cloud/music/01. Major Lazer - Be Together (feat. Wild Belle).mp3","loop":true},
+		    "meta":{
+		    	"wave_gain":1,"peak_gain":1,"damping_gain":1,"damping_mul":0.7,
+		    	"rhythm":{
+		     		"start":3000,
+		     		"tack":750
+		     	},
+		     	"struct":{
+		     		"struct":[
+			     		{"ind":1,"b":16,"n":"Humm","s":1},
+			     		{"ind":2,"b":16,"n":"HummHumm","s":2},
+			     		{"ind":3,"b":16,"n":"Yours","s":3},
+			     		{"ind":4,"b":16,"n":"SoMuch","s":3},
+			     		{"ind":5,"b":16,"n":"FreedomDangerRace","s":4},
+			     		{"ind":6,"b":16,"n":"AlignCollideTogether","s":5},
+			     		{"ind":7,"b":16,"n":"StarsHighwayTogether","s":5},
+			     		{"ind":8,"b":4,"n":"Pause","s":1},
+			     		{"ind":9,"b":16,"n":"Dreamer","s":3},
+			     		{"ind":10,"b":16,"n":"SoMuch","s":3},
+			     		{"ind":11,"b":16,"n":"FreedomDangerBreak","s":4},
+			     		{"ind":12,"b":16,"n":"AlignCollideTogether","s":5},
+			     		{"ind":13,"b":16,"n":"StarsHighwayTogether","s":5},
+			     		{"ind":14,"b":16,"n":"BeTogetherBeTogether","s":4},
+			     		{"ind":15,"b":16,"n":"BeTogetherBeTogether","s":4},
+			     		{"ind":16,"b":16,"n":"AlignCollideTogether","s":6},
+			     		{"ind":17,"b":16,"n":"StarsHighwayTogether","s":6},
+			     		{"ind":18,"b":16,"n":"AlignCollideTogether","s":3},
+			     		{"ind":19,"b":16,"n":"StarsHighwayTogether","s":3},
+			     		{"ind":20,"b":12,"n":"OutPause","s":1}
+		     		]
+		     	}
+		   	}
+		},
+
+
+		//INPUT DEVICES for MOVEMENT ***************************************************
+		"input":{
+			"def":"gamepad",
+	    	"active_timeout":2400,
+
+	    	"gamepad":{"enabled":true},
+	    	"mkb":{"enabled":false},
+	    	"touch":{"enabled":false},
+	    	"auto":{"enabled":false}
+	 	},
+
+
+		//SCREEN SETTINGS **************************************************************
+		"screen":{
+			"In3D":{
+				// none / split / VR
+				"mode":"none",
+				"mode_split":{
+					// horizontal / vertical
+					"split":"horizontal",
+					"eyeDistance":10
+				}
+			},
+
+	    	"fullscreen":false,
+	    	"browser":false,
+	    	"mouse":false,
+	    	"stats":true,
+	    
+	    	"gui":{
+	    		"console":false,
+	    		"consoleMini":false
+	    	},
+	    	"landing":true,
+	    	"saveImage":{"url":"http://localhost/cloud/save/saveImage.php?folder=vjy"}
+	    }
+	}
+}

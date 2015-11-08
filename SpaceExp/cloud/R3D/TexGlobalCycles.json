@@ -1,0 +1,13 @@
+{
+    "data":{
+	"name":"TexGlobalCycles",
+	"target":"C3D",
+	
+	"data":{
+	    
+	    "Empty":[{},"Empty"],
+	    "empty":[{},"Empty"]
+	    
+	}
+    }
+}

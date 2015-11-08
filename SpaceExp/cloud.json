@@ -1,0 +1,202 @@
+{ "sys":{ "cloud":{
+
+"R3D":{
+    "musicMaterials":false,
+    "globalBlend":"DEF",
+    "videoMaterials":{
+        "enabled":false,
+        "videos":{}
+        // "VideoA":"video/tumblr2.mp4"}
+    }
+},
+
+//CLOUD 2 (Admin) Packages *************************************************************************
+"load2":[
+   // "export/world4/Test" 
+    "export/world4/SpaceExp"
+],
+
+//CLOUD 1 Packages ********************************************************************
+"load1":[
+    //"images/all_stars.json",
+    "comp/preset.json",
+    "R3D/GeomGlobal4.json",
+    "R3D/GeomObjBasic.json",
+   // "R3D/GeomObj.json",
+    "R3D/MatGlobal.json",
+    "R3D/TexGlobal.json",
+    "R3D/TexGlobalCycles.json",
+   // "videos/videoCycles.json"
+],
+     
+"res1":{
+
+    //SPACES ***************************************************************************
+    "spaces":{
+      
+        //TribalAwakening
+        "pipe":[
+            "Pipe/_B_PipeAB",
+            "Pipe/_B_PipeAB_Sewer",
+            "Pipe/_B_PipeAB_Armadillo"
+        ],
+
+        //Retro Regulator
+        "regulator":[
+            "Regulator/_B_Regulator",
+            "Regulator/_B_Regulator2",
+            "Regulator/StairwayTo",
+            "Regulator/StairwayTo2"
+            ],
+
+        //Funky Ladders
+        "hex":[
+            "Hose/_B_HexPipeBall",
+            "Hose/_B_HexPipeBall3",
+            "Hose/_B_HexPipeBall2"
+        ],
+
+        //Space Bollards
+        "bollards":[
+            "Hose/_B_SpaceBollards",
+            "Hose/_B_SpaceBollards2"
+        ],
+        
+        //Semantic GRid
+        "wide":[
+            "Grid/_B_SemanticGrid",
+            "Grid/_B_SemanticGrid2",
+            "Grid/_B_SemanticGrid3"
+        ],
+        
+        //Evenly Spaced Doughnuts
+        "doughnuts":[
+            "Doughnuts/_B_SpaceDoughnuts1",
+            "Doughnuts/_B_SpaceDoughnuts2",
+            "Doughnuts/_B_SpaceDoughnuts3",
+            "Doughnuts/_B_SpaceDoughnuts4",
+            "Doughnuts/_B_SpaceDoughnuts5"
+        ]
+        
+    },
+    
+    //TEXTURE THEMES ******************************************************************
+    "textures":{
+        "themes":[/*
+            //Space Bollards - Tribal Awakening
+            "#PattAbst1",
+           
+            //TribalAwakening
+            "afro,mask",
+      
+            //Funky Ladders
+            "retro,platform",
+            
+            //Spaced Doughnuts
+            "pattern,torus",
+      
+            //Retro Regulator
+            "cyber,gui",
+
+            //Semantic Grid
+            "cyber,abstract",
+            
+
+            "stars,stars",
+            "cyber,noise",
+            "cyber,code",
+            "circuit,white",
+            
+            //SKY
+            "skybox,SpaceExp",
+            "skybox,8bit"
+            */
+         
+        ]
+    },
+
+    //COLORS *******************************************************************
+    "colors":[
+    /*
+        "Orange",
+        "PinkOrange",
+        "WOrangePink",
+        "Pink",
+        "Fire",
+        "Red",
+        "Klat",
+        "Huppy",
+        "Blue",
+        "csigabeka",
+        "Pusss1",
+        "Fresh Sun",
+        "Green",
+        "Whity",
+        "CGA"
+        */
+    ],
+
+    //LIGHTS ********************************************************************
+    "lights":[
+        "Flashy_Regular",
+        "Flashy_Slow",
+        "Flashy_Norm",
+        
+        "Running_Norm",
+        //"Running_Slow",
+        "Running_NormEqual",
+        "Running_NormEqual_R",
+        "Running_FastEqual_R",
+        
+        "DualRot_Norm",
+        "DualRot_Fast",
+        //"TriRot_Slow",
+        "TriRot_Norm",
+        "TriRot_Fast",
+        "TriDir",
+        "PointDir_Norm",
+        "PointDir_Hard",
+        "PointDir_Dark"
+       // "PointDir_Dark2"
+    ],
+
+//PATHS ********************************************************************
+    "paths":[
+        "Nice",
+        "Curvy",
+        "Straight",
+        "Spiral"
+    ],
+
+    //FILTERS ********************************************************************
+    "filters":[
+        "Normal",
+        "Shine1",
+        "Shine2",
+        "Shine3"
+    ],
+
+    "blends":[
+        "NORMAL",
+        "ADD"
+    ],
+    
+    //SCENES ********************************************************************
+    "scenes":[
+        //"Discovery",
+        //"All4"
+        "SpaceExp/FunkyLadders",
+        "SpaceExp/SpaceBollards",
+        "SpaceExp/SemanticGrid",
+        "SpaceExp/RetroRegulator",
+        "SpaceExp/SpacedDoughnuts",
+        "SpaceExp/TribalAwakening"
+    ],
+
+    //TIMELINES ****************************************************************
+    "timelines":[]
+
+}
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+	"data":{
+		"name":"Pipe2",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"Pipe2":{
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200,
+					"texADelay":3,
+					"texBDelay":3
+				},
+				
+				"streams":[
+					
+					//PIPE 
+					{
+						"cn":"StreamPipe",
+						"elemLength":800,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":120,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"curve":0,
+								"fillPerc":1,
+								"curve0":1,
+								"curve1":1
+							},
+						"mesh":{"mat":["Cloud","C3D",{"q":"A"},{"delay":4,"start":0,"startRnd":false}]}
+						}
+					},
+					
+					
+					//OBJ Rings
+					{
+						"cn":"StreamObjs",
+						"prgPos":{"x":0,"y":0},
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"geomTorus3",
+							"mat":["Cloud","C3D",{"q":"B"},{"delay":4,"start":0,"startRnd":false}]
+						},
+						"rotateZ":0.1,
+						"gap":800
+					},
+					
+					{
+						"cn":"StreamObjs",
+						"prgPos":{"x":0,"y":0},
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":["Stepper",["geomTorus4"]],
+							"mat":"MusicColorBlack",
+							"trans":{
+								"scale":0.2
+								},
+							"gap":800			
+						},
+					
+						"gap":400,
+					}
+
+					//OBJ Sign
+					/*
+					{
+						"cn":"StreamObjs",
+						"prgPos":{"x":0,"y":0},
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"Plane",
+							"mat":["Cloud","C3D",{"q":"multiB"},{"delay":1,"start":0,"startRnd":false}]
+						},
+						"rotateZ":0.2,
+						"gap":1600
+					}*/
+				]
+			}
+		}
+	}
+}

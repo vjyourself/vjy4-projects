@@ -1,0 +1,230 @@
+{ 
+    "game":{
+        "backgroundColor":"#000000",      
+        "elems":[
+            {"n":"me","cn":"vjyourself4.games.Me","gui":{"display":false,"posX":"center","posY":"bottom"}  },
+           // {"n":"context","cn":"vjyourself4.games.ContextManager"},
+            {"n":"back","cn":"vjyourself4.comp.CompManager"},
+            {"n":"mid","cn":"vjyourself4.comp.CompManager"},
+            {"n":"fore","cn":"vjyourself4.comp.CompManager"},
+            {"n":"filter","cn":"vjyourself4.games.CompFilters","active":true,"autoOff":{"active":false}},
+            
+            {"n":"scene","cn":"vjyourself4.games.SceneManager",
+                "init":{
+                    "flags":{},
+                    "scene":"Discovery"
+                }
+            },
+            
+            {"n":"sceneVary","cn":"vjyourself4.games.SceneVary"},
+
+            {"n":"globalVary","cn":"vjyourself4.games.SceneVary",
+              "channels":[
+                {"tar":{"obj":"mid","prop":"GP.space"},"nested":true,"vals":"spaceG"},
+                {"tar":{"obj":"mid","prop":"context.texA.name"},"vals":"texture"},
+                {"link":true,"ch":0,"lev":1},
+                {"tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
+
+                {"tar":{"obj":"filter","prop":"type"},"vals":["Normal","Shine1","Shine2","Shine3"]},
+                {"tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color"},
+                {"tar":{"obj":"mid","prop":"lights.mode"},"vals":"light"},
+                {"tar":{"obj":"back","prop":"context.colA.name"},"vals":"color"}
+
+              ]
+              },
+
+            {"n":"nextScene","cn":"vjyourself4.games.SceneVary",
+            "channels":[
+              {"tar":{"obj":"scene","prop":"scene"},"vals":"scene"},
+            ]},
+
+           // {"n":"dynoScene","cn":"vjyourself4.cloud.DynoScene"},
+
+            {"n":"ctrlKey","cn":"vjyourself4.ctrl.CtrlKey",
+              "map":{
+                "1":{"comm":["sys.music","start",[]]},
+                "2":{"comm":["sys.music","pause",[]]},
+                "3":{"comm":["dynoScene","saveToHeap",[]]},
+                "4":{"comm":["bindRooter","next",["vary"]]},
+                "5":{"comm":["debugConsole","show",[]]},
+                "6":{"comm":["game","show",["overlayMusic"]]},
+                "7":{"comm":["game","show",["back"]]}
+              }
+            },
+            
+            {"n":"bindRooter","cn":"vjyourself4.ctrl.BindRouter",
+              "setInit":false,
+              "channels":{
+                "vary":{
+                  "ind":0,
+                  "states":[
+                    [["ctrlGrammar.vary","sceneVary"]],
+                    [["ctrlGrammar.vary","globalVary"]]
+                  ],
+                }     
+              }
+            },
+
+            {"n":"overlayMusic","cn":"vjyourself4.overlay.OverlayMusicTest"},
+            {"n":"debugConsole","cn":"vjyourself4.overlay.OverlayConsole",
+              "width":300,"height":500,
+              "filter":{
+                "act":true,
+                "rule":{
+                  "def":false,
+                  "listA":[true,true,true,true],
+                  "listB":{"SynthPath":true},
+                  "listAB":[]
+                }
+              }
+            },
+            {"n":"timeline","cn":"vjyourself4.timeline.TimelineMusic",
+              "pre":0,
+              "defLength":3,
+              "frames":[
+                {"time":"0:0","comm":["mid.cs.GP","setParams",[{"restart":true,"space":"MLBT_EJ2"}]]}, 
+              
+                {"beat":"3.8","comm":["fore.cs.overlay","trig",["TextYOURS"]]},
+                {"beat":"3.12","comm":["fore.cs.overlay","trig",["TextYOURS"]]},
+                
+                {"beat":"4.8","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+                {"beat":"4.12","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+
+               
+               // {"beat":"5.4","comm":["fore.cs.overlay","trig",["TextFREEDOM"]]},
+               // {"beat":"5.9","comm":["fore.cs.overlay","trig",["TextDANGER"]]},
+                {"beat":"5.13","comm":["fore.cs.overlay","trig",["TextRACE"]]}, 
+                {"beat":"6.1","path_synch":{"pixelShift":400},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
+             
+                
+              // {"beat":"6.3","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
+              //  {"beat":"6.7","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"6.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                
+                {"beat":"7.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+                
+                {"beat":"9.1","path_synch":{"pixelShift":0},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_EJ2"}]]}, 
+
+               // {"beat":"9.3","comm":["fore.cs.overlay","trig",["TextDREAMER"]]},
+               {"beat":"9.8","comm":["fore.cs.overlay","trig",["TextSTARS"]]},
+                {"beat":"9.12","comm":["fore.cs.overlay","trig",["TextSTARS"]]},
+                {"beat":"10.8","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+                {"beat":"10.12","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+
+             //   {"beat":"11.4","comm":["fore.cs.overlay","trig",["TextFREEDOM"]]},
+             //   {"beat":"11.9","comm":["fore.cs.overlay","trig",["TextDANGER"]]},
+                {"beat":"11.13","comm":["fore.cs.overlay","trig",["TextBREAK"]]}, 
+
+                {"beat":"11.1","path_synch":{"pixelShift":200},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
+            
+             //   {"beat":"12.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
+             //   {"beat":"12.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"12.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+
+                {"beat":"13.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+              
+                {"beat":"14.1","path_synch":{"pixelShift":200},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RandomWires"}]]}, 
+            
+                {"beat":"14.1","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"14.5","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                {"beat":"14.9","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"14.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+
+                {"beat":"15.1","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"15.5","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                {"beat":"15.9","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"15.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                              
+                {"beat":"16.1","path_synch":{"pixelShift":50},"comm":["mid.cs.context","setParams",[{"texA":{"name":"Flower Power","refresh":false}}]]}, 
+                {"beat":"16.1","path_synch":{"pixelShift":50},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo2"}]]}, 
+
+                {"beat":"16.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
+                {"beat":"16.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"16.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+
+                {"beat":"17.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+              
+                {"beat":"18.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
+                {"beat":"18.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"18.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+
+                {"beat":"19.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+              
+              ]
+            },
+               {"n":"ctrlGrammar","cn":"vjyourself4.ctrl.Grammar",
+            "bind":{
+                "anal":"scene.anal",
+                "vary":"sceneVary",
+              },
+              "active":{
+                "trig":true,
+                "anal":true
+              },
+              "mode":"MultiPlayer",
+              "gamepadSingle":{
+                "players":[{
+                  "analNum":4,
+                  "analPage_num":2,
+                  "analPage_mode":"step",
+                  "analPage_butt":"LB",
+          
+                  "trigNum":8,
+                  "trigPage_num":1,
+                  "trigPage_mode":"step",
+                  "trigPage_butt":"LB",
+                  "trigButtons":["Up","Right","Down","Left","X","Y","A","B"]
+                }]
+              },
+
+              "gamepadMulti":{
+                "mode":"equal",
+                "players":[{
+                  "analNum":4,
+                  "analPage_num":2,
+                  "analPage_mode":"step",
+                  "analPage_butt":"LB",
+          
+                  "trigNum":8,
+                  "trigPage_num":1,
+                  "trigPage_mode":"step",
+                  "trigPage_butt":"LB",
+                  "trigButtons":["Up","Right","Down","Left","X","Y","A","B"]
+                }]
+              }
+            },
+
+            {"n":"ctrlGamepad","cn":"vjyourself4.ctrl.GamepadCombo",
+                "combos":[],
+                "modes":["default"],
+                "maps_default":{
+                    "std":{
+                    //  "LB":{"command":["fore.cs.overlay","trig",[]]},
+                        "RB":{"command":["mid.cs.GP.ctrlPath","nextCameraMode",[]]},
+                        //"Back":{"command":["nextScene","next",[0]]},
+                        "Back":{"command":["sys.screen","saveScreenShot",[]]}
+                       //"Back":{"command":["commandStart","trig",[]]},
+                       // "Y":{"command":["sceneVary","next",["filter"]]},
+                       //"RB":{"command":["fore.cs.overlay","trig",[]]},
+                       //"B":{"command":["fore.cs.overlay","stop",[]]}
+                      // "Left":{"command":["context.cont.textureStreamBack","trigRefresh",[]]},
+                      //"Up":{"command":["sceneVary","next",[0]]},
+                      //"Right":{"command":["sceneVary","next",[1]]},
+                      //"Down":{"command":["sceneVary","next",[2]]},
+                      //"Left":{"command":["sceneVary","next",[3]]},
+                    },
+                },
+            }
+
+        /*    {"n":"commandStart","cn":"vjyourself4.ctrl.CommandList",
+              "elems":[
+                {"command":["_sys.music","start",[]]},
+                {"command":["fore.cs.overlay","trig",[]]}
+              ]
+            }*/
+
+           
+            
+        ]  
+    }
+}

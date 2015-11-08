@@ -1,0 +1,148 @@
+
+{
+	"data":{
+		"name":"MLBT_BallsSpiralRandom",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MLBT_BallsSpiralRandom":{
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"streams":[
+					
+				{"cn":"StreamPipe","name":"Multi Pipe","elemLength":200,"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":220,"height":220,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":0,"twist0":["Stepper",[0,30,60,90,120,150,180,210,240,270,300,330]]},"mesh":{"mat":"MusicWaveADD"}},"active":true},
+			{"cn":"StreamPipe","name":"Multi Pipe","elemLength":200,"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":220,"height":220,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":0,"twist0":["Stepper",[90,120,150,180,210,240,270,300,330,0,30,60]]},"mesh":{"mat":"MusicWaveADD"}},"active":true},
+					{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":60,
+						"active":true,
+						"rotate":true,
+						"rotateRnd":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"geomSphere",
+							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],
+							"trans":{
+								"scale":["Stepper",[16,8,4,1],{"delay":1}],
+								"_prg":[["x","y"],"Random2D",{"radius":1400,"hole":400}]},
+
+						}
+					},
+
+					{
+						"cn":"StreamObjs",
+						"name":"Music Balls",
+						"gap":100,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"geomSphere",
+							"mat":"MusicColorBlack",
+							"trans":{
+								"scale":["Stepper",[3,3,3,3],{"delay":1}],
+								"_prg":[["x","y"],"Random2D",{"radius":1400,"hole":100}]}
+						}
+					},
+				//Spiral 1
+					{"cn":"StreamPipe","name":"WF Pipe","elemLength":800,
+					"prg":{
+						"cn":"PipeBasic",
+							"planeCount":8,
+							"segCount":3,
+
+
+							"angleStart":["Stepper",[0,120,240]],
+							"angleSpread":30,
+							"angleShift":1.5,
+
+							"box0":{
+								"width":320, 
+								"height":320, 
+								"x":0,
+								"y":0
+							},
+
+							"noise":{
+								"x":0,
+								"y":0,
+								"z":0
+							},
+
+							"shape":"circle",
+							"circleParams":{},
+							"starParams":{"innerPerc":0.6},
+							"sinParams":{"freqX":3,"freqY":1},
+							"planeParams":{},
+
+
+							"wf":{
+								"visible":true,
+								"color":"#ffffff",
+								"thickness":1,
+								"lines":{
+									"plane":true,
+									"planeClose":false,
+									"planeFirst":false,
+									"long":true
+								},
+								"scaleDown":1
+							},
+
+							"mesh":{"visible":false}
+					}
+					},
+
+					//Spiral 2
+					{"cn":"StreamPipe","name":"WF Pipe","elemLength":800,
+					"prg":{
+						"cn":"PipeBasic",
+							"planeCount":8,
+							"segCount":3,
+
+
+							"angleStart":["Stepper",[0,240,120]],
+							"angleSpread":30,
+							"angleShift":3,
+
+							"box0":{
+								"width":640, 
+								"height":640, 
+								"x":0,
+								"y":0
+							},
+
+							"noise":{
+								"x":0,
+								"y":0,
+								"z":0
+							},
+
+							"shape":"circle",
+							"circleParams":{},
+							"starParams":{"innerPerc":0.6},
+							"sinParams":{"freqX":3,"freqY":1},
+							"planeParams":{},
+
+
+							"wf":{
+								"visible":true,
+								"color":"#ffffff",
+								"thickness":1,
+								"lines":{
+									"plane":true,
+									"planeClose":false,
+									"planeFirst":false,
+									"long":true
+								},
+								"scaleDown":1
+							},
+
+							"mesh":{"visible":false}
+					}
+					},
+				]
+			}
+		}
+	}
+}

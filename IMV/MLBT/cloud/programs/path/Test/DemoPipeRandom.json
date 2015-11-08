@@ -1,0 +1,48 @@
+
+{
+	"data":{
+		"name":"DemoPipeRandom",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"DemoPipeRandom":{
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"streams":[
+					{"cn":"StreamPipe","name":"WF Pipe","elemLength":600,
+					"prgPipe":{
+						"cn":"WFPipeBasic",
+						"params":{
+							"x0":0,"y0":0,"rotZ0":0,
+							"shape":"random",
+					
+							"segNum":6,
+							"segWidth":360,
+							"segShift0":0,
+							"segShiftInc":0,
+
+							"randomParams":{"width":1200,"height":["Stepper",[30,300,1200],{"delay":6}]},
+
+							"lines":{
+								"plane":true,
+								"planeClose":false,
+								"planeLoop":false,
+								"long":true
+							}
+
+							//"circSeg":["Stepper",[5,4,3],{"delay":3}],
+							//"circSegShift":0.5,
+							//"fillPerc":1,
+							//"curve0":0,
+							//"curve1":0,
+							//"twist0":0
+						},
+						"wf":{"color":16777215}
+					}
+					},
+					//{"cn":"StreamPipe","name":"Music Wave","elemLength":400,"prgPipe":{"cn":"PathPipe","params":{"radius":100,"height":120,"circSeg":4,"circSegShift":1,"fillPerc":1,"curve0":0,"curve1":10,"twist0":40},"mesh":{"mat":"MusicWaveADD"}}}
+				]
+			}
+		}
+	}
+}

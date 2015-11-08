@@ -1,0 +1,59 @@
+{
+    "data":{
+	"name":"GeomGlobal",
+	"target":"R3D",
+	"path":"geom",
+	
+	"data":{
+        "vefDiamond":{"cn":"vjyourself4.three.vef.VEFDiamond","pc":[30,50,100,130,8]},
+		"vefDiamond_S":{"cn":"vjyourself4.three.vef.VEFDiamond","pc":[6,10,20,16,4]},
+		"vefDiamond_Long":{"cn":"vjyourself4.three.vef.VEFDiamond","pc":[18,40,40,60,4]},
+		"vefDiamond_SS":{"cn":"vjyourself4.three.vef.VEFDiamond","pc":[3,5,10,8,3]},
+
+		"geomTorus":{"cn":"away3d.primitives.TorusGeometry","pc":[40,10,48,16,false]},
+		"geomTorus2":{"cn":"away3d.primitives.TorusGeometry","pc":[80,30,8,16,false]},
+		"geomTorus3":{"cn":"away3d.primitives.TorusGeometry","pc":[120,40,8,16,false]},
+		"geomTorus4":{"cn":"away3d.primitives.TorusGeometry","pc":[130,20,16,16,false]},
+		"geomTorus4Slim":{"cn":"away3d.primitives.TorusGeometry","pc":[130,10,16,16,false]},
+		"geomTorus5":{"cn":"away3d.primitives.TorusGeometry","pc":[140,20,4,16,false]},
+		"geomRect":{"cn":"away3d.primitives.CubeGeometry","pc":[5,5,20]},
+		"geomDoor1":{"cn":"vjyourself4.three.CubeGeometryDouble","pc":[120,240,200]},
+		
+		"geomSphere":{"cn":"away3d.primitives.SphereGeometry","pc":[10,10]},
+		"geomCube":{"cn":"away3d.primitives.CubeGeometry","pc":[15,15,15]},
+		"geomTorusS":{"cn":"away3d.primitives.TorusGeometry","pc":[20,5,12,16,false]},
+		"geomCyl":{"cn":"away3d.primitives.CylinderGeometry","pc":[0,10,15,16,1,false,true,true]},
+		"geomOcta":{"cn":"vjyourself4.three.vef.GeometryVEF","vef":{"cn":"vjyourself4.three.vef.VEFPlatonicSolid","pc":["Octahedron",{"edge":20}]}},
+		
+		"Plane":{"cn":"away3d.primitives.PlaneGeometry","pc":[180,180,1,1,false,true]},
+		"Pad":{"cn":"away3d.primitives.CubeGeometry","pc":[160,5,30]},
+		"geomSpike":{"cn":"away3d.primitives.CylinderGeometry","pc":[0,30,100,3,1,false,true,true],"applyPosition":[0,50,0]},
+		"Pipe":{"cn":"away3d.primitives.CylinderGeometry","pc":[20,20,170,16,1,true,true,true]},
+		"Pipe2":{"cn":"away3d.primitives.CylinderGeometry","pc":[10,20,170,16,1,true,true,true]},
+		"FlatRing120":{"cn":"away3d.primitives.CylinderGeometry","pc":[100,100,120,24,1,false,false,true,false],"invertFaces":true},
+		"FlatRing240":{"cn":"away3d.primitives.CylinderGeometry","pc":[100,100,240,24,1,false,false,true,false],"invertFaces":true},
+		"Circle":{"cn":"away3d.primitives.CylinderGeometry","pc":[100,100,0,24,1,true,true,false,false]},
+		
+		"Bar":{"cn":"away3d.primitives.CylinderGeometry","pc":[10,10,120,16,1,true,true,true]},
+		"Bar3":{"cn":"away3d.primitives.CylinderGeometry","pc":[30,30,120,3,1,true,true,true,false],"applyRotation":[90,0,0]},
+
+		"Tetra":{"cn":"vjyourself4.three.vef.GeometryVEF","vef":{"cn":"vjyourself4.three.vef.VEFPlatonicSolid","pc":["Tetrahedron",{"edge":60}]}},
+		"Octa":{"cn":"vjyourself4.three.vef.GeometryVEF","vef":{"cn":"vjyourself4.three.vef.VEFPlatonicSolid","pc":["Octahedron",{"edge":60}]}},
+		"Icosa":{"cn":"vjyourself4.three.vef.GeometryVEF","vef":{"cn":"vjyourself4.three.vef.VEFPlatonicSolid","pc":["Icosahedron",{"edge":60}]}},
+		"Cube":{"cn":"away3d.primitives.CubeGeometry","pc":[60,60,60]},
+		"Sphere":{"cn":"away3d.primitives.SphereGeometry","pc":[40,40]},
+		
+		"capsule":{"cn":"away3d.primitives.CapsuleGeometry","pc":[20,40,12,6,true]},
+		
+		"TorusBar3":{"cn":"away3d.primitives.TorusGeometry","pc":[140,60,3,3,false]},
+		"TorusBar3R":{"cn":"away3d.primitives.TorusGeometry","pc":[140,60,3,24,false]},
+		"TorusBar4":{"cn":"away3d.primitives.TorusGeometry","pc":[140,60,4,3,false]},
+		"TorusBar4R":{"cn":"away3d.primitives.TorusGeometry","pc":[140,60,4,24,false]},
+		"TorusBar4L":{"cn":"away3d.primitives.TorusGeometry","pc":[140,100,4,3,false]},
+		"TorusBar4M":{"cn":"away3d.primitives.TorusGeometry","pc":[140,40,4,3,false]},
+		"TorusBar4S":{"cn":"away3d.primitives.TorusGeometry","pc":[140,20,4,3,false]}
+		
+	}
+	
+    }
+}
