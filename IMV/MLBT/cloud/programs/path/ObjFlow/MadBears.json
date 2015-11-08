@@ -1,0 +1,104 @@
+
+{
+	"data":{
+		"name":"MadBears",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MadBears":{
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"streams":[
+				//Pipe Music Wave
+					{
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":100,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":90
+							},
+						"mesh":{"mat":"MusicWaveADD"}
+						}
+					},
+				{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":160,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"PolarBurr",
+							
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotX":1,
+							"trans":{
+								"scale":["Stepper",[1,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":60,"alphaStep":100}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					},
+
+					{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":120,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"PolarBurr",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotX":1,
+							"trans":{
+								"scale":["Stepper",[2,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":300,"alphaStep":50}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					},
+
+					{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":200,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"PolarBurr",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotX":1,
+							"trans":{
+								"scale":["Stepper",[2,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":600,"alphaStep":137}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					}
+				]
+			}
+		}
+	}
+}

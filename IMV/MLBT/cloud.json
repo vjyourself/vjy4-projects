@@ -1,0 +1,151 @@
+{ "sys":{"cloud":{
+"R3D":{
+        "musicMaterials":true,
+        "globalBlend":"DEF",
+        "videoMaterials":{
+            "enabled":false,
+            "videos":{
+                //"videoA":"videos/tumblr2.mp4"
+            }
+        }
+},
+    
+//CLOUD 2 (Admin) Packages *************************************************************************
+"load2":[
+    //"export/world4/Test" 
+    "export/world4/IMV_MLBT"
+],
+
+//CLOUD 1 Packages ********************************************************************
+"load1":[
+    //"images/all_stars.json",
+    "comp/preset.json",
+    "R3D/GeomGlobal4.json",
+    "R3D/GeomObjBasic.json",
+  //  "R3D/GeomObj.json",
+    "R3D/MatGlobal.json",
+    "R3D/TexGlobal.json",
+    "R3D/TexGlobalCycles.json",
+   // "videos/videoCycles.json"
+],
+
+
+//CLOUD 1 Resources -> Packages ********************************************************
+"res1":{
+
+    //SPACES ***************************************************************************
+    "spaces":{
+        //BIND - VARY SPACES
+        "MLBT":[
+            "_SPEC_/MLBT/MLBT_EJ2",
+            "_SPEC_/MLBT/MLBT_BallsSpiralRandom",
+            "_SPEC_/MLBT/MLBT_RandomWires",
+            "_SPEC_/MLBT/MLBT_StairwayTo2"
+        ]
+       
+    },
+    
+    //TEXTURE THEMES ******************************************************************
+    "textures":{
+        "themes":[
+            /*
+            //"afro,textile",
+            //"afro,mask",
+            "afro,batik",
+            "tropic",
+            //"reggae",
+            //"retro"    
+           // "retro,arcade",
+           // "retro,sprites",
+           // "retro,feeling",
+            
+            "nature,flower",
+            //"aztec",
+           // "retro,space",
+           // "retro,street",
+            //"retro,platform",
+            
+            "hippie",
+            //"psy",
+            "cocktails,light",
+            "cocktails,dark",
+            "candy",
+            "stars",
+            //"graffiti",
+            //"cyber,noise",
+            //"cyber,abstract",
+            //"circuit,white",
+           // "cyber,code",
+            "BW,B",
+            //"skybox,stars",
+            "skybox,geom",
+            "jungle,leaves"
+            //"Lena_Vida,B"
+            */
+        ]
+       
+    },
+
+    //COLORS *******************************************************************
+    "colors":[ ],
+
+    //LIGHTS ********************************************************************
+    "lights":[
+        "Flashy_Slow",
+        "Flashy_Norm",
+        
+        "Running_Norm",
+        //"Running_Slow",
+        "Running_NormEqual",
+        "Running_NormEqual_R",
+        "Running_FastEqual_R",
+        
+        "DualRot_Norm",
+        "DualRot_Fast",
+        "TriRot_Norm",
+        "TriRot_Fast",
+        "TriDir",
+        "PointDir_Norm",
+        "PointDir_Hard",
+        "PointDir_Dark"
+       // "PointDir_Dark2"
+    ],
+
+//PATHS ********************************************************************
+    "paths":[
+        "Nice",
+        "Curvy",
+        "Straight",
+        "Spiral"
+    ],
+
+    //FILTERS ********************************************************************
+    "filters":[
+        "Normal",
+        "Shine1",
+        "Shine2",
+        "Shine3"
+    ],
+
+    "blends":[
+        "NORMAL",
+        "ADD"
+    ],
+    
+    //SCENES ********************************************************************
+    "scenes":[
+        //"LiveAll",
+        "ML_BeTogether/Start"
+        //"SpaceExp"
+    ],
+
+    //TIMELINES ****************************************************************
+    "timelines":[]
+
+},
+
+
+
+        }
+    }
+}

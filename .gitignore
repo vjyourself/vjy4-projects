@@ -2,6 +2,7 @@
 *.apk
 *.ipa
 /*/*.swf
+/IMV/*/*.swf
 cloud2/
 Thumbs.db
 .DS_Store

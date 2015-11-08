@@ -1,0 +1,20 @@
+{
+    "data":{
+	"name":"GeomObj",
+	"target":"R3D",
+	"path":"geom",
+	
+	"data":{
+		"Bomb2":{"url":"R3D/Obj/Bomb2.awd","scale":0.2,"pos":{"x":0,"y":0,"z":0}},
+		"Frog":{"url":"R3D/Obj/frog.awd","scale":0.1,"pos":{"x":0,"y":0,"z":0}},
+		"CowSkull":{"url":"R3D/Obj/CowSkull2.awd","scale":0.1,"pos":{"x":0,"y":0,"z":0}},
+		"Chair1":{"url":"R3D/Obj/chair1.awd","scale":0.1,"pos":{"x":0,"y":0,"z":0}},
+		"Chair2":{"url":"R3D/Obj/chair2.awd","scale":0.1,"pos":{"x":0,"y":0,"z":0}},
+		"MonkeyHead":{"url":"R3D/Obj/MonkeyHead.awd","scale":0.1,"pos":{"x":0,"y":0,"z":0}},
+		"Mirage":{"url":"R3D/Obj/Mirage3.awd","scale":0.1,"pos":{"x":0,"y":0,"z":0}},
+		//"PolarBurr":{"url":"R3D/MC/PolarBurr3.awd","scale":0.1,"pos":{"x":0,"y":0,"z":0}}
+		
+	}
+	
+    }
+}
