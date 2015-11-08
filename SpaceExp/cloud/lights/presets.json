@@ -1,0 +1,52 @@
+{
+    "includes":[],
+    "data":{
+        "name":"PresetLights",
+        "target":"presets",
+        "path":"lights",
+        
+        "data":{
+            
+            "PointDir":{
+                "Norm":{"dir":{"color":0,"color_val":0,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":0,"specular":0},"point":{"color":0,"color_val":16777215,"ambientColor":100,"ambientColor_val":16777215,"ambient":1,"diffuse":0,"specular":0}},
+                "Hard":{"dir":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":0.3,"specular":0.7},"point":{"color":100,"color_val":16777215,"ambientColor":100,"ambientColor_val":16777215,"ambient":0.5,"diffuse":0,"specular":0}},
+                "Dark":{"dir":{"color":100,"color_val":16777215,"ambientColor":50,"ambientColor_val":16777215,"ambient":0.1,"diffuse":0.6,"specular":1},"point":{"color":0,"color_val":0,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":0,"specular":0}},
+                "Dark2":{"dir":{"color":100,"color_val":16777215,"ambientColor":50,"ambientColor_val":16777215,"ambient":0.1,"diffuse":0.6,"specular":1},"point":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":0.4,"specular":0}}
+            },
+
+            "DualRot":{
+                "Norm":{"up":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"down":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"speed":0.01},
+                "Fast":{"up":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"down":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"speed":0.1}
+            },
+
+            "TriRot":{
+                "Norm":{"a":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"b":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"c":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"speed":0.02},
+                "Fast":{"a":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0.2,"diffuse":1,"specular":0.5},"b":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"c":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"speed":0.07},
+                "SuperFast":{"a":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"b":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"c":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"speed":0.1}
+            },
+            "TriDir":{
+                "Norm":{"a":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"b":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"c":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"speed":0.02},
+                "Fast":{"a":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0.2,"diffuse":1,"specular":0.5},"b":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"c":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"speed":0.07},
+                "SuperFast":{"a":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"b":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"c":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"speed":0.1}
+            },
+
+            "Running":{
+                "Fast":{"light":{"color":100,"color_val":16777215,"ambientColor":100,"ambientColor_val":0,"ambient":0.05,"diffuse":1,"specular":0.5},"speed":0.6,"spots":[0,5,50,55]},
+                "Norm":{"light":{"color":100,"color_val":16777215,"ambientColor":100,"ambientColor_val":0,"ambient":0.05,"diffuse":1,"specular":0.5},"speed":0.4,"spots":[0,5,50,55]},
+                "Slow":{"light":{"color":100,"color_val":16777215,"ambientColor":100,"ambientColor_val":0,"ambient":0.05,"diffuse":1,"specular":0.5},"speed":0.1,"spots":[0,5,50,55]},
+                "NormEqual":{"light":{"color":100,"color_val":16777215,"ambientColor":100,"ambientColor_val":0,"ambient":0.05,"diffuse":1,"specular":0.5},"speed":0.2,"spots":[0,25,50,75]},
+                "NormEqual_R":{"light":{"color":100,"color_val":16777215,"ambientColor":100,"ambientColor_val":0,"ambient":0.05,"diffuse":1,"specular":0.5},"speed":-0.2,"spots":[0,25,50,75]},
+               "FastEqual_R":{"light":{"color":100,"color_val":16777215,"ambientColor":100,"ambientColor_val":0,"ambient":0.05,"diffuse":1,"specular":0.5},"speed":-0.8,"spots":[0,25,50,75]},
+               
+                "SlowEqual":{"light":{"color":100,"color_val":16777215,"ambientColor":100,"ambientColor_val":0,"ambient":0.05,"diffuse":1,"specular":0.5},"speed":0.1,"spots":[0,25,50,75]}
+            },
+
+            "Flashy":{
+                "Norm":{"light":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"delay":2,"shift":0,"strength":"random"},
+                "Slow":{"light":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"delay":30,"shift":0,"strength":"random"},
+                "Regular":{"light":{"color":100,"color_val":16777215,"ambientColor":0,"ambientColor_val":0,"ambient":0,"diffuse":1,"specular":0.5},"delay":30,"shift":1,"strength":"full"}
+            }
+
+        }
+    }
+}

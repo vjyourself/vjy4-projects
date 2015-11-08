@@ -1,5 +1,6 @@
 *.exe
-*.fla
+*.apk
+*.ipa
 /*/*.swf
 cloud2/
 Thumbs.db

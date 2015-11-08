@@ -1,0 +1,40 @@
+
+{
+	"data":{
+		"name":"MCShow2",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MCShow2":{
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"streams":[
+				{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":150,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":["Stepper",["MC_PolarBurr","MC_Hand","MC_Pumpkin","MC_MugHead"]],
+							
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotY":0.5,
+							"trans":{
+								//"x":["Stepper",["100","-100"]]
+								//"scale":["Stepper",[1,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":60,"alphaStep":100}],
+								//"x":0,
+								//"y":-50,
+								//"rotationY":90
+								},
+
+						}
+					}
+				]
+			}
+		}
+	}
+}

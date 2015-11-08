@@ -1,0 +1,24 @@
+
+{
+	"data":{
+		"name":"_B_SpaceDoughnuts1",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"_B_SpaceDoughnuts1":{
+				"n":"Solo",
+				"params":{"pathFunc":"RandomCurvy","pathCurveLength":200,"cycleLength":2400},
+				"bind":[
+					{"ch":0,"tar":"Objs","prop":"scale0","v0":1,"v1":0},
+					{"ch":1,"tar":"Objs","prop":"scale1","v0":1,"v1":0},
+					{"ch":2,"tar":"Objs","prop":"rotZ","v0":0,"v1":9},
+					{"ch":2,"tar":"Objs","prop":"scale","v0":1,"v1":2},
+					{"ch":3,"tar":"Objs","prop":"rotY","v0":0,"v1":9},
+				],
+				"streams":[
+				{"cn":"StreamObjs","name":"Doughnut","context":{"color":"","texture":"A"},"prgObj":{"cn":"SimpleObj","geom":"geomTorus","mat":["Cloud","C3D",{"q":"multiA"},{"delay":1,"start":0,"startRnd":true}]},"gap":100,"active":true},
+				{"cn":"StreamObjs","name":"Icing","context":{"color":"","texture":""},"prgObj":{"cn":"SimpleObj","geom":"geomTorus","trans":{"scale":2},"mat":"MusicWaveADD"},"gap":100,"active":true}
+				]}		}
+	}
+}

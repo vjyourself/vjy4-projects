@@ -1,0 +1,91 @@
+
+{
+	"data":{
+		"name":"TestWF5",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"TestWF5":{
+				"n":"Quad",
+				/*"bind":[
+					{"ch":1,"tar":"spikes1","prop":"scale","v0":1,"v1":3},
+					{"ch":1,"tar":"spikes2","prop":"scale","v0":1,"v1":3},
+					{"ch":0,"tar":"Pipe","prop":"texDistro","v0":0,"v1":1},
+					
+					{"ch":2,"tar":"Pipe","prop":"texDistro","v0":0,"v1":1}
+
+			],*/
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				"streams":[
+
+					// Stream 1 : Pipe Basic WF 
+					{
+						"id":"pipeWF","name":"WF Pipe",
+						"context":{"color":"A","texture":"A"},
+						"cn":"StreamPipe","elemLength":1000,
+						"prg":{
+							"cn":"PipeBasic",
+
+							"planeCount":60,
+							"segCount":12,
+							"segLoop":"no",
+
+							"angleStart":0,
+							"angleSpread":180,
+							"angleShift":0.4,
+
+							"box0":{
+								"width":240,
+								"height":240,
+								"x":0,
+								"y":0
+							},
+							
+							// "box1":{
+							// 	"width":24,
+							// 	"height":240,
+							// 	"x":0,
+							// 	"y":-50
+							// },
+
+							"shape":"star",
+							"circleParams":{},
+							"starParams":{"innerPerc":0.2},
+							"sinParams":{"freqX":6,"freqY":1},
+							"planeParams":{},
+
+							"noise":{
+								"x":0,
+								"y":0,
+								"z":0
+							},
+
+							"wf":{
+								"visible":true,
+								"color":"#ffffff",
+								"thickness":1,
+								"lines":{
+									"plane":false,
+									"planeClose":false,
+									"planeFirst":true,
+									"long":true
+								}
+							},
+
+							"mesh":{"visible":false,
+								"mat":{"color":"#ffffff","alpha":0.3}
+							}
+						
+						}
+					}
+					
+				
+				]
+			}		}
+	}
+}

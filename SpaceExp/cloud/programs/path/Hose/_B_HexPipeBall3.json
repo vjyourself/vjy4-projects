@@ -1,0 +1,108 @@
+
+{
+	"data":{
+		"name":"_B_HexPipeBall3",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"_B_HexPipeBall3":{
+				"n":"Spaced",
+			"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+			
+			"bind":[
+					{"ch":0,"tar":"objBall","prop":"scale","v0":1,"v1":0},
+					{"ch":1,"tar":"pipeWF","prop":"scale","v0":1,"v1":0},
+					//{"ch":1,"tar":"pipeHose","prop":"scale","v0":0,"v1":1},
+					{"ch":2,"tar":"pipeHexA","prop":"texShift","v0":0,"v1":2},
+					{"ch":3,"tar":"pipeHexA","prop":"texZoom","v0":1,"v1":3}
+				],
+			
+			"streams":[
+				{
+					"id":"pipeHexA","name":"Hex A",
+					"context":{"color":"","texture":"A"},
+					"cn":"StreamPipe","active":true,"elemLength":200,"prgPipe":{"cn":"PathPipe","params":{
+						"circSeg":6,
+						"radius":["Stepper",[240]],
+						"circSegShift":0,
+						"curve":0,
+						"fillPerc":1,
+						"curve0":0.1,
+						"curve1":0.1,
+						"twist0":["Stepper",[0,30,60,90,120,150]]},
+						"mesh":{"mat":["Cloud","C3D",{"q":"multiA"},{"delay":2,"start":0,"startRnd":true}]}}},
+			{
+					"id":"pipeHexA","name":"Hex A",
+					"context":{"color":"","texture":"A"},
+					"cn":"StreamPipe","active":true,"elemLength":200,"prgPipe":{"cn":"PathPipe","params":{
+						"circSeg":6,
+						"radius":["Stepper",[100]],
+						"circSegShift":0,
+						"curve":0,
+						"fillPerc":1,
+						"curve0":0.1,
+						"curve1":0.1,
+						"twist0":["Stepper",[90,120,150,0,30,60,]]},
+						"mesh":{"mat":["Cloud","C3D",{"q":"multiA"},{"delay":2,"start":0,"startRnd":true}]}}},
+			
+				{
+					"id":"pipeWF","name":"WF Pipe",
+					"context":{"color":"A","texture":""},	
+					"cn":"StreamPipe","active":true,"elemLength":400,"prgPipe":{"cn":"PathPipe",
+					"params":{
+						"circSeg":12,
+						"radius":["Stepper",[220,160,120,60]],
+						"circSegShift":0.1,
+						"curve":0,"fillPerc":1,"curve0":1,"curve1":1},"wf":{"color":0}}},
+				/*
+				{
+					"id":"pipeHexB","name":"Hex B",
+					"context":{"color":"","texture":"B"},
+					"cn":"StreamPipe","active":true,"elemLength":400,"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":["Stepper",[260,220,260]],"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":1,"twist0":["Stepper",[30,150]]},"mesh":{"mat":["Cloud","C3D",{"q":"multiB"},{"delay":2,"start":0,"startRnd":true}]}}},
+				*/
+				/*{
+					"id":"pipeMusic","name":"Music Pipe",
+					"context":{"color":"","texture":""},	
+					"cn":"StreamPipe","active":true,"elemLength":800,"prgPipe":{"cn":"PathPipe","params":{"radius":160,"circSeg":6,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":1,"curve1":1,"twist0":["Stepper",[0,120,240]]},"mesh_visible":true,"mesh":{"mat":"MusicWaveADD"}}},
+				*/
+				{
+					"id":"objRing","name":"Rings",
+					"context":{"color":"","texture":""},
+					
+						"cn":"StreamObjs",
+						"prgPos":{"x":0,"y":0},
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":["Stepper",["geomTorus5","geomTorus4"]],
+							"mat":{"color":["Stepper",["#ffffff","#000000"]]},				
+						},
+					
+						"gap":1600,
+				},
+
+				{
+					"id":"objBall","name":"Balls",
+					"context":{"color":"","texture":""},
+					
+						"cn":"StreamObjs",
+						
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"Sphere",
+							"mat":{"color":"#ffffff"},
+							"trans":{
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":300,"alphaStep":135}],
+								"scale":3
+								
+							}				
+						},
+					
+						"gap":120,
+					}
+			]
+		}		
+		}
+	}
+}

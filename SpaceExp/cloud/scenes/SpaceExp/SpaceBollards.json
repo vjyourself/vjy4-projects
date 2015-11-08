@@ -1,0 +1,91 @@
+{
+  "data":{ 
+    "name":"Scenes", 
+    "target":"RScenes",
+    "path":"",
+    "data":{
+
+      "SpaceBollards":{
+        "name":"Space Bollards",
+        "listed":true,
+        "comp":"BackPathOver",
+        
+        "state":{
+
+          "back":{ "preset":"BackBoxBallGrid","params":{
+            "context":{
+              "texA":{"name":"Skybox SpaceExp","delay":1},
+              "texB":{"name":"empty","delay":1},
+              "colA":{"name":"Fire","delay":1}
+            },
+            "lights":{
+              "mode":"TriDir"
+            },
+            "gridBox":{
+              "visible":true
+            },
+            
+            "box":{
+              "visible":true
+            },
+            "ball":{
+              "visible":false
+            }
+          }},
+
+          "mid":{ "preset":"PathSpace","params":{
+            "context":{
+              "texA":{"name":"PattAbst1","delay":6},
+              "texB":{"name":"PattAbst1","delay":1},
+              "colA":{"name":"PinkOrange","delay":1}
+            },
+            "GP":{
+              "space":"_B_SpaceBollards",
+              "ctrl":{
+                    "speedMin":1,
+                    "speedMax":10
+                }
+            },
+            "lights":{
+              "mode":"TriDir"
+            }
+          }},
+
+          "fore":{ "preset":"Empty","params":{}},
+        },
+
+        "anal":{
+          "bind":[
+            {"ch":0,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":0}},
+            {"ch":1,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":1}},
+            {"ch":2,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":2}},
+            {"ch":3,"trans":null,"tar":{"obj":"back.cs.gridBox","ch":0}}
+          ]
+        },
+
+        "vary":{
+          "channels":[
+            {"tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color","val_type":"color"},
+            {"tar":{"obj":"back","prop":"context.colA.name"},"vals":"color","val_type":"color"},
+            {"tar":{"obj":"mid","prop":"context.texA.name"},"val_type":"ImageSequence","vals":["PattAbst1","Cyber Noise","Cyber Abstract","Cyber Code"]},
+            {"tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
+            
+            {"tar":{"obj":"mid.cs.context.cs.colA","func":"shift"}},
+            {"tar":{"obj":"back.cs.context.cs.colA","func":"shift"}},
+          
+            {"tar":{"obj":"mid","prop":"GP.space"},"val_type":"space","vals":["_B_SpaceBollards","_B_SpaceBollards2"]}
+            
+          ]
+        }
+      }
+      
+
+
+
+    }
+  }
+}
+
+
+
+

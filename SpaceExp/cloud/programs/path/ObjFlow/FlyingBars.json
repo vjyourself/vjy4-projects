@@ -1,0 +1,95 @@
+
+{
+	"data":{
+		"name":"FlyingBars",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"FlyingBars":{
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"streams":[
+				//MUSIC Waves	
+					{"cn":"StreamPipe","name":"Multi Pipe","elemLength":200,
+					"context":{"color":"","texture":""},
+					"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":160,"height":220,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":0,"twist0":["Stepper",[0,30,60,90,120,150,180,210,240,270,300,330]]},"mesh":{"mat":"MusicWaveADD"}},"active":true
+					},
+					
+					{"cn":"StreamPipe","name":"Multi Pipe","elemLength":200,
+					"context":{"color":"","texture":""},
+					"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":320,"height":220,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":0,"twist0":["Stepper",[90,120,150,180,210,240,270,300,330,0,30,60]]},"mesh":{"mat":"MusicWaveADD"}},"active":true
+					},
+				{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":160,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Bar3",
+							
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotX":1,
+							"trans":{
+								"scale":["Stepper",[1,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":60,"alphaStep":100}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					},
+
+					{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":120,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Bar3",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotX":1,
+							"trans":{
+								"scale":["Stepper",[2,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":300,"alphaStep":50}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					},
+
+					{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":200,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Bar3",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotX":1,
+							"trans":{
+								"scale":["Stepper",[2,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":600,"alphaStep":137}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					}
+				]
+			}
+		}
+	}
+}

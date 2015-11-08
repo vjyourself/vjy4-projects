@@ -1,0 +1,34 @@
+{
+	"data":{
+		"name":"MusicDoors",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MusicDoors":{
+			"streams":[
+				{
+					"cn":"StreamObjs",
+					"prgObj":{
+						"cn":"SimpleObj",
+						"geom":"geomSpike",
+						"mat":"mc1",
+						"trans":{
+							"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":100,"alphaStep":150}]			
+						},
+						"logic":{"active":["Array",[{"cn":"CtrlScale","p":{"target":"spike","ctrl":1}}]]}
+					},
+					"gap":100,
+					"rotate":false
+				}
+			],
+		
+			"params":{	
+				"pathFunc":"Random",
+				"pathCurveLength":200,
+				"cycleLength":2400
+			}
+			}
+		}
+	}
+}

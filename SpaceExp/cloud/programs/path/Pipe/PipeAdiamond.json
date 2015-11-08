@@ -1,0 +1,72 @@
+
+{
+	"data":{
+		"name":"PipeAdiamond",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"PipeAdiamond":{
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				
+				"streams":[
+					
+			
+					{
+						"cn":"StreamPipe",
+"name":"Pipe",
+						"elemLength":800,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":120,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"curve":0,
+								"fillPerc":1,
+								"curve0":1,
+								"curve1":1
+							},
+						"mesh":{"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}]}
+						}
+					},
+					
+					
+				
+					{
+						"cn":"StreamObjs",
+				"name":"Small Diamonds",	
+						"prgObj":{
+						 	"cn":"MultiObjs",
+							"diamond":{"vef":"vefDiamond_S","wf":{"color":["Cloud","CCol",{"q":"A"}]},"mat":"MCBWADD"},
+							"trans":{
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":115,"alphaStep":150}]
+							}
+						},
+						"gap":60
+					},
+					
+					
+					{
+						"cn":"StreamObjs",
+					"name":"Big Diamonds",
+						"prgObj":{
+						 	"cn":"MultiObjs",
+							"diamond":{"vef":"vefDiamond","wf":{"color":0xffffff},"mat":{"color":["Cloud","CCol",{"q":"A"}],"blend":"ADD"}},
+							"trans":{
+								"x":0,
+								"y":0,
+								"rotationX":["Stepper",[0,60,120,180,240,300]]
+							}
+						},
+						"gap":2000
+					}
+				]
+			}		}
+	}
+}

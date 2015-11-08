@@ -1,0 +1,49 @@
+{
+    "sys":{
+
+		//MUSIC SOURCE : Mic / MP3 *****************************************************
+		"music":{},
+
+
+		//INPUT OUTPUT DEVICES ***************************************************
+		"io":{
+			"lastActiveBase":"touch",
+
+	    	"auto":{"enabled":false,"timeout":2400},
+	    	"mkb":{"enabled":false},
+	    	"touch":{"enabled":true},
+	    	"gamepad":{"enabled":true},
+	    	
+	    	"midi":{"enabled":false},
+	    	"arduino":{"enabled":false}
+	 	},
+
+		//SCREEN SETTINGS **************************************************************
+		"screen":{
+			"In3D":{
+				// none / split / VR
+				"mode":"none",
+				"mode_split":{
+					// horizontal / vertical
+					"split":"horizontal",
+					"eyeDistance":10
+				}
+			},
+
+	    	"fullscreen":true,
+	    	"browser":false,
+	    	"mouse":true,
+	    	//"logo":false,
+	    	//"logoX":"left",
+	    	//"logoY":"top",
+	    	//"fpsmeter":false,
+	    
+	    	"gui":{
+	    		"console":false,
+	    		"consoleMini":false
+	    	},
+	    	"landing":true
+	    	//"saveImage":{"url":"http://localhost/cloud/save/saveImage.php?folder=vjy"}
+	    }
+	}
+}
