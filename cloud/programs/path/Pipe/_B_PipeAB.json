@@ -1,0 +1,107 @@
+{
+	"data":{
+		"name":"_B_PipeAB",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"_B_PipeAB":{
+				"n":"Pipe",
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				"bind":[
+					{"ch":0,"tar":"Pipe","prop":"scale","v0":1,"v1":0},
+					{"ch":1,"tar":"spikeSide","prop":"scale","v0":0,"v1":3},
+					{"ch":2,"tar":"Pipe","prop":"texDistro","v0":0,"v1":1},
+					{"ch":2,"tar":"objRings","prop":"scale","v0":1,"v1":2},
+					{"ch":3,"tar":"objSigns","prop":"rotY","v0":0,"v1":24}
+					/*
+			
+			{ch:3,tar:"Pipe",prop:"texShift",v0:0,v1:2},
+			{ch:3,tar:"Pipe",prop:"texZoom",v0:1,v1:3},
+			{ch:3,tar:"Objs",prop:"scale",v0:1,v1:0},
+*/
+			],
+				"streams":[
+					
+					//PIPE 
+					{
+						"cn":"StreamPipe",
+						"elemLength":800,
+						"context":{"color":"","texture":"A"},
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":120,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"curve":0,
+								"fillPerc":1,
+								"curve0":1,
+								"curve1":1
+							},
+						"mesh":{"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}]}
+						}
+					},
+					
+					
+					//OBJ Rings
+					{
+						"context":{"color":"","texture":"A"},
+						"cn":"StreamObjs",
+						"id":"objRings",
+						"prgPos":{"x":0,"y":0},
+						
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"geomTorus3",
+							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}]
+						},
+						"rotateZ":0.1,
+						"gap":800
+					},
+					
+					//OBJ Sign
+			
+					{
+						"id":"objSigns",
+						"cn":"StreamObjs",
+						"prgPos":{"x":0,"y":0},
+						"context":{"color":"","texture":"B"},
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"Plane",
+							"mat":["Cloud","C3D",{"q":"multiB"},{"delay":1,"start":0,"startRnd":false}]
+						},
+						"rotateZ":0.2,
+						"gap":1600
+					},
+					
+					//SPIKES Sides
+					{	
+						"id":"spikeSide",
+						"context":{"color":"","texture":""},
+						"cn":"StreamObjs",
+					"gap":100,
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"geomCyl",
+						//"mat":["Cloud","C3D",{"q":"StreetArtEastLondon"},{"delay":6,"startRnd":true}],
+						"mat":{"color":"#ffffff"},
+						"trans":{
+							
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":100,"alphaStep":197}],
+								"scale":2,
+								"scaleY":4
+						}
+					}
+					}
+				]
+			}
+		}
+	}
+}

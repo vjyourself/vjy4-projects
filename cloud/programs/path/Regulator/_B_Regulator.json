@@ -1,0 +1,96 @@
+
+{
+	"data":{
+		"name":"_B_Regulator",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"_B_Regulator":{
+				"n":"Reg A",
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				"bind":[
+					{"ch":0,"tar":"all","prop":"scale0","v0":1,"v1":0},
+					{"ch":1,"tar":"all","prop":"scale1","v0":1,"v1":0},
+					{"ch":2,"tar":"pipeTex","prop":"texDistro","v0":0,"v1":1},
+					{"ch":3,"tar":"objBar","prop":"scale","v0":0,"v1":1.2},
+					{"ch":3,"tar":"Pipe","prop":"texShift","v0":0,"v1":2},
+					{"ch":3,"tar":"Pipe","prop":"texZoom","v0":1,"v1":3}
+					
+				],
+				"streams":[
+					
+					//Pillars 
+					{	
+						"context":{"color":"","texture":""},
+						"cn":"StreamObjs",
+						"id":"objBar",
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"Bar",
+						"mat":{"color":"#ffffff"},
+						//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+						"trans":{
+							"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":120,"alphaStep":90}],
+							"scale":1
+						}
+					},
+					
+					"gap":60,
+					"rotate":false
+					},
+					
+					//PIPE
+					{
+						"cn":"StreamPipe",
+						"id":"pipeTex",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":100,
+								"height":120,
+								"circSeg":4,
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":["Stepper",[0,90]]
+							},
+						"mesh":{
+							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}]
+							}
+						//"wf_visible":["Stepper",[true,false],{"delay":3}],
+						//"mesh_visible":["Stepper",[false,true],{"delay":3}]
+						}
+					},
+					
+					//PIPE
+					{
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":60,
+								"height":120,
+								"circSeg":["Stepper",[5,4,3],{"delay":3}],
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":0
+							},
+						"wf":{"color":"#ffffff"}
+						//"wf_visible":["Stepper",[true,false],{"delay":3}],
+						//"mesh_visible":["Stepper",[false,true],{"delay":3}]
+						}
+					},
+				]
+			}		}
+	}
+}

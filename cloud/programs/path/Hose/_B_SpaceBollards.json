@@ -1,0 +1,166 @@
+
+{
+	"data":{
+		"name":"_B_SpaceBollards",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"_B_SpaceBollards":{
+				"n":"Quad",
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				"bind":[
+					{"ch":0,"tar":"objRing","prop":"scale","v0":1,"v1":3},
+					{"ch":1,"tar":"pipeWF","prop":"scale","v0":1,"v1":0},
+					{"ch":1,"tar":"pipeHose","prop":"scale","v0":0,"v1":1},
+					{"ch":2,"tar":"objSpike","prop":"scale","v0":0,"v1":1},
+					{"ch":2,"tar":"objBollard","prop":"scale","v0":1,"v1":0}
+				],
+				"streams":[
+					//WF PIPE
+					{
+						"id":"pipeWF","name":"WF Pipe",
+						"context":{"color":"A","texture":""},
+						"cn":"StreamPipe",
+						"context":{},
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":240,
+								"height":120,
+								"circSeg":["Stepper",[5,4,3],{"delay":3}],
+								"circSegShift":0.5,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":0
+								},
+							"wf":{"color":16777215}}
+					},
+					{
+						"cn":"StreamPipe",
+						"id":"pipeHose",
+						"elemLength":800,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+							
+								"circSeg":12,
+								"radius":420,
+								"height":420,
+								"circSegShift":0,
+								"curve":0,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"linesH":true,
+								"linesCirc":false,
+								
+								"twist0":0 //["Stepper",[0,30,60,90,120,150,180,210,240,270,300,330]]
+							},
+							"wf":{"color":0xaaaaaa,"thickness":1}
+						//"wf_visible":["Stepper",[true,false],{"delay":3}],
+						//"mesh_visible":["Stepper",[false,true],{"delay":3}]
+						}
+					},
+					//Spikes
+					{	
+						"id":"objSpike","name":"Spikes",
+						"context":{"color":"","texture":"A"},
+	
+						"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"geomSpike",
+						"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}],
+						//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+						"trans":{
+							"x":["Stepper",[140,-140]],
+							"y":["Stepper",[140,140,-140,-140]],
+							"rotationZ":["Stepper",[135,-135,45,315]],
+							"scale":1.8
+						},
+						"rotZ":0
+					},
+					
+					"gap":120,
+					},
+
+					//Bollards
+					{	
+
+						"id":"objBollard","name":"Bollards",
+						"context":{"color":"","texture":"A"},
+						"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"geomOcta",
+						"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}],
+						//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+						"trans":{
+							"x":["Stepper",[160,-160]],
+							"y":["Stepper",[160,160,-160,-160]],
+							"z":0,
+							"scale":10
+						},
+						"rotY":["Stepper",[1,-1]],
+						"rotZ":0.5
+					},
+					
+					"gap":120,
+					},
+
+					//OBJ Rings
+					{
+
+						"id":"objRing","name":"Rings",
+						"context":{"color":"","texture":""},
+						"cn":"StreamObjs",
+						"prgPos":{"x":0,"y":0},
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":["Stepper",["geomTorus5","geomTorus4"]],
+							"mat":{"color":"#ffffff"}				
+						},
+					
+						"gap":1200,
+					},
+
+					//PIPE Music Wave
+					/*
+					{
+						"id":"pipeMusic","name":"Music Pipe",
+						"context":{"color":"","texture":""},
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":100,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":["Stepper",[30,91,150,3,4]],
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":["Stepper",[0,30,60,90,120,150,180,210,240,270,300,330]]
+							},
+						"mesh":{"mat":"MusicWaveADD"}
+						}
+					},*/
+
+					//Hose
+					/*
+					*/
+				]
+			}		}
+	}
+}

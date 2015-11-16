@@ -1,0 +1,74 @@
+
+{
+	"data":{
+		"name":"SpaceBollardsInHose",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"SpaceBollardsInHose":{
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				
+				"streams":[
+					//Hose
+					{
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":100,
+								"height":100,
+								"circSeg":8,
+								"circSegShift":0.5,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":0
+							},
+							"wf":{"color":0xaaaaaa,"thickness":1}
+						//"wf_visible":["Stepper",[true,false],{"delay":3}],
+						//"mesh_visible":["Stepper",[false,true],{"delay":3}]
+						}
+					},
+					
+					//Bollards
+					{	"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"geomOcta",
+						"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}],
+						//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+						"trans":{
+							"x":["Stepper",[80,-80]],
+							"y":["Stepper",[80,80,-80,-80]],
+							"z":0,
+							"scale":10
+						}
+					},
+					
+					"gap":240,
+					"rotate":true
+					},
+					//OBJ Rings
+					{
+						"cn":"StreamObjs",
+						"prgPos":{"x":0,"y":0},
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":["Stepper",["geomTorus5","geomTorus4"]],
+							"mat":"MusicColorBlack"					
+						},
+					
+						"gap":1600
+					}
+				]
+			}		}
+	}
+}
