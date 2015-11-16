@@ -13,7 +13,7 @@
 						"offline_path":"cloud/"
 					},
 					"cloud2":{
-						"online":true,
+						"online":false,
 						"online_path":"http://vjycloud-50504.onmodulus.net/",
 						//"online_path":"http://localhost:3000/",
 						"offline_path":"cloud2/"

@@ -5,8 +5,10 @@
 	    		"enabled":true,
 	    		"device":{
 	    			"n":"APCmini",
+	    			"litBackground":true,
+	    			"selectedColor":1,
 	    			"digi":[
-		    			{"t":"index","col":1,"e":[56,48,40,32,24,16,8,0],"command":["globalVary","setIndex",[8]]},
+		    			{"t":"index","col":5,"e":[56,48,40,32,24,16,8,0],"command":["globalVary","setIndex",[8]]},
 		    			{"t":"index","col":3,"e":[57,49,41,33,25,17,9,1,58,50,42,34,26,18,10,2],"command":["globalVary","setIndex",[2]]},
 		    			{"t":"index","col":5,"e":[59,51,43,35,27,19,11,3],"command":["globalVary","setIndex",[0]]},
 		    			{"t":"index","col":3,"e":[60,52,44,36,28,20,12,4,61,53,45,37,29,21,13,5],"command":["globalVary","setIndex",[1]]},

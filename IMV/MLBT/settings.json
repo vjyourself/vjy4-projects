@@ -62,14 +62,28 @@
 
 
 		//INPUT DEVICES for MOVEMENT ***************************************************
-		"input":{
-			"def":"gamepad",
-	    	"active_timeout":2400,
+		"io":{
+			"lastActiveBase":"gamepad",
 
-	    	"gamepad":{"enabled":true},
+	    	"auto":{"enabled":false,"timeout":2400},
 	    	"mkb":{"enabled":false},
 	    	"touch":{"enabled":false},
-	    	"auto":{"enabled":false}
+	    	"gamepad":{"enabled":true},
+	    	"midi":{
+	    		"enabled":false,
+	    		"connection":{
+	    			"type":"MIDI2.jar",
+					"url":"127.0.0.1",
+					"port":10000
+	    		},
+	    		"device":{}
+	    	},
+	    	"arduino":{
+	    		"enabled":false,
+	    		"via":"ethernet",
+	    		"ip":"192.168.2.66",
+	    		"map":["A","B","X","Y","LB","RB","LT","RT"]
+	    	}
 	 	},
 
 

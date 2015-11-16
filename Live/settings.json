@@ -40,7 +40,7 @@
 		"screen":{
 			"In3D":{
 				// none / split / VR
-				"mode":"split",
+				"mode":"none",
 				"mode_split":{
 					// horizontal / vertical
 					"split":"horizontal",

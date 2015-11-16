@@ -14,7 +14,8 @@
 //CLOUD 2 (Admin) Packages *************************************************************************
 "load2":[
    // "export/world4/Test" 
-    "export/world4/mimikrifirst"
+    //"export/world4/mimikrifirst"
+    "export/world4/JustFab"
 ],
 
 //CLOUD 1 Packages ********************************************************************

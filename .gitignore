@@ -7,6 +7,12 @@
 cloud2/
 /*/cloud/
 /*/*/cloud/
+*/cloud/
+*/*/cloud/
+/*/cloud
+/*/*/cloud
+*/cloud
+*/*/cloud
 Thumbs.db
 .DS_Store
 MIDI2.jar

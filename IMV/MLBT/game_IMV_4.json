@@ -115,7 +115,7 @@
              //   {"beat":"11.9","comm":["fore.cs.overlay","trig",["TextDANGER"]]},
                 {"beat":"11.13","comm":["fore.cs.overlay","trig",["TextBREAK"]]}, 
 
-                {"beat":"11.1","path_synch":{"pixelShift":200},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
+                {"beat":"12.1","path_synch":{"pixelShift":200},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
             
              //   {"beat":"12.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
              //   {"beat":"12.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
