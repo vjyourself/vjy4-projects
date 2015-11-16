@@ -1,9 +1,12 @@
 *.exe
 *.apk
 *.ipa
+*.fla
 /*/*.swf
 /IMV/*/*.swf
 cloud2/
+/*/cloud/
+/*/*/cloud/
 Thumbs.db
 .DS_Store
 MIDI2.jar
