@@ -1,10 +1,11 @@
+*.mp3
 *.exe
 *.apk
 *.ipa
 *.fla
 /*/*.swf
 /IMV/*/*.swf
-cloud2/
+cloud1/
 /*/cloud/
 /*/*/cloud/
 */cloud/

@@ -32,6 +32,13 @@
 			"rule":"over"
 		},
 		
+		//CLOUD 1
+		{
+			"url":"[player]cloud1.json",
+			"include":"data",
+			"rule":"over"
+		},
+
 		//CLOUD
 		{
 			"url":"[player]cloud.json",

@@ -1,0 +1,161 @@
+
+{
+	"data":{
+		"name":"MIDI1",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MIDI1":{
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				
+				"streams":[
+					
+					//Obj Primitives
+					{	
+						"id":"objPrim","name":"Primitives",
+						"context":{"color":"","texture":"A"},
+						"cn":"StreamMIDI",
+						"shape":"line", // line, circle 					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						//"geom":["Stepper",["geomOcta","geomCube","geomSphere","geomCyl"]],
+						"geom":"geomSphere",
+						//"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}],
+						"mat":{"color":"#ffffff"},
+						"trans":{
+							"x":0,
+							"y":-60,
+							"z":0,
+							"scale":4
+						},
+						"logic":{
+							"active":[[],[{
+									"cn":"StartHigh",
+									"p":{
+										"target":"obj3D",
+										"scale0":42,
+										"scale1":4,
+										"length":30
+									}
+								}]
+							]
+						}
+					},
+					
+					"gap":200,
+					"rotate":false
+					},
+					
+					
+					{
+						"cn":"StreamObjs",
+						"gap":2400,
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"geomCyl",
+							"mat":"MusicColorBlack",
+							"gap":["Stepper",[0,0,0,2400]],
+							"trans":{
+								"x":["Stepper",[300,300,-300,-300]],
+								"y":["Stepper",[300,-300,300,-300]],
+								"rotationZ":["Stepper",[135,45,-135,-45]],
+								"scale":6
+							}
+						},
+					},
+					/*
+					{	
+
+						"cn":"StreamObjs",
+					"gap":300,
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"geomCyl",
+						//"mat":["Cloud","C3D",{"q":"StreetArtEastLondon"},{"delay":6,"startRnd":true}],
+						"mat":"MusicColorBlack",
+						"trans":{
+							"x":["Stepper",[260,-260]],
+							"y":0,
+							"rotationZ":["Stepper",[90,-90]],
+							"scale":3,
+						}
+						},
+					},
+					*/
+					//Obj Lights
+					/*
+					{	"cn":"StreamObjs",
+					
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"geomCyl",
+						//"mat":["Cloud","C3D",{"q":"StreetArtEastLondon"},{"delay":6,"startRnd":true}],
+						"mat":"MusicColorBlack",
+						"trans":{
+							"x":["RandomSides",{"yes":1200,"no":100}],
+							"y":-500,
+							"z":0,
+							"scale":3,
+							"scaleY":5
+						}
+					},
+					
+					"gap":100,
+					"rotate":false
+					},*/
+					
+					//Pipe Wire
+					{
+						"id":"pipeWF","name":"WF Pipe",
+						//"context":{"color":"A","texture":""},
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":300,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":1,
+								"curve1":1,
+								"twist0":90,
+								"flat":false,
+								"linesCirc":false,
+							},
+						"wf":{"color":0x999999}
+						}
+					},
+					
+					//Pipe Music Wave
+					{
+						"id":"pipeMusic","name":"Music Pipe",
+						"context":{"color":"","texture":""},
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":300,
+								"height":300,
+								"circSeg":36,
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":1,
+								"curve1":1,
+								"twist0":90
+							},
+						"mesh":{"mat":"MusicWaveADD2"}
+						}
+					},
+				]
+			}		}
+	}
+}

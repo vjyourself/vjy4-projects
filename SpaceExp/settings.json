@@ -20,6 +20,7 @@
 
 		//SCREEN SETTINGS **************************************************************
 		"screen":{
+			"fps":30,
 			"In3D":{
 				// none / split / VR
 				"mode":"none",
@@ -30,7 +31,7 @@
 				}
 			},
 
-	    	"fullscreen":true,
+	    	"fullscreen":false,
 	    	"browser":false,
 	    	"mouse":true,
 	    	//"logo":false,

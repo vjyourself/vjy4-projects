@@ -7,18 +7,19 @@
 			"data":{
 				"init":{
 					"medium":"SA",
-					"cloud1":{
-						"online":false,
-						"online_path":"http://localhost/cloud/",
-						"offline_path":"cloud/"
-					},
-					"cloud2":{
+					"cloud":{
 						"online":false,
 						"online_path":"http://vjycloud-50504.onmodulus.net/",
 						//"online_path":"http://localhost:3000/",
-						"offline_path":"cloud2/"
+						"offline_path":"cloud/"
 					},
-					"start_file":"[player]start.json",
+					"cloud1":{
+						"online":false,
+						"online_path":"http://localhost/cloud/",
+						"offline_path":"cloud1/"
+					},
+					
+					"startFile":"[player]start.json",
 				}
 
 			}

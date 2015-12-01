@@ -16,9 +16,9 @@
 	<text xml:lang="ja">Japanese App name goes here</text>
 	</name>
 -->
-<application xmlns="http://ns.adobe.com/air/application/17.0">
+<application xmlns="http://ns.adobe.com/air/application/19.0">
   <id>com.vjyourself.spaceexp</id>
-  <versionNumber>28</versionNumber>
+  <versionNumber>33</versionNumber>
   <filename>Space Exp</filename>
   <description/>
   <name>Space Exp</name>
@@ -55,14 +55,18 @@
     
     
     
-    <image29x29>icons/icon29.png</image29x29>
-    <image57x57>icons/icon57.png</image57x57>
-    <image512x512>icons/icon512.png</image512x512>
+    
+    
+    
+    
+    
+    
+    
+    
+    <image36x36>icons/icon36.png</image36x36>
     <image48x48>icons/icon48.png</image48x48>
     <image72x72>icons/icon72.png</image72x72>
-    <image144x144>icons/icon144.png</image144x144>
-    <image1024x1024>icons/icon1024.png</image1024x1024>
-    <image76x76>icons/icon76.png</image76x76>
+    <image96x96>icons/icon96.png</image96x96>
   </icon>
   <customUpdateUI>false</customUpdateUI>
   <allowBrowserInvocation>false</allowBrowserInvocation>

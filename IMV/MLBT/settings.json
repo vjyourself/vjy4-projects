@@ -26,7 +26,7 @@
 		"music":{
 	    	//"play":{"src":"Mic"}
 		    "autoStart":false,
-		    "play":{"url":"cloud/music/01. Major Lazer - Be Together (feat. Wild Belle).mp3","loop":true},
+		    "play":{"url":"music/01. Major Lazer - Be Together (feat. Wild Belle).mp3","loop":true},
 		    "meta":{
 		    	"wave_gain":1,"peak_gain":1,"damping_gain":1,"damping_mul":0.7,
 		    	"rhythm":{
@@ -89,6 +89,7 @@
 
 		//SCREEN SETTINGS **************************************************************
 		"screen":{
+			"fps":60,
 			"In3D":{
 				// none / split / VR
 				"mode":"none",
@@ -102,7 +103,7 @@
 	    	"fullscreen":false,
 	    	"browser":false,
 	    	"mouse":false,
-	    	"stats":true,
+	    	"stats":false,
 	    
 	    	"gui":{
 	    		"console":false,

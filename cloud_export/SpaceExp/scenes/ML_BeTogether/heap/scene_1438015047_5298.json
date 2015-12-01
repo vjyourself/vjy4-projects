@@ -1,0 +1,226 @@
+{
+   "vary": {
+      "channels": [
+         {
+            "tar": {
+               "prop": "GP.space",
+               "obj": "mid"
+            },
+            "nested": true,
+            "vals": "spaceG"
+         },
+         {
+            "tar": {
+               "prop": "context.texA.name",
+               "obj": "mid"
+            },
+            "vals": "texture"
+         },
+         {
+            "link": true,
+            "ch": 0,
+            "lev": 1
+         },
+         {
+            "tar": {
+               "func": "trigRefresh",
+               "obj": "back.cs.context.cs.texA"
+            }
+         },
+         {
+            "tar": {
+               "prop": "type",
+               "obj": "filter"
+            },
+            "vals": [
+               "Normal",
+               "Shine1",
+               "Shine2",
+               "Shine3"
+            ]
+         },
+         {
+            "tar": {
+               "prop": "context.colA.name",
+               "obj": "mid"
+            },
+            "vals": "color"
+         },
+         {
+            "tar": {
+               "prop": "lights.mode",
+               "obj": "mid"
+            },
+            "vals": "light"
+         },
+         {
+            "tar": {
+               "prop": "context.colA.name",
+               "obj": "back"
+            },
+            "vals": "color"
+         }
+      ]
+   },
+   "name": "Start",
+   "anal": {
+      "bind": [
+         {
+            "ch": 0,
+            "trans": null,
+            "tar": {
+               "ch": 0,
+               "obj": "mid.cs.GP.anal"
+            }
+         },
+         {
+            "ch": 1,
+            "trans": null,
+            "tar": {
+               "ch": 1,
+               "obj": "mid.cs.GP.anal"
+            }
+         },
+         {
+            "ch": 2,
+            "trans": null,
+            "tar": {
+               "ch": 2,
+               "obj": "mid.cs.GP.anal"
+            }
+         },
+         {
+            "ch": 3,
+            "trans": null,
+            "tar": {
+               "ch": 3,
+               "obj": "mid.cs.GP.anal"
+            }
+         }
+      ]
+   },
+   "path": "ML_BeTogether.Start",
+   "listed": true,
+   "state": {
+      "fore": {
+         "preset": "ForeOverlayAniSeq",
+         "params": {
+            "overlay": {
+               "defLength": 1,
+               "channels": [
+                  {
+                     "scale": "stretch",
+                     "type": "timeline",
+                     "width": 960,
+                     "cn": "TextYOURS",
+                     "height": 540
+                  },
+                  {
+                     "scale": "stretch",
+                     "type": "timeline",
+                     "width": 960,
+                     "cn": "TextSOMUCH",
+                     "height": 540
+                  },
+                  {
+                     "scale": "stretch",
+                     "type": "timeline",
+                     "width": 960,
+                     "cn": "TextFREEDOM",
+                     "height": 540
+                  },
+                  {
+                     "scale": "stretch",
+                     "type": "timeline",
+                     "width": 960,
+                     "cn": "TextDANGER",
+                     "height": 540
+                  },
+                  {
+                     "scale": "stretch",
+                     "type": "timeline",
+                     "width": 960,
+                     "cn": "TextALIGN",
+                     "height": 540
+                  },
+                  {
+                     "scale": "stretch",
+                     "type": "timeline",
+                     "width": 960,
+                     "cn": "TextCOLLIDE",
+                     "height": 540
+                  },
+                  {
+                     "scale": "stretch",
+                     "type": "timeline",
+                     "width": 960,
+                     "cn": "TextBETOGETHER",
+                     "height": 540
+                  },
+                  {
+                     "scale": "stretch",
+                     "type": "timeline",
+                     "width": 960,
+                     "cn": "TextALLTOGETHER",
+                     "height": 540
+                  },
+                  {
+                     "scale": "stretch",
+                     "type": "timeline",
+                     "width": 960,
+                     "cn": "TextDREAMER",
+                     "height": 540
+                  }
+               ]
+            }
+         }
+      },
+      "back": {
+         "preset": "BackBoxGrid",
+         "params": {
+            "lights": {
+               "mode": "TriDir"
+            },
+            "context": {
+               "texA": {
+                  "name": "stars",
+                  "delay": 1
+               },
+               "colA": {
+                  "name": "Fire",
+                  "delay": 1
+               }
+            }
+         }
+      },
+      "mid": {
+         "preset": "PathSpace",
+         "params": {
+            "lights": {
+               "mode": "TriRot_Norm"
+            },
+            "GP": {
+               "space": "Regulator2",
+               "ctrl": {
+                  "speedMin": 1,
+                  "speedMax": 10
+               }
+            },
+            "context": {
+               "texA": {
+                  "name": "BW_B",
+                  "delay": 6
+               },
+               "texB": {
+                  "name": "BW_B",
+                  "delay": 6
+               },
+               "colA": {
+                  "name": "PinkOrange",
+                  "delay": 1
+               }
+            }
+         }
+      }
+   }
+}

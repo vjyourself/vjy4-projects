@@ -18,17 +18,19 @@
             
             {"n":"sceneVary","cn":"vjyourself4.games.SceneVary"},
 
-            {"n":"globalVary","cn":"vjyourself4.games.SceneVary",
+             {"n":"globalVary","cn":"vjyourself4.games.SceneVary",
               "channels":[
-                {"tar":{"obj":"mid","prop":"GP.space"},"nested":true,"vals":"spaceG"},
-                {"tar":{"obj":"mid","prop":"context.texA.name"},"vals":"texture"},
-                {"link":true,"ch":0,"lev":1},
-                {"tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
+                {"n":"Space","n2":"Space Grp","tar":{"obj":"mid","prop":"GP.space"},"nested":true,"vals":"spaceG"},
+                {"n":"Tex A","tar":{"obj":"mid","prop":"context.texA.name"},"vals":"texture"},
+                {"n":"Space","link":true,"ch":0,"lev":1},
+                {"n":"Back Tex","tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
 
-                {"tar":{"obj":"filter","prop":"type"},"vals":["Normal","Shine1","Shine2","Shine3"]},
-                {"tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color"},
-                {"tar":{"obj":"mid","prop":"lights.mode"},"vals":"light"},
-                {"tar":{"obj":"back","prop":"context.colA.name"},"vals":"color"}
+                
+                {"n":"Back Col","tar":{"obj":"back","prop":"context.colA.name"},"vals":"color"},
+                {"n":"Filter","tar":{"obj":"filter","prop":"type"},"vals":["Normal","Shine1","Shine2","Shine3"]},
+                {"n":"Light","tar":{"obj":"mid","prop":"lights.mode"},"vals":"light"},
+                {"n":"Mid Col","tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color"},
+                {"n":"Path","tar":{"obj":"mid","prop":"GP.path.type"},"vals":"path"}
 
               ]
               },
@@ -39,16 +41,18 @@
             ]},
 
            // {"n":"dynoScene","cn":"vjyourself4.cloud.DynoScene"},
-
+           {"n":"reloadCloud","cn":"vjyourself4.cloud.ReloadCloud"},
             {"n":"ctrlKey","cn":"vjyourself4.ctrl.CtrlKey",
               "map":{
                 "1":{"comm":["sys.music","start",[]]},
                 "2":{"comm":["sys.music","pause",[]]},
-                "3":{"comm":["dynoScene","saveToHeap",[]]},
-                "4":{"comm":["bindRooter","next",["vary"]]},
-                "5":{"comm":["debugConsole","show",[]]},
-                "6":{"comm":["game","show",["overlayMusic"]]},
-                "7":{"comm":["game","show",["back"]]}
+              //  "3":{"comm":["dynoScene","saveToHeap",[]]},
+              //  "4":{"comm":["bindRooter","next",["vary"]]},
+               // "5":{"comm":["debugConsole","show",[]]},
+               "6":{"comm":["reloadCloud","reloadCurrSpace",[]]},
+               "7":{"comm":["game","show",["overlayMusic"]]},
+            //    "7":{"comm":["game","show",["back"]]},
+            //    "8":{"comm":["globalVary","next",[3]]}
               }
             },
             
@@ -82,7 +86,8 @@
               "pre":0,
               "defLength":3,
               "frames":[
-                {"time":"0:0","comm":["mid.cs.GP","setParams",[{"restart":true,"space":"MLBT_EJ2"}]]}, 
+                {"time":"0:0","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]}, 
+               {"time":"0:0","comm":["mid.cs.GP","setParams",[{"restart":true,"space":"MLBT_EJ2"}]]}, 
               
                 {"beat":"3.8","comm":["fore.cs.overlay","trig",["TextYOURS"]]},
                 {"beat":"3.12","comm":["fore.cs.overlay","trig",["TextYOURS"]]},
@@ -90,11 +95,14 @@
                 {"beat":"4.8","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
                 {"beat":"4.12","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
 
-               
+               {"beat":"5.1","path_synch":{"pixelShift":300},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RunningUp"}]]}, 
+             
                // {"beat":"5.4","comm":["fore.cs.overlay","trig",["TextFREEDOM"]]},
-               // {"beat":"5.9","comm":["fore.cs.overlay","trig",["TextDANGER"]]},
+                {"beat":"5.9","comm":["fore.cs.overlay","trig",["TextDANGER"]]},
                 {"beat":"5.13","comm":["fore.cs.overlay","trig",["TextRACE"]]}, 
-                {"beat":"6.1","path_synch":{"pixelShift":400},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
+                 {"beat":"6.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]}, 
+               
+                {"beat":"6.1","path_synch":{"pixelShift":0},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
              
                 
               // {"beat":"6.3","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
@@ -102,7 +110,7 @@
                 {"beat":"6.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
                 
                 {"beat":"7.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
-                
+                {"beat":"9.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
                 {"beat":"9.1","path_synch":{"pixelShift":0},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_EJ2"}]]}, 
 
                // {"beat":"9.3","comm":["fore.cs.overlay","trig",["TextDREAMER"]]},
@@ -113,16 +121,21 @@
 
              //   {"beat":"11.4","comm":["fore.cs.overlay","trig",["TextFREEDOM"]]},
              //   {"beat":"11.9","comm":["fore.cs.overlay","trig",["TextDANGER"]]},
+
+                {"beat":"11.1","path_synch":{"pixelShift":400},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RunningUp"}]]}, 
+             
                 {"beat":"11.13","comm":["fore.cs.overlay","trig",["TextBREAK"]]}, 
 
-                {"beat":"12.1","path_synch":{"pixelShift":200},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
+                {"beat":"12.1","path_synch":{"pixelShift":0},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
             
              //   {"beat":"12.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
              //   {"beat":"12.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
                 {"beat":"12.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
 
                 {"beat":"13.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
-              
+                 {"beat":"14.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]},
+                 {"beat":"14.1","path_synch":{"pixelShift":200},"comm":["mid.cs.context","setParams",[{"texA":{"name":"Plus","refresh":false}}]]}, 
+               
                 {"beat":"14.1","path_synch":{"pixelShift":200},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RandomWires"}]]}, 
             
                 {"beat":"14.1","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
@@ -134,20 +147,23 @@
                // {"beat":"15.5","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
                 {"beat":"15.9","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
                // {"beat":"15.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
-                              
+               {"beat":"16.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
                 {"beat":"16.1","path_synch":{"pixelShift":50},"comm":["mid.cs.context","setParams",[{"texA":{"name":"Flower Power","refresh":false}}]]}, 
                 {"beat":"16.1","path_synch":{"pixelShift":50},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo2"}]]}, 
-
+                {"beat":"16.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},                 
+               
                 {"beat":"16.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
                 {"beat":"16.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
                 {"beat":"16.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
 
                 {"beat":"17.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
-              
+                
+                {"beat":"18.1","path_synch":{"pixelShift":50},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo1"}]]}, 
                 {"beat":"18.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
                 {"beat":"18.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
                 {"beat":"18.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
 
+                {"beat":"19.1","path_synch":{"pixelShift":50},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo0"}]]}, 
                 {"beat":"19.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
               
               ]

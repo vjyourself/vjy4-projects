@@ -14,12 +14,15 @@
 		"geomTorus2":{"cn":"away3d.primitives.TorusGeometry","pc":[80,30,8,16,false]},
 		"geomTorus3":{"cn":"away3d.primitives.TorusGeometry","pc":[120,40,8,16,false]},
 		"geomTorus4":{"cn":"away3d.primitives.TorusGeometry","pc":[130,20,16,16,false]},
+		"geomTorus4Hi":{"cn":"away3d.primitives.TorusGeometry","pc":[130,20,32,16,false]},
 		"geomTorus4Slim":{"cn":"away3d.primitives.TorusGeometry","pc":[130,10,16,16,false]},
 		"geomTorus5":{"cn":"away3d.primitives.TorusGeometry","pc":[140,20,4,16,false]},
 		"geomRect":{"cn":"away3d.primitives.CubeGeometry","pc":[5,5,20]},
 		"geomDoor1":{"cn":"vjyourself4.three.CubeGeometryDouble","pc":[120,240,200]},
 		
-		"geomSphere":{"cn":"away3d.primitives.SphereGeometry","pc":[10,10]},
+		"geomSphere":{"cn":"away3d.primitives.SphereGeometry","pc":[10,16,12]},
+		"geomSphereHi":{"cn":"away3d.primitives.SphereGeometry","pc":[10,32,12]},
+		
 		"geomCube":{"cn":"away3d.primitives.CubeGeometry","pc":[15,15,15]},
 		"geomTorusS":{"cn":"away3d.primitives.TorusGeometry","pc":[20,5,12,16,false]},
 		"geomCyl":{"cn":"away3d.primitives.CylinderGeometry","pc":[0,10,15,16,1,false,true,true]},
