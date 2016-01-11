@@ -2,7 +2,18 @@
     "sys":{
 
 		//MUSIC SOURCE : Mic / MP3 *****************************************************
-		"music":{},
+		"music":{
+		/*	"play":{"src":"Mic"},
+	    	"meta":{"wave_gain":2,"peak_gain":1,"damping_gain":1,"damping_mul":0.7,
+	    		"rhythm":{"tack":1000,"start":0},
+	    		"struct":{"struct":[]}
+	    	}*/
+	    	"meta":{
+	    		"wave":{"enabled":false},
+	    		"beat":{"enabled":false},
+	    		"timeline":{"enabled":false}
+	    	}
+		},
 
 
 		//INPUT OUTPUT DEVICES ***************************************************
@@ -15,12 +26,14 @@
 	    	"gamepad":{"enabled":true},
 	    	
 	    	"midi":{"enabled":false},
-	    	"arduino":{"enabled":false}
+	    	"arduino":{"enabled":false},
+
+	    	"disableBackButton":true
 	 	},
 
 		//SCREEN SETTINGS **************************************************************
 		"screen":{
-			"fps":30,
+			"fps":60,
 			"In3D":{
 				// none / split / VR
 				"mode":"none",
@@ -31,7 +44,7 @@
 				}
 			},
 
-	    	"fullscreen":false,
+	    	"fullscreen":true,
 	    	"browser":false,
 	    	"mouse":true,
 	    	//"logo":false,

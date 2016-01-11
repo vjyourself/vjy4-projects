@@ -1,0 +1,14 @@
+{
+    "data":{
+	"name":"MatGlobal",
+	"target":"R3D",
+	"path":"mat",
+	
+	"data":{
+                "mc":{"cn":"ColorMaterial","p":{"color":0xff0000}},
+                "mc1":{"cn":"ColorMaterial","p":{"color":0x6633aa,"alpha":0.7}},
+                "mc2":{"cn":"ColorMaterial","p":{"color":0xaa0066,"alpha":0.7}},
+                "mc3":{"cn":"ColorMaterial","p":{"color":0x993399,"alpha":1}}
+	}
+    }
+}

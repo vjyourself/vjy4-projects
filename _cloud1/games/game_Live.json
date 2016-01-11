@@ -1,0 +1,282 @@
+{ 
+    "game":{
+        "backgroundColor":"#000000",      
+        "elems":[
+
+            // --- Scene Struct ----------------------------------------------------------------------------
+            
+            {"n":"me","cn":"vjyourself4.games.Me","gui":{"display":false,"posX":"center","posY":"bottom"}  },
+            {"n":"back","cn":"vjyourself4.comp.CompManager"},
+            {"n":"mid","cn":"vjyourself4.comp.CompManager"},
+            {"n":"fore","cn":"vjyourself4.comp.CompManager"},
+            {"n":"filter","cn":"vjyourself4.games.CompFilters","active":true,"autoOff":{"active":false}},
+            {"n":"scene","cn":"vjyourself4.games.SceneManager",
+                "init":{
+                    "flags":{},
+                    "scene":"Discovery"
+                }
+            },
+            {"n":"ctrlCameraMode","cn":"vjyourself4.ctrl.CtrlCameraMode"},
+            {"n":"spaceProgress","cn":"vjyourself4.ctrl.SpaceProgress",
+              "stepElem":true,
+              "stepDelay":30,
+              
+              "stepGroup":true,
+              "repeatGroup":1
+            },
+
+            // --- Overlay Extras ----------------------------------------------------------------------------
+            
+            // Logos
+            {"n":"overlayVJY","cn":"vjyourself4.overlay.OverlayAni","aniCNs":["AniBrands_VJY"],"aniWidth":1024,"aniHeight":768},
+            
+            // Mask
+            // {"n":"mask","cn":"vjyourself4.overlay.OverlayMask"},
+
+            // Music Meta
+            {"n":"overlayMusicMeta","cn":"vjyourself4.overlay.OverlayMusicMeta",
+              "visible":false,
+              "show":{
+                "Wave":true,
+                "Beat":true,
+                "Mixer":true,
+                "Keys":true
+              },
+              "keys":[
+                
+                {"ch":"h","desc":"Lit Turbo"},
+                {"ch":"j","desc":"Lit Speed"},
+                {"ch":"","desc":""},
+                {"ch":"k","desc":"Mixer Func"}, 
+                {"ch":"l","desc":"Mixer Mod"}, 
+                {"ch":"","desc":""},
+                {"ch":"x","desc":"MC Func"}, 
+                {"ch":"c","desc":"MC LP"}, 
+                {"ch":"","desc":""},
+                {"ch":"v","desc":"Wave Draw"},
+                {"ch":"b","desc":"Wave Gain -"},
+                {"ch":"n","desc":"Wave Gain +"},
+                {"ch":"","desc":""},
+                {"ch":"m","desc":"Show / Hide"},
+              
+              ]
+
+            },
+            
+            // Console
+            /*{"n":"debugConsole","cn":"vjyourself4.overlay.OverlayConsole",
+              "width":300,"height":500,
+              "filter":{
+                "act":true,
+                "rule":{
+                  "def":false,
+                  "listA":[true,true,true,true],
+                  "listB":{"SynthPath":true},
+                  "listAB":[]
+                }
+              }
+            },*/
+            
+            // --- Cloud Dynamics ---------------------------------------------------------------------------
+            
+            {"n":"dynoScene","cn":"vjyourself4.cloud.DynoScene"},
+            {"n":"reloadCloud","cn":"vjyourself4.cloud.ReloadCloud"},
+
+            // --- Scene Vary --------------------------------------------------------------------------
+            
+            {"n":"sceneVary","cn":"vjyourself4.games.SceneVary"},
+            
+            {"n":"globalVary","cn":"vjyourself4.games.SceneVary",
+              "channels":[
+                {"n":"Space","n2":"Space Grp","tar":{"obj":"mid","prop":"GP.space"},"nested":true,"vals":"spaceG"},
+                {"n":"Tex A","tar":{"obj":"mid","prop":"context.texA.name"},"vals":"texture"},
+                {"n":"Space","link":true,"ch":0,"lev":1},
+                {"n":"Back Tex","tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
+
+                
+                {"n":"Back Col","tar":{"obj":"back","prop":"context.colA.name"},"vals":"color"},
+                {"n":"Filter","tar":{"obj":"filter","prop":"type"},"vals":["Normal","Shine1","Shine2","Shine3"]},
+                {"n":"Light","tar":{"obj":"mid","prop":"lights.mode"},"vals":"light"},
+                {"n":"Mid Col","tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color"},
+                {"n":"Path","tar":{"obj":"mid","prop":"GP.path.type"},"vals":"path"}
+
+              ]
+            },
+
+            {"n":"nextScene","cn":"vjyourself4.games.SceneVary",
+              "channels":[
+                {"tar":{"obj":"scene","prop":"scene"},"vals":"scene"},
+              ]
+            },
+
+
+            // --- Ctrl Inputs ---------------------------------------------------------------------------
+            
+            {"n":"ctrlKey","cn":"vjyourself4.ctrl.CtrlKey",
+              "map":{
+             /*   "1":{"comm":["mask","incHeight",["top",-1]]},
+                "2":{"comm":["mask","incHeight",["top",1]]},
+                "3":{"comm":["mask","incHeight",["bottom",-1]]},
+                "4":{"comm":["mask","incHeight",["bottom",1]]},*/
+
+                //"5":{"command":["globalVary","next",[8]]},
+                //"6":{"command":["reloadCloud","reloadCurrSpace",[]]},
+
+
+               
+                //MUSIC META
+                "m":{"command":["game","show",["overlayMusicMeta"]]},
+                "b":{"command":["_sys.music.meta","addWaveGain",[-0.2]]},
+                "n":{"command":["_sys.music.meta","addWaveGain",[0.2]]},
+                "v":{"command":["_sys.cloud.R3D","nextWaveDrawMode",[]]},
+                "x":{"command":["_sys.music.meta.mixer","next",["peak"]]},
+                "c":{"command":["_sys.cloud.R3D","toggleMCLP",[]]},
+                "l":{"command":["_sys.music.meta.mixer","next",["VaryMod"]]},
+                "k":{"command":["_sys.music.meta.mixer","next",["VaryFunc"]]},
+                "h":{"command":["_sys.music.meta.mixer","next",["litTurbo"]]},
+                "j":{"command":["_sys.music.meta.mixer","next",["lit"]]},
+                
+              }
+            },
+            /*
+            {"n":"ctrlKeyVary","cn":"vjyourself4.ctrl.CtrlKey",
+              "map":{
+                "q":{"command":["globalVary","next",[2]]},
+                "w":{"command":["globalVary","next",[0]]},
+                "e":{"command":["globalVary","next",[1]]},
+                "r":{"command":["globalVary","next",[3]]},
+                "t":{"command":["globalVary","next",[7]]},
+                "y":{"command":["globalVary","next",[4]]},
+                "u":{"command":["globalVary","next",[6]]},
+                "i":{"command":["globalVary","next",[5]]},
+                "o":{"command":["globalVary","next",[8]]},
+                "a":{"command":["globalVary","prev",[2]]},
+                "s":{"command":["globalVary","prev",[0]]},
+                "d":{"command":["globalVary","prev",[1]]},
+                "f":{"command":["globalVary","prev",[3]]},
+                "g":{"command":["globalVary","prev",[7]]},
+                "h":{"command":["globalVary","prev",[4]]},
+                "j":{"command":["globalVary","prev",[6]]},
+                "k":{"command":["globalVary","prev",[5]]},
+                "l":{"command":["globalVary","prev",[8]]},
+
+                "z":{"command":["sys.cloud.R3D","toggleBlendAdd",[]]},
+                "x":{"command":["ctrlCameraMode","next",[]]},
+                "c":{"command":["nextScene","next",[0]]}
+              }
+            },*/
+
+            {"n":"bindRouter","cn":"vjyourself4.ctrl.BindRouter",
+              "setInit":false,
+              "channels":{
+                "ctrlGrammar":{
+                  "ind":0,
+                  "states":[
+                    [
+                      ["ctrlGrammar.trig","AnyRouter"],
+                      ["ctrlGrammar.anal","AnyRouter"],
+                      ],
+                    [
+                      ["ctrlGrammar.trig","globalVary"],
+                      ["ctrlGrammar.anal","scene.anal"],
+                    ]
+                  ],
+                }     
+              }
+            },
+            
+            {"n":"anyRouter","cn":"vjyourself4.ctrl.AnyRouter",
+              "mapTrig":[
+                {"t":"command","command":["globalVary","next",[2]]},
+                {"t":"command","command":["globalVary","next",[0]]},
+              ],
+              "mapAnal":[
+                {"t":"anal","tar":{"obj":"scene.anal","ch":4}},
+                {"t":"anal","tar":{"obj":"scene.anal","ch":5}},
+                {"t":"anal","tar":{"obj":"scene.anal","ch":6}},
+                {"t":"anal","tar":{"obj":"scene.anal","ch":7}},
+                 
+              ]
+            },
+
+            {"n":"ctrlMIDI","cn":"vjyourself4.ctrl.CtrlMIDI"},
+            
+            {"n":"ctrlGrammar","cn":"vjyourself4.ctrl.Grammar",
+            "bind":{
+                "anal":"anyRouter",
+                "trig":"anyRouter",
+              },
+              "active":{
+                "trig":true,
+                "anal":true
+              },
+              "mode":"MultiPlayer",
+              "gamepadSingle":{
+                "players":[{
+                  "analNum":2,
+                  "analPage_num":1,
+                  "analPage_mode":"step",
+                  "analPage_butt":"LB",
+          
+                  "trigNum":8,
+                  "trigPage_num":1,
+                  "trigPage_mode":"step",
+                  "trigPage_butt":"LB",
+                  "trigButtons":["Up","Right","Down","Left","X","Y","A","B","LB","RB"]
+                }]
+              },
+
+              "gamepadMulti":{
+                "mode":"equal",
+                "players":[{
+                  "analNum":4,
+                  "analPage_num":2,
+                  "analPage_mode":"step",
+                  "analPage_butt":"LB",
+          
+                  "trigNum":10,
+                  "trigPage_num":1,
+                  "trigPage_mode":"step",
+                  "trigPage_butt":"LB",
+                  "trigButtons":["Up","Right","Down","Left","X","Y","A","B","LB","RB"]
+                }]
+              }
+            },
+
+            {"n":"ctrlGamepad","cn":"vjyourself4.ctrl.GamepadCombo",
+                "combos":[],
+                "modes":["default"],
+                "maps_default":{
+                    "std":{
+                      "Back":{"command":["bindRouter","next",["ctrlGrammar"]]}
+                       // "LB":{"command":["me","nextCameraMode",[]]},
+                      //  "RB":{"command":["ctrlCameraMode","next",[]]},
+                        //"Back":{"command":["nextScene","next",[0]]},
+                       // "Back":{"command":["overlayVJY","play",[]]},
+                       // "Start":{"command":["sys.cloud.R3D","toggleBlendAdd",[]]}
+                       // "Back":{"command":["sys.screen","saveScreenShot",[]]}
+                       //"Back":{"command":["commandStart","trig",[]]},
+                       // "Y":{"command":["sceneVary","next",["filter"]]},
+                       //"RB":{"command":["fore.cs.overlay","trig",[]]},
+                       //"B":{"command":["fore.cs.overlay","stop",[]]}
+                      // "Left":{"command":["context.cont.textureStreamBack","trigRefresh",[]]},
+                      //"Up":{"command":["sceneVary","next",[0]]},
+                      //"Right":{"command":["sceneVary","next",[1]]},
+                      //"Down":{"command":["sceneVary","next",[2]]},
+                      //"Left":{"command":["sceneVary","next",[3]]},
+                    },
+                },
+            }
+
+        /*    {"n":"commandStart","cn":"vjyourself4.ctrl.CommandList",
+              "elems":[
+                {"command":["_sys.music","start",[]]},
+                {"command":["fore.cs.overlay","trig",[]]}
+              ]
+            }*/
+
+           
+            
+        ]  
+    }
+}

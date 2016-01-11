@@ -1,0 +1,11 @@
+{
+    "data":{
+	"name":"TexGlobal",
+	"target":"R3D",
+	"path":"tex",
+	
+	"data":[
+	    {"sp":"Empty","blend":"ALPHA"}
+	    ]
+    }
+}

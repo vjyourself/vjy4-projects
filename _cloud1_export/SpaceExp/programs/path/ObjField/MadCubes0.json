@@ -1,0 +1,39 @@
+{
+	"data":{
+		"name":"MadCubes0",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MadCubes0":{
+			"streams":[
+				{
+					"cn":"StreamObjs",
+					"prgObj":{
+						"cn":"SimpleObj",
+						"geom":"geomCube",
+						"mat":["Cloud","C3D",{"q":"multiA"},{"delay":24,"start":0,"startRnd":true}],
+						"trans":{
+							"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":60,"alphaStep":50}],
+							"scale":3
+						},
+						"rotZ":["Stepper",[0.3,-0.3]]
+					},
+					
+					"gap":10,
+				},
+				{"cn":"StreamObjs","name":"Icing","prgPos":{"x":0,"y":0},"prgObj":{"cn":"SimpleObj","geom":"geomTorus","trans":{"scale":1},"mat":"MusicWaveADD"},"gap":100,"active":true}
+				
+		
+			],
+		
+			"params":{	
+				"pathFunc":"Random",
+				"pathCurveLength":200,
+				"cycleLength":1200,
+				"texADelay":12,
+			}
+			}
+		}
+	}
+}

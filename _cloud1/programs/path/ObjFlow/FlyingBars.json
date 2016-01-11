@@ -1,0 +1,157 @@
+
+{
+	"data":{
+		"name":"FlyingBars",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"FlyingBars":{
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"n":"Bars",
+				"streams":[
+
+					//pipe
+					// Stream 1 : Pipe Basic WF 
+					{
+						"id":"pipeWF","name":"WF Pipe",
+						"context":{"color":"A","texture":""},
+						"cn":"StreamPipe","elemLength":600,
+						"prg":{
+							"cn":"PipeBasic",
+
+							"planeCount":6,
+							"segCount":64,
+
+
+							"angleStart":0,
+							"angleSpread":360,
+							"angleShift":0,
+
+							"box0":{
+								"width":200, //["Stepper",[240,80]],
+								"height":200, //["Stepper",[80,240]],
+								"x":0,
+								"y":0
+							},
+							"_box1":{
+								"width":["Stepper",[80,240]],
+								"height":["Stepper",[240,80]],
+								"x":0,
+								"y":0
+							},
+
+							"shape":"star",
+							"circleParams":{},
+							"starParams":{"innerPerc":0.6},
+							"sinParams":{"freqX":3,"freqY":0},
+							"planeParams":{},
+
+							"noise":{
+								"x":0,
+								"y":0,
+								"z":0
+							},
+
+							"wf":{
+								"visible":true,
+								"color":"#ffffff",
+								"thickness":1,
+								"lines":{
+									"plane":true,
+									"planeClose":true,
+									"planeFirst":false,
+									"long":false
+								},
+								"scaleDown":0.99
+							},
+
+							"mesh":{"visible":false
+							}
+						
+						}
+					},
+				//MUSIC Waves	
+					{"cn":"StreamPipe","name":"Multi Pipe","elemLength":200,
+					"context":{"color":"","texture":""},
+					"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":160,"height":220,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":0,"twist0":["Stepper",[0,30,60,90,120,150,180,210,240,270,300,330]]},"mesh":{"mat":"MusicWaveADD"}},"active":true
+					},
+					
+					{"cn":"StreamPipe","name":"Multi Pipe","elemLength":200,
+					"context":{"color":"","texture":""},
+					"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":320,"height":220,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":0,"twist0":["Stepper",[90,120,150,180,210,240,270,300,330,0,30,60]]},"mesh":{"mat":"MusicWaveADD"}},"active":true
+					},
+				{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":160,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Bar3",
+							
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotX":1,
+							"trans":{
+								"scale":["Stepper",[1,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":60,"alphaStep":100}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					},
+
+					{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":120,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Bar3",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotX":1,
+							"trans":{
+								"scale":["Stepper",[2,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":300,"alphaStep":50}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					},
+
+					{
+						"cn":"StreamObjs",
+						"name":"Multi Balls",
+						"gap":200,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Bar3",
+							"mat":["Cloud","C3D",{"q":"A"},{}],
+							//"rot":1,
+							//"rotZ":["Stepper",[0.2,-0.2]],
+							"rotX":1,
+							"trans":{
+								"scale":["Stepper",[2,1],{"delay":1}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":600,"alphaStep":137}],
+								//"x":0,
+								//"y":-50,
+								"rotationY":90
+								},
+
+						}
+					}
+				]
+			}
+		}
+	}
+}

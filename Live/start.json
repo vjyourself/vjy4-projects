@@ -4,8 +4,8 @@
 		{
 			"data":{
 				"proj":{
-					"name":"Test Builder",
-					"id":"Test"
+					"name":"Live",
+					"id":"Live"
 				}
 			},
 			"rule":"over"
@@ -27,7 +27,7 @@
 
 		//GAME
 		{
-			"url":"[cloud1]games/game_Builder.json",
+			"url":"[cloud1]games/game_Live.json",
 			"include":"data",
 			"rule":"over"
 		},
@@ -51,7 +51,9 @@
 			"include":"data",
 			"target":"game.elems.5.init.scene",
 			"rule":"over",
-			"data":"Test"
+			//"data":"Test"
+			//"data":"Minimal",
+			"data":"Hippie",
 			//"data":"FunkyLadders",
 			//"data":"CentralCubes"
 			//"data":"TestPath"

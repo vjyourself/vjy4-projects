@@ -1,0 +1,102 @@
+{ 
+    "game":{
+        "backgroundColor":"#000000",      
+        "elems":[
+            {"n":"me","cn":"vjyourself4.games.Me","gui":{"display":false,"posX":"center","posY":"bottom"}  },
+           // {"n":"context","cn":"vjyourself4.games.ContextManager"},
+            {"n":"back","cn":"vjyourself4.comp.CompManager"},
+            {"n":"mid","cn":"vjyourself4.comp.CompManager"},
+            {"n":"fore","cn":"vjyourself4.comp.CompManager"},
+            {"n":"filter","cn":"vjyourself4.games.CompFilters","active":true,"autoOff":{"active":false}},
+            
+            {"n":"scene","cn":"vjyourself4.games.SceneManager",
+                "init":{
+                    "flags":{},
+                    "scene":"LiveNorm"
+                }
+            },
+            // LOGOS
+            {"n":"overlayVJY","cn":"vjyourself4.overlay.OverlayAni","aniCNs":["AniBrands_VJY","AniBrands_Joypad"],"aniWidth":960,"aniHeight":540},
+              
+            {"n":"sceneVary","cn":"vjyourself4.games.SceneVary"},
+
+
+
+            {"n":"guiExp","cn":"vjyourself4.gui.VJYExp"},
+
+            {"n":"reloadCloud","cn":"vjyourself4.cloud.ReloadCloud"},
+/*
+            {"n":"gamepadExp","cn":"vjyourself4.ctrl.GamepadExp",
+              "analNum":4,
+              "trigNum":8
+              },*/
+        
+            {"n":"ctrlGrammar","cn":"vjyourself4.ctrl.Grammar",
+              "mode":"MultiPlayer",
+              "gamepadSingle":{
+                "players":[{
+                  "analNum":4,
+                  "analPage_num":2,
+                  "analPage_mode":"step",
+                  "analPage_butt":"LB",
+          
+                  "trigNum":8,
+                  "trigPage_num":1,
+                  "trigPage_mode":"step",
+                  "trigPage_butt":"LB",
+                  "trigButtons":["Up","Right","Down","Left","X","Y","A","B"]
+                }]
+              },
+
+              "gamepadMulti":{
+                "mode":"equal",
+                "players":[{
+                  "analNum":4,
+                  "analPage_num":2,
+                  "analPage_mode":"step",
+                  "analPage_butt":"LB",
+          
+                  "trigNum":8,
+                  "trigPage_num":1,
+                  "trigPage_mode":"step",
+                  "trigPage_butt":"LB",
+                  "trigButtons":["Up","Right","Down","Left","X","Y","A","B"]
+                }]
+              }
+            },
+
+            {"n":"ctrlGamepad","cn":"vjyourself4.ctrl.GamepadCombo",
+                "combos":[],
+                "modes":["default"],
+                "maps_default":{
+                    "std":{
+                        "RB":{"command":["mid.cs.GP.ctrlPath","nextCameraMode",[]]},
+                        //"LB":{"command":["reloadCloud","reloadCurrSpace",[]]},
+                      //  "Back":{"command":["sys.screen","saveScreenShot",[]]}
+                      "Y":{"command":["overlayVJY","play",[]]},
+                        "B":{"command":["guiExp","openNextScene",[false]]},
+                       //"Back":{"command":["commandStart","trig",[]]},
+                       // "Y":{"command":["sceneVary","next",["filter"]]},
+                       //"RB":{"command":["fore.cs.overlay","trig",[]]},
+                       //"B":{"command":["fore.cs.overlay","stop",[]]}
+                      // "Left":{"command":["context.cont.textureStreamBack","trigRefresh",[]]},
+                      //"Up":{"command":["sceneVary","next",[0]]},
+                      //"Right":{"command":["sceneVary","next",[1]]},
+                      //"Down":{"command":["sceneVary","next",[2]]},
+                      //"Left":{"command":["sceneVary","next",[3]]},
+                    },
+                },
+            }
+
+        /*    {"n":"commandStart","cn":"vjyourself4.ctrl.CommandList",
+              "elems":[
+                {"command":["_sys.music","start",[]]},
+                {"command":["fore.cs.overlay","trig",[]]}
+              ]
+            }*/
+
+           // {"n":"overlayMusic","cn":"vjyourself4.overlay.OverlayMusicTest"}
+            
+        ]  
+    }
+}

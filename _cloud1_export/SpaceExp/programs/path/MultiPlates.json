@@ -1,0 +1,60 @@
+{
+	"data":{
+		"name":"MultiPlates",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MultiPlates":{
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				
+				"streams":[
+					
+					//PIPE 
+					{
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":120,
+								"height":120,
+								"circSeg":3,
+								"circSegShift":0,
+								"curve":0,
+								"fillPerc":1,
+								"curve0":1,
+								"curve1":1
+							},
+						"wf":{"color":"0xffffff"}
+						}
+					},
+					
+					
+					
+					//OBJ Sign
+					
+					{
+						"cn":"StreamObjs",
+						"prgPos":{"x":0,"y":0},
+					
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"Plane",
+							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":1,"start":0,"startRnd":false}],
+							"trans":{
+								"rotationZ":["Stepper",[0,120,240]]
+							}
+						},
+						"rotateZ":0,
+						"gap":100
+					}
+				]
+			}
+		}
+	}
+}

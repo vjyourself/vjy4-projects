@@ -10,11 +10,6 @@
     }
 },
 
-//CLOUD 2 (Admin) Packages *************************************************************************
-"load2":[
-   // "export/world4/Test" 
-    "export/world4/SpaceExp"
-],
 
 //CLOUD 1 Packages ********************************************************************
 "load1":[
@@ -76,8 +71,46 @@
             "Doughnuts/_B_SpaceDoughnuts3",
             "Doughnuts/_B_SpaceDoughnuts4",
             "Doughnuts/_B_SpaceDoughnuts5"
-        ]
+        ],
+
+        //Data Bank
+        "posters":[
+            "Poster/DataPoster1",
+            "Poster/DataPoster2",
+            "Poster/DataPoster3",
+            "Poster/DataPoster4",
+            "Poster/DataBank",
+            "Poster/DataBank2"
+        ],
+
+        //Crashing Balls
+        "balls":[
+            "Balls/SpiralCrash",
+            "Balls/SpiralCrash2",
+            "Balls/SpiralCrash3",
+            "Balls/BallsSpiralRandom"
+        ],
+
+        //Obj Flow
+        "ObjFlow":[
+            "ObjFlow/FlyingBars",
+            "ObjFlow/FlyingGeom",
+            "ObjFlow/FlyingAnimals"
+        ],
+
+        //Mad Cubes
+        "MadCubes":[
+            "ObjField/MadCubes0",
+            "ObjField/MadCubes1",
+            "ObjField/MadCubes2",
+            "ObjField/MadCubes3"
+        ],
         
+        //Muta Patt
+        "MutaPatt":[
+            "MutaPatt/MutaPatt",
+            "MutaPatt/EdgyHoles"
+        ],
     },
     
     //TEXTURE THEMES ******************************************************************
@@ -190,7 +223,14 @@
         "SpaceExp/SemanticGrid",
         "SpaceExp/RetroRegulator",
         "SpaceExp/SpacedDoughnuts",
-        "SpaceExp/TribalAwakening"
+        "SpaceExp/TribalAwakening",
+/*
+        "SpaceExp/DataBank",
+        "SpaceExp/CrashingBalls",
+        "SpaceExp/ObjFlow",
+        "SpaceExp/MadCubes",
+        "SpaceExp/MutaPatt"*/
+
     ],
 
     //TIMELINES ****************************************************************

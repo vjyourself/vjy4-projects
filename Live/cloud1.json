@@ -11,12 +11,6 @@
         }
 },
     
-//CLOUD 2 (Admin) Packages *************************************************************************
-"load2":[
-   //"export/world4/Test" 
-    "export/world4/SpaceExp"
-    //"export/world4/JustFab"
-],
 
 //CLOUD 1 Packages ********************************************************************
 "load1":[
@@ -40,7 +34,7 @@
         //Test
         "test":[
             "Test/TestObj1",
-            "Test/TestMesh3",
+            //"Test/TestMesh3", //This is just a road
             "Test/TestMesh2",
             "Test/TestMesh1",
             "Test/TestWF1",
@@ -104,13 +98,14 @@
             "Doughnuts/_B_SpaceDoughnuts5"
         ],
 
-         //POSTERS
+        //Data Bank
         "posters":[
-            "Poster/DiamondSpider",
-            "Poster/DiamondSpider2",
-            "Poster/DiamondSpider3",
-            "Poster/DiamondSpider3Wide",
-            "Poster/DatabasePlanes"
+            "Poster/DataPoster1",
+            "Poster/DataPoster2",
+            "Poster/DataPoster3",
+            "Poster/DataPoster4",
+            "Poster/DataBank",
+            "Poster/DataBank2"
         ],
 
         //MAD CUBES
@@ -137,11 +132,15 @@
             
         ],
         
-        //Exp
+        //Nyuszi Pagoda
         "exp":[
-            "Exp/WayWarm",
-            "Exp/MutaPatt",
-            "Exp/EdgyHoles"
+            "Exp/WayWarm"
+        ],
+
+        //Muta Patt
+        "MutaPatt":[
+            "MutaPatt/MutaPatt",
+            "MutaPatt/EdgyHoles"
         ],
 
         //OBJFLOW
@@ -161,13 +160,14 @@
     //TEXTURE THEMES ******************************************************************
     "textures":{
         "themes":[
-            "stars,stars",
-             "road"
+           // "stars,stars",
+           //  "road"
         ],
     },
 
     //COLORS *******************************************************************
     "colors":[
+    /*
         "Orange",
         "PinkOrange",
         "WOrangePink",
@@ -182,45 +182,47 @@
         "Fresh Sun",
         "Green",
         "Whity",
-        "CGA"
+        "CGA"*/
         
     ],
 
     //LIGHTS ********************************************************************
     "lights":[
-        "Flashy_Regular",
-        "Flashy_Slow",
+
         "Flashy_Norm",
         
         "Running_Norm",
-        //"Running_Slow",
-        "Running_NormEqual",
-        "Running_NormEqual_R",
-        "Running_FastEqual_R",
+        "Running_Norm_R",
         
         "DualRot_Norm",
-        "DualRot_Fast",
-        //"TriRot_Slow",
         "TriRot_Norm",
-        "TriRot_Fast",
+
         "TriDir",
+
         "PointDir_Norm",
-        "PointDir_Hard",
-        "PointDir_Dark"
+        //"PointDir_Hard",
+        "PointDir_Dark",
+
+        
        // "PointDir_Dark2"
     ],
 
     //PATHS ********************************************************************
     "paths":[
-        "Nice",
-        "Curvy",
         "Straight",
-        "Spiral",
-        "SpiralSoft",
-        "RandomSoftCurves",
         "LinearTurn",
+        
+        "Nice",
+        "Complex",
+        "RandomSoftCurves",
+        
+        "Curvy", 
+        //"Spiral",
+        "SpiralSoft",
         "Test",
-        "Complex"
+        
+        
+        
     ],
 
     //FILTERS ********************************************************************
@@ -240,13 +242,15 @@
     "scenes":[
         //"Discovery",
         //"All4"
-        "Test",
-        "SpaceExp/FunkyLadders",
+       // "Test",
+        "Minimal",
+        "Hippie",
+       /* "SpaceExp/FunkyLadders",
         "SpaceExp/SpaceBollards",
         "SpaceExp/SemanticGrid",
         "SpaceExp/RetroRegulator",
         "SpaceExp/SpacedDoughnuts",
-        "SpaceExp/TribalAwakening"
+        "SpaceExp/TribalAwakening"*/
     ],
 
     //TIMELINES ****************************************************************

@@ -1,0 +1,84 @@
+{
+  "data":{ 
+    "name":"Scenes", 
+    "target":"RScenes",
+    "path":"",
+    "data":{
+
+    "SemanticGrid":{
+        "name":"Semantic Grid",
+        "listed":true,
+        "comp":"BackPathOver",
+        
+        "state":{
+
+          "back":{ "preset":"BackBoxBallGrid","params":{
+            "context":{
+              "texA":{"name":"Skybox SpaceExp","delay":1},
+              "texB":{"name":"Skybox Ball","delay":1},
+              "colA":{"name":"Fire","delay":1}
+            },
+            "lights":{
+              "mode":"TriDir"
+            },
+            "gridBox":{
+              "visible":false
+            },
+             "box":{
+              "visible":true
+            },
+            "ball":{
+              "visible":true
+            }
+          }},
+
+          "mid":{ "preset":"PathSpace","params":{
+            "context":{
+              "texA":{"name":"Cyber Abstract","delay":1},
+              "texB":{"name":"Cyber Abstract","delay":1},
+              "colA":{"name":"Fresh Sun","delay":1}
+            },
+            "GP":{
+              //"space":"_B_SpaceBollards"
+              "space":"_B_SemanticGrid",
+              "ctrl":{
+                    "speedMin":1,
+                    "speedMax":10
+                }
+            },
+            "lights":{
+              "mode":"TriDir"
+            }
+          }},
+
+          "fore":{ "preset":"Empty","params":{}},
+        },
+        
+        "anal":{
+          "bind":[
+            {"ch":0,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":0}},
+            {"ch":1,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":1}},
+            {"ch":2,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":2}},
+            {"ch":3,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":3}},
+          ]
+        },
+        "vary":{
+          "channels":[
+            {"tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color","val_type":"color"},
+            {"tar":{"obj":"back","prop":"context.colA.name"},"vals":"color","val_type":"color"},
+            {"tar":{"obj":"mid","prop":"context.texA.name"},"val_type":"ImageSequence","vals":"texture"},
+            {"tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
+            
+            {"tar":{"obj":"mid.cs.context.cs.colA","func":"shift"}},
+            {"tar":{"obj":"back.cs.context.cs.colA","func":"shift"}},
+          
+            {"tar":{"obj":"mid","prop":"GP.space"},"val_type":"space","vals":["_B_SemanticGrid","_B_SemanticGrid2","_B_SemanticGrid3"]}
+            
+          ]
+        }
+        
+      } 
+      
+    }
+  }
+}

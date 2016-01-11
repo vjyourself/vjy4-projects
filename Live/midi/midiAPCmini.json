@@ -2,7 +2,7 @@
     "sys":{
 		"io":{
 	    	"midi":{
-	    		"enabled":true,
+	    		//"enabled":true,
 	    		"device":{
 	    			"n":"APCmini",
 	    			"litBackground":true,
@@ -23,8 +23,8 @@
 		    			{"t":"trig","col":5,"e":88,"command":["globalVary","prev",[7]]},
 		    			{"t":"trig","col":5,"e":89,"command":["globalVary","next",[5]]},
 
-		    			{"t":"trig","col":5,"e":98,"command":["ctrlCameraMode","next",[]]}
-
+		    			{"t":"trig","col":5,"e":98,"command":["ctrlCameraMode","next",[]]},
+		    			{"t":"trig","col":5,"e":64,"command":["nextScene","next",[0]]}
 	    			],
 	    			"anal":[20,21,22,23]
 	    		}

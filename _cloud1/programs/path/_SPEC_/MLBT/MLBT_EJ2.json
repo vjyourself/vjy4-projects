@@ -1,0 +1,74 @@
+
+{
+	"data":{
+		"name":"MLBT_EJ2",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MLBT_EJ2":{
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"bind":[
+				//	{"ch":0,"tar":"spikeSpiral1","prop":"scale","v0":0,"v1":3},
+				//	{"ch":1,"tar":"spikeSpiral2","prop":"scale","v0":0,"v1":3}
+					/*
+					{"ch":1,"tar":"spikeSide","prop":"scale","v0":0,"v1":3},
+					{"ch":2,"tar":"Pipe","prop":"texDistro","v0":0,"v1":1},
+					{"ch":2,"tar":"objRings","prop":"scale","v0":1,"v1":2},
+					{"ch":3,"tar":"objSigns","prop":"rotY","v0":0,"v1":24}
+			*/		
+					/*
+			
+			{ch:3,tar:"Pipe",prop:"texShift",v0:0,v1:2},
+			{ch:3,tar:"Pipe",prop:"texZoom",v0:1,v1:3},
+			{ch:3,tar:"Objs",prop:"scale",v0:1,v1:0},
+*/
+			],
+			
+			"streams":[
+				
+				{"cn":"StreamPipe","name":"WF Pipe","elemLength":400,"prgPipe":{"cn":"PathPipe","params":{"radius":60,"height":120,"circSeg":["Stepper",[5,4,3],{"delay":3}],"circSegShift":0.5,"fillPerc":1,"curve0":0,"curve1":0,"twist0":0},"wf":{"color":16777215}}},
+				{"cn":"StreamPipe","name":"Music Wave","elemLength":400,"prgPipe":{"cn":"PathPipe","params":{"radius":100,"height":120,"circSeg":4,"circSegShift":1,"fillPerc":1,"curve0":0,"curve1":10,"twist0":0},"mesh":{"mat":"MusicWaveADD"}}},
+				/*
+				{
+				"id":"spikeSpiral1",
+				"context":{"color":"","texture":""},
+				"cn":"StreamObjs",
+					"gap":200,
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"geomCyl",
+						//"mat":["Cloud","C3D",{"q":"StreetArtEastLondon"},{"delay":6,"startRnd":true}],
+						"mat":{"color":"#ffffff"},
+						"trans":{
+							
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":140,"alphaStep":30}],
+								"scale":1,
+								"scaleY":3
+						}
+					}
+			},
+			{
+				"id":"spikeSpiral2",
+				"context":{"color":"","texture":""},
+				"cn":"StreamObjs",
+					"gap":200,
+					"prgObj":{
+					 	"cn":"SimpleObj",
+						"geom":"geomCyl",
+						//"mat":["Cloud","C3D",{"q":"StreetArtEastLondon"},{"delay":6,"startRnd":true}],
+						"mat":{"color":"#ffffff"},
+						"trans":{
+							
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":140,"alphaStep":30,"alpha":180}],
+								"scale":1,
+								"scaleY":3
+						}
+					}
+			}*/
+			]
+		}		
+
+	}	
+	}
+}

@@ -1,0 +1,13 @@
+
+{
+	"data":{
+		"name":"SpiralCrash",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"SpiralCrash":{
+                "n":"Grow",
+                "params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},"streams":[{"cn":"StreamObjs","name":"Multi Balls","prgObj":{"cn":"SimpleObj","geom":"geomSphere","mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],"trans":{"scale":["Stepper",[8,6,3,1],{"delay":10}],"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":115,"alphaStep":150}]}},"gap":60,"active":true},{"cn":"StreamObjs","name":"Diamonds","prgObj":{"cn":"MultiObjs","diamond":{"vef":"vefDiamond","wf":{"color":16777215}},"trans":{"x":0,"y":0,"rotationX":0}},"gap":2000,"rotateZ":0.5,"active":true},{"cn":"StreamObjs","name":"Music Cone","prgObj":{"cn":"SimpleObj","geom":"geomCyl","mat":"MusicColorBlack","trans":{"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":160,"alphaStep":150}],"scale":["Stepper",[8,6,3,1],{"delay":10}],"scaleY":5}},"gap":60,"rotate":false,"active":true}]}		}
+	}
+}

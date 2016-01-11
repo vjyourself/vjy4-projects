@@ -1,0 +1,29 @@
+{
+  "data":{ 
+    "name":"Lights", 
+    "target":"RLights",
+    "path":"",
+    "data":{
+                "Flashy_Regular":["Flashy","Regular","Static","context"],
+                "Flashy_Norm":["Flashy","Norm","Static","context"],
+                "Flashy_Slow":["Flashy","Slow","Static","context"],
+                "Running_Norm":["Running","Norm","Static","context"],
+                "Running_NormEqual":["Running","NormEqual","Static","context"],
+                "Running_NormEqual_R":["Running","NormEqual_R","Static","context"],
+                "Running_FastEqual_R":["Running","FastEqual_R","Static","context"],
+                "Running_Slow":["Running","Slow","Static","context"],
+                "DualRot_Norm":["DualRot","Norm","Static","context"],
+                "DualRot_Fast":["DualRot","Fast","Static","context"],
+                "TriRot_Norm":["TriRot","Norm","Static","context"],
+                "TriRot_NormDark":["TriRot","NormDark","Static","context"],
+                "TriRot_Fast":["TriRot","Fast","Static","context"],
+                
+                "TriDir":["TriDir","Norm","Static","context"],
+                "PointDir_Norm":["PointDir","Norm","Static","context"],
+                //["PointDir","Norm","Random","context"],
+                "PointDir_Hard":["PointDir","Hard","Static","context"],
+                "PointDir_Dark":["PointDir","Dark","Static","context"],
+                "PointDir_Dark2":["PointDir","Dark2","Static","context"]
+    }
+  }
+}

@@ -1,0 +1,125 @@
+
+{
+	"data":{
+		"name":"MLBT_StairwayTo0",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MLBT_StairwayTo0":{
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"bind":[
+					{"ch":0,"tar":"Pipe","prop":"texShift","v0":0,"v1":3},
+				//	{"ch":0,"tar":"Pipe","prop":"texZoom","v0":1,"v1":3},
+					{"ch":1,"tar":"Objs","prop":"scale","v0":1,"v1":2},
+				
+				],
+			"streams":[
+			
+			//{"cn":"StreamPipe","name":"Multi Pipe","elemLength":200,"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":120,"height":120,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":0,"twist0":["Stepper",[0,30,60,90,120,150,180,210,240,270,300,330]]},"mesh":{"mat":["Cloud","C3D",{"q":"multiA"},{"delay":2,"start":0,"startRnd":true}]}},"active":true},
+			
+			//{"cn":"StreamPipe","name":"Multi Pipe","elemLength":200,"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":120,"height":120,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":0,"twist0":["Stepper",[90,120,150,180,210,240,270,300,330,0,30,60]]},"mesh":{"mat":["Cloud","C3D",{"q":"multiA"},{"delay":2,"start":0,"startRnd":true}]}},"active":true},
+			
+		//	{"cn":"StreamPipe","name":"Multi Pipe","elemLength":200,"prgPipe":{"cn":"PathPipe","params":{"circSeg":6,"radius":30,"height":40,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":0,"curve1":0,"flat":true,"twist0":["Stepper",[0,30,60,90,120,150,180,210,240,270,300,330]]},"wf":{"color":"#ffffff"}},"active":true},
+			{
+						"id":"pipeWF","name":"WF Pipe",
+						"context":{"color":"","texture":"A"},
+						"cn":"StreamPipe","elemLength":800,
+						"prg":{
+							"cn":"PipeBasic",
+
+							"planeCount":8,
+							"segCount":8,
+
+							"angleStart":0,
+							"angleSpread":360,
+							"angleShift":2,
+
+							"box0":{
+								"width":240,
+								"height":240,
+								"x":0,
+								"y":0
+							},
+							"box_":{
+								"width":24,
+								"height":240,
+								"x":0,
+								"y":-50
+							},
+
+							"shape":"circle",
+							"circleParams":{},
+							"starParams":{"innerPerc":0.2},
+							"sinParams":{"freqX":6,"freqY":1},
+							"planeParams":{},
+
+							"noise":{
+								"x":0,
+								"y":0,
+								"z":0
+							},
+
+							"wf":{
+								"visible":false,
+								"color":"#ffffff",
+								"thickness":1,
+								"lines":{
+									"plane":true,
+									"planeClose":false,
+									"planeFirst":false,
+									"long":true
+								}
+							},
+
+							"mesh":{
+								"visible":true,
+								"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],
+								"doubleSided":false,
+								"uv":{
+									"mirrorU":false,
+									"countU":12,
+									"mirrorV":false,
+									"countV":12
+								}
+							}
+						
+						}
+					},
+
+			{"cn":"StreamObjs","name":"Light Bars",
+			"prg":{
+				"cn":"SimpleObj",
+				"geom":"geomSphere",
+				"mat":["Stepper",["Beat1","Beat2","Beat3","Beat4"]],
+				"trans":{
+					"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":230,"alphaStep":65}],
+					"scale":12,
+				}
+			},
+			"gap":60,
+			"active":true
+			},
+/*
+			{"cn":"StreamObjs","name":"Light Bars",
+			"prg":{
+				"cn":"SimpleObj",
+				"geom":"Bar",
+				"mat":"MusicColorBlack",
+				"trans":{
+					"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":200,"alphaStep":120,"alpha":180}],
+					"scaleX":0.5,"scaleY":2,"scaleZ":0.5
+				}
+			},
+			"gap":120,
+			"active":true
+			}
+*/
+
+			]
+
+
+			}		
+		}
+	}
+}

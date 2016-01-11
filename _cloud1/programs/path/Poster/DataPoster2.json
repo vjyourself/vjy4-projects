@@ -1,0 +1,35 @@
+
+{
+	"data":{
+		"name":"DataPoster2",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"DataPoster2":{
+				"n":"Posters Rot",
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"streams":[
+					{
+						"cn":"StreamObjs","name":"Multi Planes",
+						"context":{"color":"","texture":"A"},
+						"prgObj":{"cn":"SimpleObj","geom":"Plane","mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],"trans":{"scale":["Stepper",[1,1,1,1],{"delay":10}],"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":115,"alphaStep":150}]}},
+						"rotateZ":0.5,"gap":60,"active":true
+					},
+					{
+						"cn":"StreamObjs","name":"Diamonds",
+						"context":{"color":"A","texture":""},
+						"prgObj":{"cn":"MultiObjs","diamond":{"vef":"vefDiamond","wf":{"color":16777215}},"trans":{"scale":["Stepper",[1,2,4]],"x":0,"y":0,"rotationZ":["Stepper",[0,120,240]]}},
+						"gap":400,"rotateZ":0,"active":true
+					},
+					{
+						"cn":"StreamObjs","name":"Icing",
+						"context":{"color":"","texture":""},
+						"prgObj":{"cn":"SimpleObj","geom":"geomTorus","trans":{"scale":2},"mat":"MusicWaveADD"},
+						"gap":200,"active":true
+					}
+				]
+			}		
+		}
+	}
+}

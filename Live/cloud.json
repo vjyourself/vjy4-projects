@@ -12,8 +12,36 @@
                 {
                     "n": "SpaceExp",
                     "online": true,
-                    "active": true,
+                    "active": false,
                     "syncDate": "2015/Dec/1 Tue 21:46",
+                    "syncStatus": "Success"
+                },
+                {
+                    "n": "Minimal",
+                    "online": false,
+                    "active": false,
+                    "syncDate": "2015/Dec/3 Thu 02:08",
+                    "syncStatus": "Success"
+                },
+                {
+                    "n": "Hippie",
+                    "online": false,
+                    "active": true,
+                    "syncDate": "2015/Dec/25 Fri 19:51",
+                    "syncStatus": "Success"
+                },
+                {
+                    "n": "RetroGlitch",
+                    "online": false,
+                    "active": false,
+                    "syncDate": "2015/Dec/12 Sat 20:55",
+                    "syncStatus": "Success"
+                },
+                {
+                    "n": "Tropical",
+                    "online": false,
+                    "active": false,
+                    "syncDate": "2015/Dec/25 Fri 11:24",
                     "syncStatus": "Success"
                 }
             ]

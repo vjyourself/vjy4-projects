@@ -1,0 +1,92 @@
+{
+  "data":{ 
+    "name":"Scenes", 
+    "target":"RScenes",
+    "path":"",
+    "data":{
+
+      "CrashingBalls":{
+        "name":"Spiral Crash",
+        "listed":true,
+        "comp":"BackPathOver",
+        
+        "state":{
+
+          "back":{ "preset":"BackBoxBallGrid","params":{
+            "context":{
+              "texA":{"name":"Skybox SpaceExp Dark","delay":1},
+              "texB":{"name":"empty","delay":1},
+              "colA":{"name":"Blue","delay":1}
+            },
+            "lights":{
+              "mode":"PointDir_Norm"
+            },
+            "gridBox":{
+              "visible":false
+            },
+             "box":{
+              "visible":true
+            },
+            "ball":{
+              "visible":false
+            }
+          }},
+
+          "mid":{ "preset":"PathSpace","params":{
+            "context":{
+              "texA":{"name":"Cyber Abstract","delay":1},
+              "texB":{"name":"Empty","delay":1},
+              "colA":{"name":"Pink","delay":1}
+            },
+            "GP":{
+              "space":"SpiralCrash",
+              "ctrl":{
+                    "speedMin":1,
+                    "speedMax":10
+                }
+            },
+            "lights":{
+              "mode":"Running_SlowEqual"
+            }
+          }},
+
+          "fore":{ "preset":"Empty","params":{}}
+
+       //   "filter":{"type":"Shine3"}
+        },
+        
+        "anal":{
+          "bind":[
+            {"ch":0,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":0}},
+            {"ch":1,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":1}},
+            {"ch":2,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":2}},
+            {"ch":3,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":3}},
+          ]
+        },
+        "vary":{
+          "channels":[
+            {"tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color","val_type":"color"},
+            {"tar":{"obj":"back","prop":"context.colA.name"},"vals":"color","val_type":"color"},
+            {"tar":{"obj":"mid","prop":"context.texA.name"},"val_type":"ImageSequence","vals":["Cyber Noise","Cyber Code","Circuit White","Pattern Torus","Cyber GUI","Cyber Abstract"]},
+            //["Afro Mask","Skybox Ball","Stars","Cyber Noise","Cyber Code","Circuit White","Skybox 8bit","Skybox SpaceExp","PattAbst1","Retro Platform","Pattern Torus","Cyber GUI","Cyber Abstract"]
+            {"tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
+            
+            {"tar":{"obj":"mid.cs.context.cs.colA","func":"shift"}},
+            {"tar":{"obj":"back.cs.context.cs.colA","func":"shift"}},
+          
+            {"tar":{"obj":"mid","prop":"GP.space"},"val_type":"space","vals":["SpiralCrash",
+            "SpiralCrash2",
+            "SpiralCrash3"
+            ]}
+            
+          ]
+        }
+        
+      }
+      
+
+
+
+    }
+  }
+}

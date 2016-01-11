@@ -1,0 +1,59 @@
+
+{
+	"data":{
+		"name":"DataPoster4",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"DataPoster4":{
+				"n":"Posters Wide",
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"streams":[
+					{
+						"cn":"StreamObjs","name":"Multi Planes",
+						"context":{"color":"","texture":"A"},
+						"rotateZ":0.5,"gap":60,"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Circle",
+							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],
+							"trans":{
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":115,"alphaStep":150}],
+								"scale":["Stepper",[0.1,0.2,0.4,0.8],{"delay":10}],
+							}
+						},
+					},
+
+					{
+						"cn":"StreamObjs","name":"Multi Planes2",
+						"context":{"color":"","texture":"A"},
+						"rotateZ":0.5,"gap":60,"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"Circle",
+							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":2,"startRnd":false}],
+							"trans":{
+								"scale":["Stepper",[1,1.5,0.5],{"delay":10}],
+								"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":315,"alphaStep":300}]
+							}
+						}
+					},
+				
+					//{"cn":"StreamObjs","name":"Diamonds","prgObj":{"cn":"MultiObjs","diamond":{"vef":"vefDiamond","wf":{"color":16777215}},"trans":{"scale":["Stepper",[0.4,4]],"x":["Stepper",[0,100]],"y":0,"rotationZ":["Stepper",[0,120,240]]}},"gap":600,"rotateZ":0,"active":true},
+					{
+						"cn":"StreamObjs","name":"Icing",
+						"context":{"color":"","texture":""},
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"geomTorus",
+							"trans":{"scale":["Stepper",[2,4]]},
+							"mat":"MusicWaveADD"
+						},
+						"gap":200,"active":true
+					}
+				]
+			}		
+		}
+	}
+}

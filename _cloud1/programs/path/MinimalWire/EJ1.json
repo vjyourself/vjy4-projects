@@ -1,0 +1,60 @@
+{
+	"data":{
+		"name":"EJ1",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"EJ1":{
+				"params":{	
+					"pathFunc":"Random",
+					"pathCurveLength":200,
+					"cycleLength":7200
+				},
+				
+				"streams":[
+					//PIPE
+					{
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":60,
+								"height":120,
+								"circSeg":["Stepper",[5,4,3],{"delay":3}],
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":0
+							},						"wf":{"color":0xffffff},
+						//"wf_visible":["Stepper",[true,false],{"delay":3}],
+						//"mesh_visible":["Stepper",[false,true],{"delay":3}]
+						}
+					},
+					
+					//Pipe Music Wave
+					{
+						"cn":"StreamPipe",
+						"elemLength":400,
+						"prgPipe":{
+							"cn":"PathPipe",
+							"params":{
+								"radius":100,
+								"height":120,
+								"circSeg":36,
+								"circSegShift":0,
+								"fillPerc":1,
+								"curve0":0,
+								"curve1":0,
+								"twist0":90
+							},
+						"mesh":{"mat":"MusicWaveADD"}
+						}
+					},
+				]
+			}
+		}
+	}
+}

@@ -4,9 +4,42 @@
 		//MUSIC SOURCE : Mic / MP3 *****************************************************
 		"music":{
 	    	"play":{"src":"Mic"},
-	    	"meta":{"wave_gain":2,"peak_gain":1,"damping_gain":1,"damping_mul":0.7,
-	    		"rhythm":{"tack":1000,"start":0},
-	    		"struct":{"struct":[]}
+	    	"meta":{
+	    		"wave":{
+	    			"enabled":true,
+	    			"wave_gain":2,
+	    			"peak_gain":1,
+	    			"damping_gain":1,
+	    			"damping_mul":0.7
+	    		},
+	    		"beat":{
+	    			"enabled":true,
+	    			"sync":"tap", // tap,auto,playback
+	    			"tap":{
+
+	    			},
+	    			"play":{
+	    				"start":0,
+	    				"tack":1000
+	    			}
+	    			
+	    		},
+	    		"timeline":{
+	    			"enabled":false,
+	    			"struct":[]
+	    		},
+	    		"mixer":{
+	    			"enabled":true,
+	    			"A":{
+	    				"peak":"beat.Sin1_1",
+	    				"lit":"NORM",
+	    				"Vary":{
+	    					"mod":2,
+	    					"vol":1,
+	    					"func":"None"
+	    				}
+	    			}
+	    		}
 	    	}
 		},
 
@@ -19,7 +52,7 @@
 	    	"mkb":{"enabled":true},
 	    	"touch":{"enabled":false},
 	    	"gamepad":{"enabled":true},
-	    	"midi":{
+			"midi":{
 	    		"enabled":false,
 	    		"connection":{
 	    			"type":"MIDI2.jar",

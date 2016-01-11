@@ -1,0 +1,89 @@
+
+{
+	"data":{
+		"name":"MLBT_RandomWires",
+		"target":"RPrg",
+		"path":"programs.path",
+		
+		"data":{
+			"MLBT_RandomWires":{
+				
+				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+				"bind":[
+				
+				],
+				"streams":[
+						{"cn":"StreamPipe","name":"WF Pipe","elemLength":400,
+					"prg":{
+						"cn":"PipeBasic",
+							"planeCount":3,
+							"segCount":3,
+
+
+							"angleStart":0,
+							"angleSpread":360,
+							"angleShift":0,
+
+							"box0":{
+								"width":2200,
+								"height":2200,
+							"x":0,
+								"y":0
+							},
+
+							"noise":{
+								"x":0,
+								"y":0,
+								"z":0
+							},
+
+							"shape":"random",
+							"circleParams":{},
+							"starParams":{"innerPerc":0.6},
+							"sinParams":{"freqX":3,"freqY":1},
+							"planeParams":{},
+
+
+							"wf":{
+								"visible":true,
+								"color":"#ffffff",
+								"thickness":1,
+								"lines":{
+									"plane":true,
+									"planeClose":false,
+									"planeFirst":false,
+									"long":true
+								},
+								"scaleDown":1
+							},
+
+							"mesh":{"visible":false}
+					}
+					},
+				
+				
+					
+
+					{
+						"cn":"StreamObjs",
+						"name":"Music Balls",
+						"gap":30,
+						"active":true,
+						"prgObj":{
+							"cn":"SimpleObj",
+							"geom":"geomSphereHi",
+							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],
+							"trans":{
+								"scale":["Stepper",[4,2,4,2],{"delay":1}],
+								"_prg":[["x","y"],"Random2D",{"radius":1400,"hole":60}]},
+								"rotX":1
+							},
+							
+					},
+					
+				
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"data":{
+		"name":"DataBank2",
+		"target":"RPrg",
+		"path":"programs.path",
+	
+		"data":{
+			"DataBank2":{
+                "n":"Data BC",
+                "params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
+                "streams":[
+                    {
+                        "cn":"StreamObjs","name":"Multi Planes",
+                        "context":{"color":"","texture":"A"},
+                        "gap":80,"active":true,
+                        "prgObj":{
+                            "cn":"SimpleObj",
+                            "geom":"Circle",
+                            "mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],
+                            "trans":{
+                                "scale":["Stepper",[0.3,1.2,1.2,0.6,0.6,0.3]],
+                                "x":["Stepper",[120,-120]],
+                                "rotationY":["Stepper",[0,45,45,0,0,0]]
+                                }
+                            }
+                        },
+                    {
+                        "cn":"StreamObjs","name":"Light Bars",
+                        "context":{"color":"","texture":""},
+                        "prgObj":{"cn":"SimpleObj","geom":"Bar","mat":"MusicColorBlack","trans":{"scale":["Stepper",[1,1,1,1],{"delay":10}],"x":0,"y":["Stepper",[120,-120]],"rotationZ":90,"scaleX":0.5,"scaleY":2,"scaleZ":0.5}},"gap":120,"active":true},
+                    {
+                        "cn":"StreamPipe","name":"WF Bottom","active":true,"elemLength":800,
+                        "context":{"color":"A","texture":""},
+                        "prgPipe":{"cn":"PathPipe","params":{"radius":120,"height":120,"circSeg":12,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":1,"curve1":1,"flat":true},"mesh_visible":false,"mesh":{"mat":{"color":"#ff00ff"}},"wf_visible":true,"wf":{"color":"#ffffff"}}},
+                    {
+                        "cn":"StreamPipe","name":"WF Top","active":true,"elemLength":800,
+                        "context":{"color":"A","texture":""},
+                        "prgPipe":{"cn":"PathPipe","params":{"radius":120,"height":-120,"circSeg":12,"circSegShift":0,"curve":0,"fillPerc":1,"curve0":1,"curve1":1,"flat":true},"mesh_visible":false,"mesh":{"mat":{"color":"#ff00ff"}},"wf_visible":true,"wf":{"color":"#ffffff"}}}
+                ]
+            }
+		}
+	}
+}
