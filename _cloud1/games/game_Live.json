@@ -88,16 +88,17 @@
             
             {"n":"globalVary","cn":"vjyourself4.games.SceneVary",
               "channels":[
+
                 {"n":"Space","n2":"Space Grp","tar":{"obj":"mid","prop":"GP.space"},"nested":true,"vals":"spaceG"},
-                {"n":"Tex A","tar":{"obj":"mid","prop":"context.texA.name"},"vals":"texture"},
                 {"n":"Space","link":true,"ch":0,"lev":1},
                 {"n":"Back Tex","tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
-
+                {"n":"Tex A","tar":{"obj":"mid","prop":"context.texA.name"},"vals":"texture"},
                 
                 {"n":"Back Col","tar":{"obj":"back","prop":"context.colA.name"},"vals":"color"},
                 {"n":"Filter","tar":{"obj":"filter","prop":"type"},"vals":["Normal","Shine1","Shine2","Shine3"]},
                 {"n":"Light","tar":{"obj":"mid","prop":"lights.mode"},"vals":"light"},
                 {"n":"Mid Col","tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color"},
+
                 {"n":"Path","tar":{"obj":"mid","prop":"GP.path.type"},"vals":"path"}
 
               ]
@@ -201,6 +202,109 @@
 
             {"n":"ctrlMIDI","cn":"vjyourself4.ctrl.CtrlMIDI"},
             
+            // LIVE A 
+            {"n":"map_LIVE_A","cn":"vjyourself4.ctrl.GamepadMapper",
+              "map":[
+                {"n":"LeftTrigger","t":"anal","tar":{"obj":"scene.anal","ch":0}},
+                {"n":"RightTrigger","t":"anal","tar":{"obj":"scene.anal","ch":1}},
+                {"n":"LB","t":"anal","tar":{"obj":"scene.anal","ch":6}},
+                {"n":"RB","t":"trigOn","command":["ctrlCameraMode","nextFrontBack",[]]},
+                {"n":"RB","t":"trigOff","command":["ctrlCameraMode","prevFrontBack",[]]},
+               
+                {"n":"Y","t":"trigOn","command":["globalVary","setIndex",[5,3]]},
+                {"n":"Y","t":"trigOff","command":["globalVary","setIndex",[5,0]]},
+                {"n":"A","t":"trigOn","command":["globalVary","setIndex",[6,"inv"]]},
+                {"n":"A","t":"trigOff","command":["globalVary","setIndex",[6,"invBack"]]},
+                {"n":"X","t":"trigOn","command":["sys.cloud.R3D","toggleBlendAdd",[]]},
+                {"n":"X","t":"trigOff","command":["sys.cloud.R3D","toggleBlendAdd",[]]},
+                {"n":"B","t":"anal","tar":{"obj":"scene.anal","ch":7}},
+
+                {"n":"Up","t":"trigOn","command":["globalVary","next",[4]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[7]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[3]]}
+
+              ]
+            },
+
+            // LIVE B
+            {"n":"map_LIVE_B","cn":"vjyourself4.ctrl.GamepadMapper",
+              "map":[
+                {"n":"LeftTrigger","t":"anal","tar":{"obj":"scene.anal","ch":4}},
+                {"n":"RightTrigger","t":"anal","tar":{"obj":"scene.anal","ch":5}},
+                {"n":"LB","t":"anal","tar":{"obj":"scene.anal","ch":2}},
+                {"n":"RB","t":"trigOn","command":["ctrlCameraMode","nextInOut",[]]},
+                {"n":"RB","t":"trigOff","command":["ctrlCameraMode","prevInOut",[]]},
+                
+                {"n":"B","t":"anal","tar":{"obj":"scene.anal","ch":3}},
+                {"n":"A","t":"trigOn","command":["globalVary","setIndex",[7,"inv"]]},
+                {"n":"A","t":"trigOff","command":["globalVary","setIndex",[7,"invBack"]]},
+                {"n":"A","t":"trigOn","command":["globalVary","setIndex",[4,"inv"]]},
+                {"n":"A","t":"trigOff","command":["globalVary","setIndex",[4,"invBack"]]},
+
+                {"n":"Up","t":"trigOn","command":["globalVary","next",[4]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[7]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[3]]}
+              ]
+            },
+
+            // BUILD A
+            {"n":"map_BUILD_A","cn":"vjyourself4.ctrl.GamepadMapper",
+              "map":[
+                {"n":"LeftTrigger","t":"anal","tar":{"obj":"scene.anal","ch":0}},
+                {"n":"RightTrigger","t":"anal","tar":{"obj":"scene.anal","ch":1}},
+                {"n":"LB","t":"anal","tar":{"obj":"scene.anal","ch":2}},
+                
+                {"n":"RB","t":"trigOn","command":["ctrlCameraMode","nextFrontBackInOut",[]]},
+                
+                {"n":"X","t":"trigOn","command":["globalVary","next",[4]]},
+                {"n":"Y","t":"trigOn","command":["globalVary","next",[5]]},
+                {"n":"A","t":"trigOn","command":["globalVary","next",[6]]},
+                {"n":"B","t":"trigOn","command":["globalVary","next",[7]]},
+
+                {"n":"Up","t":"trigOn","command":["globalVary","next",[0]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[1]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[3]]}
+              ]
+            },
+
+            // BUILD B
+            {"n":"map_BUILD_B","cn":"vjyourself4.ctrl.GamepadMapper",
+              "map":[
+                {"n":"LeftTrigger","t":"anal","tar":{"obj":"scene.anal","ch":2}},
+                {"n":"RightTrigger","t":"anal","tar":{"obj":"scene.anal","ch":3}},
+
+                {"n":"X","t":"trigOn","command":["_sys.cloud.R3D","nextWaveDrawMode",[]]},
+                {"n":"Y","t":"trigOn","command":["_sys.music.meta.mixer","next",["VaryMod"]]},
+                {"n":"A","t":"trigOn","command":["_sys.cloud.R3D","toggleMCLP",[]]},
+                {"n":"B","t":"trigOn","command":["_sys.music.meta.beat","tap",[]]},
+
+                {"n":"Up","t":"trigOn","command":["globalVary","next",[8]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","prev",[8]]},
+               // {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
+                {"n":"Right","t":"trigOn","command":["sys.cloud.R3D","toggleBlendAdd",[]]}
+              ]
+            },
+
+            {"n":"liveBuilderManager","cn":"vjyourself4.ctrl.LiveBuilderManager",
+              "player":{
+                "switchMap":"Start",
+                "switchSubMap":"Back",
+                "maps":[
+                  {
+                    "name":"LIVE","mapsInd":0,
+                    "maps":[{"name":"A"},{"name":"B"}]
+                  },
+                  {
+                    "name":"BUILD","mapsInd":0,
+                    "maps":[{"name":"A"},{"name":"B"}]
+                  } 
+                ]
+              }
+            }
+            /*
             {"n":"ctrlGrammar","cn":"vjyourself4.ctrl.Grammar",
             "bind":{
                 "anal":"anyRouter",
@@ -266,7 +370,7 @@
                       //"Left":{"command":["sceneVary","next",[3]]},
                     },
                 },
-            }
+            }*/
 
         /*    {"n":"commandStart","cn":"vjyourself4.ctrl.CommandList",
               "elems":[

@@ -34,9 +34,9 @@
 	    				"peak":"beat.Sin1_1",
 	    				"lit":"NORM",
 	    				"Vary":{
-	    					"mod":2,
+	    					"mod":0,
 	    					"vol":1,
-	    					"func":"None"
+	    					"func":"Sin"
 	    				}
 	    			}
 	    		}
