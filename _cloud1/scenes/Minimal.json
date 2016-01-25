@@ -53,7 +53,7 @@
               "path":{
                   //"type":"RandomSoftCurves"
                  // "type":"SpiralSoft"
-                 "type":"RandomSoftCurves"
+                 "type":"Nice"
                 }
             },
             "lights":{

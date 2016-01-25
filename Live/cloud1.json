@@ -31,27 +31,7 @@
     
     //SPACES ***************************************************************************
     "spaces":{
-        //Test
-        "test":[
-            "Test/TestObj1",
-            //"Test/TestMesh3", //This is just a road
-            "Test/TestMesh2",
-            "Test/TestMesh1",
-            "Test/TestWF1",
-            "Test/TestWF2",
-            "Test/TestWF3",
-            "Test/TestWF4",
-            "Test/TestWF5",
-            "Test/TestWF6"
-        ],
-        //Road
-        "road":[
-            "Road/Road1",
-            "Road/Road2",
-            "Road/Road3",
-            "Road/Road4"
-        ],
-
+       
         //TribalAwakening
         "pipe":[
             "Pipe/_B_PipeAB",
@@ -124,6 +104,19 @@
             "Balls/BallsSpiralRandom"
         ],
 
+        //OBJFLOW
+        "ObjFlow":[
+            "ObjFlow/FlyingBars",
+            "ObjFlow/FlyingGeom",
+            "ObjFlow/FlyingAnimals",
+            //"ObjFlow/MadBombs",
+            //"ObjFlow/MadFrogs",
+            //"ObjFlow/MadCow",
+            //"ObjFlow/MadChairs",
+            //"ObjFlow/MadMirage"
+        ],
+
+        // ******* UNDER DEV ***********************************************
         //WIRE
         "wire":[
             "MinimalWire/EJ1",
@@ -143,17 +136,27 @@
             "MutaPatt/EdgyHoles"
         ],
 
-        //OBJFLOW
-        "ObjFlow":[
-            "ObjFlow/FlyingBars",
-            "ObjFlow/FlyingGeom",
-            "ObjFlow/FlyingAnimals",
-            //"ObjFlow/MadBombs",
-            //"ObjFlow/MadFrogs",
-            //"ObjFlow/MadCow",
-            //"ObjFlow/MadChairs",
-            //"ObjFlow/MadMirage"
-        ]
+         //Test
+        "test":[
+            "Test/TestObj1",
+            //"Test/TestMesh3", //This is just a road
+            "Test/TestMesh2",
+            "Test/TestMesh1",
+            "Test/TestWF1",
+            "Test/TestWF2",
+            "Test/TestWF3",
+            "Test/TestWF4",
+            "Test/TestWF5",
+            "Test/TestWF6"
+        ],
+        //Road
+        "road":[
+            "Road/Road1",
+            "Road/Road2",
+            "Road/Road3",
+            "Road/Road4"
+        ],
+
        
     },
     
@@ -209,18 +212,14 @@
 
     //PATHS ********************************************************************
     "paths":[
-        "Straight",
-        "LinearTurn",
-        
-        "Nice",
+        //"Straight", //"LinearTurn",
+        "Nice", 
         "Complex",
-        "RandomSoftCurves",
+        "Curvy",
+        "ZigZag"
         
-        "Curvy", 
         //"Spiral",
-        "SpiralSoft",
-        "Test",
-        
+        //"SpiralSoft",
         
         
     ],

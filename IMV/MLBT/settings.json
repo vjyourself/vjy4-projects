@@ -1,26 +1,5 @@
 {
     "sys":{
-	
-		//CONNECT TO ARDUINO **********************************************************
-		/*
-		"arduino":{
-	    	"via":"ethernet",
-	    	"ip":"192.168.2.66",
-	    	"map":["A","B","X","Y",
-               "LB","RB","LT","RT"]
-		},
-		*/
-		
-
-		//CONNECT TO MIDI **************************************************************
-		/*
-		"midi":{
-			"type":"MIDI2.jar",
-			"url":"127.0.0.1",
-			"port":10000
-		},
-		*/
-
 
 		//MUSIC SOURCE : Mic / MP3 *****************************************************
 		"music":{
@@ -28,12 +7,27 @@
 		    "autoStart":false,
 		    "play":{"url":"music/01. Major Lazer - Be Together (feat. Wild Belle).mp3","loop":true},
 		    "meta":{
-		    	"wave_gain":1,"peak_gain":1,"damping_gain":1,"damping_mul":0.7,
-		    	"rhythm":{
-		     		"start":3000,
-		     		"tack":750
-		     	},
-		     	"struct":{
+		    	"wave":{
+	    			"enabled":true,
+	    			"wave_gain":1,
+	    			"peak_gain":1,
+	    			"damping_gain":1,
+	    			"damping_mul":0.7
+	    		},
+		    	"beat":{
+	    			"enabled":true,
+	    			"sync":"playback", // tap / playback / (auto)
+	    			"tap":{
+
+	    			},
+	    			"playback":{
+	    				"start":3000,
+	    				"tack":750
+	    			}
+	    			
+	    		},
+		     	"timeline":{
+		     		"enabled":true,
 		     		"struct":[
 			     		{"ind":1,"b":16,"n":"Humm","s":1},
 			     		{"ind":2,"b":16,"n":"HummHumm","s":2},
@@ -56,7 +50,19 @@
 			     		{"ind":19,"b":16,"n":"StarsHighwayTogether","s":3},
 			     		{"ind":20,"b":12,"n":"OutPause","s":1}
 		     		]
-		     	}
+		     	},
+		     	"mixer":{
+	    			"enabled":true,
+	    			"A":{
+	    				"peak":"beat.Sin1_1",
+	    				"lit":"NORM",
+	    				"Vary":{
+	    					"mod":0,
+	    					"vol":1,
+	    					"func":"Sin"
+	    				}
+	    			}
+	    		}
 		   	}
 		},
 

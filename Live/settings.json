@@ -14,11 +14,11 @@
 	    		},
 	    		"beat":{
 	    			"enabled":true,
-	    			"sync":"tap", // tap,auto,playback
+	    			"sync":"tap", // tap / playback / (auto)
 	    			"tap":{
 
 	    			},
-	    			"play":{
+	    			"playback":{
 	    				"start":0,
 	    				"tack":1000
 	    			}
@@ -53,7 +53,7 @@
 	    	"touch":{"enabled":false},
 	    	"gamepad":{"enabled":true},
 			"midi":{
-	    		"enabled":false,
+	    		"enabled":true,
 	    		"connection":{
 	    			"type":"MIDI2.jar",
 					"url":"127.0.0.1",

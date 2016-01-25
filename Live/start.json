@@ -52,8 +52,8 @@
 			"target":"game.elems.5.init.scene",
 			"rule":"over",
 			//"data":"Test"
-			//"data":"Minimal",
-			"data":"Hippie",
+			"data":"Minimal",
+			//"data":"Hippie",
 			//"data":"FunkyLadders",
 			//"data":"CentralCubes"
 			//"data":"TestPath"

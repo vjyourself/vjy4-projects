@@ -19,14 +19,14 @@
                 {
                     "n": "Minimal",
                     "online": false,
-                    "active": false,
+                    "active": true,
                     "syncDate": "2015/Dec/3 Thu 02:08",
                     "syncStatus": "Success"
                 },
                 {
                     "n": "Hippie",
                     "online": false,
-                    "active": true,
+                    "active": false,
                     "syncDate": "2016/Jan/21 Thu 18:35",
                     "syncStatus": "Success"
                 },

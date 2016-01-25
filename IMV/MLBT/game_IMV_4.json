@@ -44,13 +44,13 @@
            {"n":"reloadCloud","cn":"vjyourself4.cloud.ReloadCloud"},
             {"n":"ctrlKey","cn":"vjyourself4.ctrl.CtrlKey",
               "map":{
-                "1":{"comm":["sys.music","start",[]]},
-                "2":{"comm":["sys.music","pause",[]]},
+                "1":{"command":["_sys.music","start",[]]},
+                "2":{"command":["_sys.music","pause",[]]},
               //  "3":{"comm":["dynoScene","saveToHeap",[]]},
               //  "4":{"comm":["bindRooter","next",["vary"]]},
                // "5":{"comm":["debugConsole","show",[]]},
-               "6":{"comm":["reloadCloud","reloadCurrSpace",[]]},
-               "7":{"comm":["game","show",["overlayMusic"]]},
+               "6":{"command":["reloadCloud","reloadCurrSpace",[]]},
+               "7":{"command":["game","show",["overlayMusic"]]},
             //    "7":{"comm":["game","show",["back"]]},
             //    "8":{"comm":["globalVary","next",[3]]}
               }
@@ -69,7 +69,7 @@
               }
             },
 
-            {"n":"overlayMusic","cn":"vjyourself4.overlay.OverlayMusicTest"},
+            {"n":"overlayMusic","cn":"vjyourself4.overlay.OverlayMusicTimeline"},
             {"n":"debugConsole","cn":"vjyourself4.overlay.OverlayConsole",
               "width":300,"height":500,
               "filter":{
@@ -87,7 +87,7 @@
               "defLength":3,
               "frames":[
                 {"time":"0:0","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]}, 
-               {"time":"0:0","comm":["mid.cs.GP","setParams",[{"restart":true,"space":"MLBT_EJ2"}]]}, 
+                {"time":"0:0","comm":["mid.cs.GP","setParams",[{"restart":true,"space":"MLBT_EJ2"}]]}, 
               
                 {"beat":"3.8","comm":["fore.cs.overlay","trig",["TextYOURS"]]},
                 {"beat":"3.12","comm":["fore.cs.overlay","trig",["TextYOURS"]]},

@@ -87,32 +87,25 @@
     "colors":[ ],
 
     //LIGHTS ********************************************************************
-    "lights":[
-        "Flashy_Slow",
+    "lights":[      
         "Flashy_Norm",
-        
         "Running_Norm",
-        //"Running_Slow",
-        "Running_NormEqual",
-        "Running_NormEqual_R",
-        "Running_FastEqual_R",
-        
+        "Running_Norm_R",
         "DualRot_Norm",
-        "DualRot_Fast",
         "TriRot_Norm",
-        "TriRot_Fast",
-       
         "TriDir",
         "PointDir_Norm",
         "PointDir_Hard",
         "PointDir_Dark"
-       // "PointDir_Dark2"
     ],
 
 //PATHS ********************************************************************
     "paths":[
-        "Nice",
+        "Nice", 
+        "Complex",
         "Curvy",
+        "ZigZag",
+        
         "Straight",
         "Spiral"
     ],

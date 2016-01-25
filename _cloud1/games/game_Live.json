@@ -236,11 +236,11 @@
                 {"n":"RB","t":"trigOn","command":["ctrlCameraMode","nextInOut",[]]},
                 {"n":"RB","t":"trigOff","command":["ctrlCameraMode","prevInOut",[]]},
                 
-                {"n":"B","t":"anal","tar":{"obj":"scene.anal","ch":3}},
                 {"n":"A","t":"trigOn","command":["globalVary","setIndex",[7,"inv"]]},
                 {"n":"A","t":"trigOff","command":["globalVary","setIndex",[7,"invBack"]]},
                 {"n":"A","t":"trigOn","command":["globalVary","setIndex",[4,"inv"]]},
                 {"n":"A","t":"trigOff","command":["globalVary","setIndex",[4,"invBack"]]},
+                {"n":"B","t":"anal","tar":{"obj":"scene.anal","ch":3}},
 
                 {"n":"Up","t":"trigOn","command":["globalVary","next",[4]]},
                 {"n":"Down","t":"trigOn","command":["globalVary","next",[7]]},
@@ -258,15 +258,16 @@
                 
                 {"n":"RB","t":"trigOn","command":["ctrlCameraMode","nextFrontBackInOut",[]]},
                 
-                {"n":"X","t":"trigOn","command":["globalVary","next",[4]]},
+                {"n":"X","t":"trigOn","command":["sys.cloud.R3D","toggleBlendAdd",[]]},
                 {"n":"Y","t":"trigOn","command":["globalVary","next",[5]]},
                 {"n":"A","t":"trigOn","command":["globalVary","next",[6]]},
-                {"n":"B","t":"trigOn","command":["globalVary","next",[7]]},
+                {"n":"B","t":"trigOn","command":["_sys.music.meta.beat","tap",[]]},
 
-                {"n":"Up","t":"trigOn","command":["globalVary","next",[0]]},
-                {"n":"Down","t":"trigOn","command":["globalVary","next",[1]]},
+                {"n":"Up","t":"trigOn","command":["globalVary","next",[4]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[7]]},
                 {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
                 {"n":"Right","t":"trigOn","command":["globalVary","next",[3]]}
+
               ]
             },
 
@@ -281,10 +282,11 @@
                 {"n":"A","t":"trigOn","command":["_sys.cloud.R3D","toggleMCLP",[]]},
                 {"n":"B","t":"trigOn","command":["_sys.music.meta.beat","tap",[]]},
 
-                {"n":"Up","t":"trigOn","command":["globalVary","next",[8]]},
-                {"n":"Down","t":"trigOn","command":["globalVary","prev",[8]]},
-               // {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
-                {"n":"Right","t":"trigOn","command":["sys.cloud.R3D","toggleBlendAdd",[]]}
+                {"n":"Up","t":"trigOn","command":["globalVary","next",[0]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[1]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[8]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","prev",[8]]}
+                
               ]
             },
 
