@@ -64,7 +64,8 @@
               "overlay":{
                 "def":{
                   "length":2,
-                  "trans":["ZoomInFadeOut"], //"RightSideRoller","LeftSideRoller"]
+                  "trans":["ZoomInLeopard"],
+                  //"trans":["ZoomInFadeOut"], //"RightSideRoller","LeftSideRoller"]
                   "transInd":0
                   },
                 "channels":[

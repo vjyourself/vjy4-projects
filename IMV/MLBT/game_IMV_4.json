@@ -185,7 +185,7 @@
                   "analPage_mode":"step",
                   "analPage_butt":"LB",
           
-                  "trigNum":8,
+                  "trigNum":0,
                   "trigPage_num":1,
                   "trigPage_mode":"step",
                   "trigPage_butt":"LB",
@@ -201,7 +201,7 @@
                   "analPage_mode":"step",
                   "analPage_butt":"LB",
           
-                  "trigNum":8,
+                  "trigNum":0,
                   "trigPage_num":1,
                   "trigPage_mode":"step",
                   "trigPage_butt":"LB",
@@ -217,6 +217,7 @@
                     "std":{
                     //  "LB":{"command":["fore.cs.overlay","trig",[]]},
                         "RB":{"command":["mid.cs.GP.ctrlPath","nextCameraMode",[]]},
+                        "B":{"command":["_sys.cloud.R3D","toggleMCLP",[]]},
                         //"Back":{"command":["nextScene","next",[0]]},
                         "Back":{"command":["sys.screen","saveScreenShot",[]]}
                        //"Back":{"command":["commandStart","trig",[]]},
