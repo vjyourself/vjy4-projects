@@ -38,13 +38,13 @@
 
           "mid":{ "preset":"PathSpace","params":{
             "context":{
-              "texA":{"name":"Flower Power","delay":6},
-              "texB":{"name":"PattAbst1","delay":6},
+              "texA":{"name":"Plus","delay":6},
+              "texB":{"name":"Plus Inv","delay":6},
               "colA":{"name":"PinkOrange","delay":1}
             },
             "GP":{
               //"space":"_B_SpaceBollards"
-              "space":"MLBT_RunningUp",
+              "space":"MLBT_RandomWires",
               "ctrlMovement":{
                     "speedMin":1.5,
                     "speedDef":1.5,
@@ -64,7 +64,7 @@
               "overlay":{
                 "def":{
                   "length":2,
-                  "trans":["ZoomInLeopard"],
+                  "trans":["ZoomInLeopard","ZoomInFluid","ZoomInCheetah"],
                   //"trans":["ZoomInFadeOut"], //"RightSideRoller","LeftSideRoller"]
                   "transInd":0
                   },

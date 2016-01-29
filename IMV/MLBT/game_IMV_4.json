@@ -46,13 +46,13 @@
               "map":{
                 "1":{"command":["_sys.music","start",[]]},
                 "2":{"command":["_sys.music","pause",[]]},
-              //  "3":{"comm":["dynoScene","saveToHeap",[]]},
-              //  "4":{"comm":["bindRooter","next",["vary"]]},
-               // "5":{"comm":["debugConsole","show",[]]},
+              //  "3":{"command":["dynoScene","saveToHeap",[]]},
+              //  "4":{"command":["bindRooter","next",["vary"]]},
+               // "5":{"command":["debugConsole","show",[]]},
                "6":{"command":["reloadCloud","reloadCurrSpace",[]]},
                "7":{"command":["game","show",["overlayMusic"]]},
-            //    "7":{"comm":["game","show",["back"]]},
-            //    "8":{"comm":["globalVary","next",[3]]}
+            //    "7":{"command":["game","show",["back"]]},
+            //    "8":{"command":["globalVary","next",[3]]}
               }
             },
             
@@ -86,85 +86,86 @@
               "pre":0,
               "defLength":3,
               "frames":[
-                {"time":"0:0","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]}, 
-                {"time":"0:0","comm":["mid.cs.GP","setParams",[{"restart":true,"space":"MLBT_EJ2"}]]}, 
+                {"time":"0:0","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]}, 
+                {"time":"0:0","command":["mid.cs.GP","setParams",[{"restart":true,"space":"MLBT_EJ2"}]]},
+                {"time":"0:0","command":["_sys.cloud.R3D","toggleMCLP",[]]},
               
-                {"beat":"3.8","comm":["fore.cs.overlay","trig",["TextYOURS"]]},
-                {"beat":"3.12","comm":["fore.cs.overlay","trig",["TextYOURS"]]},
+                {"beat":"3.8","command":["fore.cs.overlay","trig",["TextYOURS"]]},
+                {"beat":"3.12","command":["fore.cs.overlay","trig",["TextYOURS"]]},
                 
-                {"beat":"4.8","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
-                {"beat":"4.12","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+                {"beat":"4.8","command":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+                {"beat":"4.12","command":["fore.cs.overlay","trig",["TextSOMUCH"]]},
 
-               {"beat":"5.1","path_synch":{"pixelShift":300},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RunningUp"}]]}, 
+               {"beat":"5.1","path_synch":{"pixelShift":300},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RunningUp"}]]}, 
              
-               // {"beat":"5.4","comm":["fore.cs.overlay","trig",["TextFREEDOM"]]},
-                {"beat":"5.9","comm":["fore.cs.overlay","trig",["TextDANGER"]]},
-                {"beat":"5.13","comm":["fore.cs.overlay","trig",["TextRACE"]]}, 
-                 {"beat":"6.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]}, 
+               // {"beat":"5.4","command":["fore.cs.overlay","trig",["TextFREEDOM"]]},
+                {"beat":"5.9","command":["fore.cs.overlay","trig",["TextDANGER"]]},
+                {"beat":"5.13","command":["fore.cs.overlay","trig",["TextRACE"]]}, 
+                 {"beat":"6.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]}, 
                
-                {"beat":"6.1","path_synch":{"pixelShift":0},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
+                {"beat":"6.1","path_synch":{"pixelShift":0},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom2"}]]}, 
              
                 
-              // {"beat":"6.3","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
-              //  {"beat":"6.7","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
-                {"beat":"6.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+              // {"beat":"6.3","command":["fore.cs.overlay","trig",["TextALIGN"]]},
+              //  {"beat":"6.7","command":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"6.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
                 
-                {"beat":"7.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
-                {"beat":"9.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
-                {"beat":"9.1","path_synch":{"pixelShift":0},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_EJ2"}]]}, 
+                {"beat":"7.12","command":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+                {"beat":"9.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
+                {"beat":"9.1","path_synch":{"pixelShift":0},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_EJ2"}]]}, 
 
-               // {"beat":"9.3","comm":["fore.cs.overlay","trig",["TextDREAMER"]]},
-               {"beat":"9.8","comm":["fore.cs.overlay","trig",["TextSTARS"]]},
-                {"beat":"9.12","comm":["fore.cs.overlay","trig",["TextSTARS"]]},
-                {"beat":"10.8","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
-                {"beat":"10.12","comm":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+               // {"beat":"9.3","command":["fore.cs.overlay","trig",["TextDREAMER"]]},
+               {"beat":"9.8","command":["fore.cs.overlay","trig",["TextSTARS"]]},
+                {"beat":"9.12","command":["fore.cs.overlay","trig",["TextSTARS"]]},
+                {"beat":"10.8","command":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+                {"beat":"10.12","command":["fore.cs.overlay","trig",["TextSOMUCH"]]},
 
-             //   {"beat":"11.4","comm":["fore.cs.overlay","trig",["TextFREEDOM"]]},
-             //   {"beat":"11.9","comm":["fore.cs.overlay","trig",["TextDANGER"]]},
+             //   {"beat":"11.4","command":["fore.cs.overlay","trig",["TextFREEDOM"]]},
+             //   {"beat":"11.9","command":["fore.cs.overlay","trig",["TextDANGER"]]},
 
-                {"beat":"11.1","path_synch":{"pixelShift":400},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RunningUp"}]]}, 
+                {"beat":"11.1","path_synch":{"pixelShift":400},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RunningUp"}]]}, 
              
-                {"beat":"11.13","comm":["fore.cs.overlay","trig",["TextBREAK"]]}, 
+                {"beat":"11.13","command":["fore.cs.overlay","trig",["TextBREAK"]]}, 
 
-                {"beat":"12.1","path_synch":{"pixelShift":0},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
+                {"beat":"12.1","path_synch":{"pixelShift":0},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom2"}]]}, 
             
-             //   {"beat":"12.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
-             //   {"beat":"12.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
-                {"beat":"12.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+             //   {"beat":"12.4","command":["fore.cs.overlay","trig",["TextALIGN"]]},
+             //   {"beat":"12.8","command":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"12.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
 
-                {"beat":"13.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
-                 {"beat":"14.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]},
-                 {"beat":"14.1","path_synch":{"pixelShift":200},"comm":["mid.cs.context","setParams",[{"texA":{"name":"Plus","refresh":false}}]]}, 
-               
-                {"beat":"14.1","path_synch":{"pixelShift":200},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RandomWires"}]]}, 
+                {"beat":"13.12","command":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+                 {"beat":"14.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]},
+                 {"beat":"14.1","path_synch":{"pixelShift":200},"command":["mid.cs.context","setParams",[{"texA":{"name":"Plus","refresh":false}}]]}, 
+               {"beat":"14.1","path_synch":{"pixelShift":200},"command":["mid.cs.context","setParams",[{"texB":{"name":"Plus Inv","refresh":false}}]]}, 
+                {"beat":"14.1","path_synch":{"pixelShift":200},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RandomWires"}]]}, 
             
-                {"beat":"14.1","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
-               // {"beat":"14.5","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
-                {"beat":"14.9","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
-               // {"beat":"14.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                {"beat":"14.1","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"14.5","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                {"beat":"14.9","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"14.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
 
-                {"beat":"15.1","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
-               // {"beat":"15.5","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
-                {"beat":"15.9","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
-               // {"beat":"15.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
-               {"beat":"16.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
-                {"beat":"16.1","path_synch":{"pixelShift":50},"comm":["mid.cs.context","setParams",[{"texA":{"name":"Flower Power","refresh":false}}]]}, 
-                {"beat":"16.1","path_synch":{"pixelShift":50},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo2"}]]}, 
-                {"beat":"16.1","comm":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},                 
+                {"beat":"15.1","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"15.5","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                {"beat":"15.9","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"15.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               {"beat":"16.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
+                {"beat":"16.1","path_synch":{"pixelShift":50},"command":["mid.cs.context","setParams",[{"texA":{"name":"Flower Power","refresh":false}}]]}, 
+                {"beat":"16.1","path_synch":{"pixelShift":50},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo2"}]]}, 
+                {"beat":"16.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},                 
                
-                {"beat":"16.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
-                {"beat":"16.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
-                {"beat":"16.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                {"beat":"16.4","command":["fore.cs.overlay","trig",["TextALIGN"]]},
+                {"beat":"16.8","command":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"16.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
 
-                {"beat":"17.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+                {"beat":"17.12","command":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
                 
-                {"beat":"18.1","path_synch":{"pixelShift":50},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo1"}]]}, 
-                {"beat":"18.4","comm":["fore.cs.overlay","trig",["TextALIGN"]]},
-                {"beat":"18.8","comm":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
-                {"beat":"18.13","comm":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                {"beat":"18.1","path_synch":{"pixelShift":50},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo1"}]]}, 
+                {"beat":"18.4","command":["fore.cs.overlay","trig",["TextALIGN"]]},
+                {"beat":"18.8","command":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"18.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
 
-                {"beat":"19.1","path_synch":{"pixelShift":50},"comm":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo0"}]]}, 
-                {"beat":"19.12","comm":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+                {"beat":"19.1","path_synch":{"pixelShift":50},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo0"}]]}, 
+                {"beat":"19.12","command":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
               
               ]
             },

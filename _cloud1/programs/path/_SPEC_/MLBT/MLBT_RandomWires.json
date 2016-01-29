@@ -10,11 +10,13 @@
 				
 				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
 				"bind":[
+					{"ch":0,"tar":"Plus","prop":"scale","v0":1,"v1":0},
+					//{"ch":0,"tar":"PlusInv","prop":"scale","v0":0,"v1":1},
 				
 				],
 				"streams":[
 						{"cn":"StreamPipe","name":"WF Pipe","elemLength":400,
-					"prg":{
+						"prg":{
 						"cn":"PipeBasic",
 							"planeCount":3,
 							"segCount":3,
@@ -58,27 +60,41 @@
 							},
 
 							"mesh":{"visible":false}
-					}
+						}
 					},
-				
-				
-					
 
 					{
 						"cn":"StreamObjs",
-						"name":"Music Balls",
+						"name":"Plus Balls",
+						"id":"Plus",
 						"gap":30,
 						"active":true,
 						"prgObj":{
-							"cn":"SimpleObj",
-							"geom":"geomSphereHi",
-							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],
+							"cn":"MultiObjs",
+							"plus":{
+								"geom":"geomSphereHi",
+								"mat":["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],
+							},
+							"plusInv":{
+								"geom":"geomSphereHi",
+								"mat":["Cloud","C3D",{"q":"multiB"},{"delay":4,"start":0,"startRnd":false}],
+							},
 							"trans":{
 								"scale":["Stepper",[4,2,4,2],{"delay":1}],
-								"_prg":[["x","y"],"Random2D",{"radius":1400,"hole":60}]},
-								"rotX":1
+								"_prg":[["x","y"],"Random2D",{"radius":1400,"hole":60}]
 							},
+							"logic":{
+								"active":[[],[
+									{
+										"cn":"MultiStates",
+										"p":{
+											"states":[[],["plus","plusInv"]]
+										}
+									}
+								]]
+							}
 							
+						}
 					},
 					
 				

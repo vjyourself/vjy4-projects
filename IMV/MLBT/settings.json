@@ -54,7 +54,7 @@
 		     	"mixer":{
 	    			"enabled":true,
 	    			"A":{
-	    				"peak":"beat.Sin1_1",
+	    				"peak":"wave.peak",
 	    				"lit":"NORM",
 	    				"Vary":{
 	    					"mod":0,

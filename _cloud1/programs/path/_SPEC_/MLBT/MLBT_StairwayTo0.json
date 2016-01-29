@@ -89,9 +89,17 @@
 
 			{"cn":"StreamObjs","name":"Light Bars",
 			"prg":{
-				"cn":"SimpleObj",
-				"geom":"geomSphere",
-				"mat":["Stepper",["Beat1","Beat2","Beat3","Beat4"]],
+				"cn":"MultiObjs",
+							"original":{
+								"geom":"geomSphere",
+								"mat":{"color":"#ffffff"},
+							},
+							"flash":{
+								"geom":"geomSphere",
+								"mat":["Stepper",["Beat4_1","Beat4_2","Beat4_3","Beat4_4"]],
+								//"mat":["Stepper",["Beat1A","Beat2A","Beat3A","Beat4A"],{"delay":12}],
+								"trans":{"scale":1.1}
+							},
 				"trans":{
 					"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":230,"alphaStep":65}],
 					"scale":12,

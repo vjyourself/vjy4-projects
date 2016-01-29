@@ -29,9 +29,18 @@
 						"rotateRnd":true,
 						"id":"circoBalls",
 						"prgObj":{
-							"cn":"SimpleObj",
-							"geom":"geomSphere",
-							"mat":{"color":"#ffffff"},//["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],
+							"cn":"MultiObjs",
+							"original":{
+								"geom":"geomSphere",
+								"mat":{"color":"#ffffff"},
+							},
+							"flash":{
+								"geom":"geomSphere",
+								"mat":["Stepper",["Beat2_1A","Beat2_2A"]],
+								//"mat":["Stepper",["Beat4_1","Beat4_2","Beat4_3","Beat4_4"]],
+								"trans":{"scale":1.1}
+							},
+								//["Cloud","C3D",{"q":"multiA"},{"delay":4,"start":0,"startRnd":false}],
 							"trans":{
 								"scale":3,
 								//"scale":["Stepper",[16,8,4,1],{"delay":1}],
@@ -53,6 +62,7 @@
 							}
 						}
 					},
+					
 /*
 					{
 						"cn":"StreamObjs",
