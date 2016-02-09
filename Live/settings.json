@@ -53,7 +53,7 @@
 	    	"touch":{"enabled":false},
 	    	"gamepad":{"enabled":true},
 			"midi":{
-	    		"enabled":true,
+	    		"enabled":false,
 	    		"connection":{
 	    			"type":"MIDI2.jar",
 					"url":"127.0.0.1",

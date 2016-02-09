@@ -1,0 +1,106 @@
+{
+    "sys":{
+
+		//MUSIC SOURCE : Mic / MP3 *****************************************************
+		"music":{
+	    	//"play":{"src":"Mic"}
+		    "autoStart":false,
+		    "play":{
+		    	"url":"music/Redo-DjVas.mp3",
+		    	"loop":true,
+		    	//"pos0":98,
+		    //	"pos1":113
+		    },
+		    "meta":{
+		    	"wave":{
+	    			"enabled":true,
+	    			"wave_gain":0.5,
+	    			"peak_gain":1.4,
+	    			"damping_gain":1,
+	    			"damping_mul":0.7
+	    		},
+		    	"beat":{
+	    			"enabled":true,
+	    			"sync":"playback", // tap / playback / (auto)
+	    			"tap":{
+
+	    			},
+	    			"playback":{
+	    				"start":123,
+	    				"tack":512.82051282
+	    			}
+	    			
+	    		},
+		     	"timeline":{
+		     		"enabled":false
+		     	},
+		     	"mixer":{
+	    			"enabled":true,
+	    			"A":{
+	    				"peak":"wave.peak",
+	    				"lit":"NORM",
+	    				"Vary":{
+	    					"mod":2,
+	    					"vol":1,
+	    					"func":"FullSin"
+	    				},
+	    				
+	    			}
+	    		}
+		   	}
+		},
+
+
+		//INPUT DEVICES for MOVEMENT ***************************************************
+		"io":{
+			"lastActiveBase":"gamepad",
+
+	    	"auto":{"enabled":false,"timeout":2400},
+	    	"mkb":{"enabled":false},
+	    	"touch":{"enabled":false},
+	    	"gamepad":{"enabled":true},
+	    	"midi":{
+	    		"enabled":false,
+	    		"connection":{
+	    			"type":"MIDI2.jar",
+					"url":"127.0.0.1",
+					"port":10000
+	    		},
+	    		"device":{}
+	    	},
+	    	"arduino":{
+	    		"enabled":false,
+	    		"via":"ethernet",
+	    		"ip":"192.168.2.66",
+	    		"map":["A","B","X","Y","LB","RB","LT","RT"]
+	    	}
+	 	},
+
+
+		//SCREEN SETTINGS **************************************************************
+		"screen":{
+			"fps":60,
+			"In3D":{
+				// none / split / VR
+				"mode":"none",
+				"mode_split":{
+					// horizontal / vertical
+					"split":"horizontal",
+					"eyeDistance":10
+				}
+			},
+
+	    	"fullscreen":false,
+	    	"browser":false,
+	    	"mouse":false,
+	    	"stats":false,
+	    
+	    	"gui":{
+	    		"console":false,
+	    		"consoleMini":true
+	    	},
+	    	"landing":true,
+	    	"saveImage":{"url":"http://localhost/cloud/save/saveImage.php?folder=vjy"}
+	    }
+	}
+}

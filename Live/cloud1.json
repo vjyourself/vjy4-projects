@@ -244,12 +244,13 @@
        // "Test",
         "Minimal",
         "Hippie",
-       /* "SpaceExp/FunkyLadders",
+        "TropicalFunkyHouse",
+       "SpaceExp/FunkyLadders",
         "SpaceExp/SpaceBollards",
         "SpaceExp/SemanticGrid",
         "SpaceExp/RetroRegulator",
         "SpaceExp/SpacedDoughnuts",
-        "SpaceExp/TribalAwakening"*/
+        "SpaceExp/TribalAwakening"
     ],
 
     //TIMELINES ****************************************************************

@@ -10,8 +10,8 @@
 				
 				"params":{"pathFunc":"Random","pathCurveLength":200,"cycleLength":7200},
 				"bind":[
-					{"ch":0,"tar":"Plus","prop":"scale","v0":1,"v1":0},
-					//{"ch":0,"tar":"PlusInv","prop":"scale","v0":0,"v1":1},
+					{"ch":0,"tar":"Plus","prop":"scale0","v0":1,"v1":3},
+					{"ch":0,"tar":"Plus","prop":"scale1","v0":1,"v1":3},
 				
 				],
 				"streams":[
@@ -80,7 +80,7 @@
 								"mat":["Cloud","C3D",{"q":"multiB"},{"delay":4,"start":0,"startRnd":false}],
 							},
 							"trans":{
-								"scale":["Stepper",[4,2,4,2],{"delay":1}],
+								"scale":["Stepper",[4,2,6,2],{"delay":1}],
 								"_prg":[["x","y"],"Random2D",{"radius":1400,"hole":60}]
 							},
 							"logic":{

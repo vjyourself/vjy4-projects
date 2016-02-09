@@ -1,0 +1,109 @@
+{
+  "data":{ 
+    "name":"Scenes", 
+    "target":"RScenes",
+    "path":"",
+    "data":{
+
+      "TropicalFunkyHouse":{
+        "name":"TropicalFunkyHouse",
+        "listed":true,
+       // "comp":"BackPathOver",
+        
+        "state":{
+
+          "back":{ "preset":"BackBoxBallGrid","params":{
+            "context":{
+              "texA":{"name":"#MusicWaveADD","delay":1},
+              "texB":{"name":"#MusicWaveADD","delay":1},
+              "colA":{"name":"Klat","delay":1}
+            },
+            "lights":{
+              "mode":"TriDir"
+            },
+            "gridBox":{
+              "visible":false
+            },
+            
+            "box":{
+              "visible":true,
+              "dim":12000
+            },
+            "ball":{
+              "visible":false
+            }
+          }},
+
+          "mid":{ "preset":"PathSpace","params":{
+            "context":{
+              "texA":{"name":"Hippie","delay":6},
+              "texB":{"name":"empty","delay":1},
+              "colA":{"name":"PinkOrange","delay":1}
+            },
+            "GP":{
+              "space":"_B_SpaceBollards",
+              //"space":"DataPoster1",
+              "ctrl":{
+                    "speedMin":1,
+                    "speedMax":10,
+              },
+              "ctrlPath":{
+                "beforeMe":5400,
+                "afterMe":200
+              },
+              "path":{
+                  //"type":"RandomSoftCurves"
+                 // "type":"SpiralSoft"
+                 "type":"RandomSoftCurves"
+                }
+            },
+            "lights":{
+              "mode":"TriDir_Norm"
+            }
+          }},
+
+          "fore":{ "preset":"ForeOverlayAni","params":{}},
+        },
+
+        "anal":{
+          "bind":[
+            {"ch":0,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":0}},
+            {"ch":1,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":1}},
+            {"ch":2,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":2}},
+            {"ch":3,"trans":null,"tar":{"obj":"mid.cs.GP.anal","ch":3}},
+
+            {"ch":4,"trans":null,"tar":{"obj":"fore.cs.overlay","ch":0}},
+            {"ch":5,"trans":null,"tar":{"obj":"fore.cs.overlay","ch":1}},
+            {"ch":6,"trans":null,"tar":{"obj":"fore.cs.overlay","ch":2}},
+            {"ch":7,"trans":null,"tar":{"obj":"fore.cs.overlay","ch":3}}
+            
+            //{"ch":3,"trans":null,"tar":{"obj":"mid.cs.gridBox","ch":0}}
+          ]
+        },
+
+        "vary":{
+          "channels":[
+            {"tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color","val_type":"color"},
+            {"tar":{"obj":"back","prop":"context.colA.name"},"vals":"color","val_type":"color"},
+            {"tar":{"obj":"mid","prop":"context.texA.name"},"val_type":"ImageSequence","vals":["PattAbst1","cyber_noise","cyber_abstract","cyber_code"]},
+            {"tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
+            
+            {"tar":{"obj":"mid.cs.context.cs.colA","func":"shift"}},
+            {"tar":{"obj":"back.cs.context.cs.colA","func":"shift"}},
+          
+            {"tar":{"obj":"mid","prop":"GP.space"},"val_type":"space","vals":["_B_SpaceBollards","_B_SpaceBollards2"]}
+            
+          ]
+        }
+      }
+      
+
+
+
+    }
+  }
+}
+
+
+
+

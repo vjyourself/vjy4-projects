@@ -1,6 +1,7 @@
 {
     "sys": {
         "cloud": {
+            "version": "v4",
             "world4": [
                 {
                     "n": "Test",
@@ -11,23 +12,23 @@
                 },
                 {
                     "n": "SpaceExp",
-                    "online": true,
+                    "online": false,
                     "active": false,
-                    "syncDate": "2015/Dec/1 Tue 21:46",
+                    "syncDate": "2016/Feb/4 Thu 21:44",
                     "syncStatus": "Success"
                 },
                 {
                     "n": "Minimal",
                     "online": false,
-                    "active": true,
-                    "syncDate": "2015/Dec/3 Thu 02:08",
+                    "active": false,
+                    "syncDate": "2016/Feb/5 Fri 13:39",
                     "syncStatus": "Success"
                 },
                 {
                     "n": "Hippie",
                     "online": false,
-                    "active": false,
-                    "syncDate": "2016/Jan/21 Thu 18:35",
+                    "active": true,
+                    "syncDate": "2016/Feb/4 Thu 21:40",
                     "syncStatus": "Success"
                 },
                 {

@@ -13,7 +13,7 @@
             {"n":"scene","cn":"vjyourself4.games.SceneManager",
                 "init":{
                     "flags":{},
-                    "scene":"Discovery"
+                    "scene":"World4"
                 }
             },
             {"n":"ctrlCameraMode","cn":"vjyourself4.ctrl.CtrlCameraMode"},
@@ -139,66 +139,7 @@
                 
               }
             },
-            /*
-            {"n":"ctrlKeyVary","cn":"vjyourself4.ctrl.CtrlKey",
-              "map":{
-                "q":{"command":["globalVary","next",[2]]},
-                "w":{"command":["globalVary","next",[0]]},
-                "e":{"command":["globalVary","next",[1]]},
-                "r":{"command":["globalVary","next",[3]]},
-                "t":{"command":["globalVary","next",[7]]},
-                "y":{"command":["globalVary","next",[4]]},
-                "u":{"command":["globalVary","next",[6]]},
-                "i":{"command":["globalVary","next",[5]]},
-                "o":{"command":["globalVary","next",[8]]},
-                "a":{"command":["globalVary","prev",[2]]},
-                "s":{"command":["globalVary","prev",[0]]},
-                "d":{"command":["globalVary","prev",[1]]},
-                "f":{"command":["globalVary","prev",[3]]},
-                "g":{"command":["globalVary","prev",[7]]},
-                "h":{"command":["globalVary","prev",[4]]},
-                "j":{"command":["globalVary","prev",[6]]},
-                "k":{"command":["globalVary","prev",[5]]},
-                "l":{"command":["globalVary","prev",[8]]},
-
-                "z":{"command":["sys.cloud.R3D","toggleBlendAdd",[]]},
-                "x":{"command":["ctrlCameraMode","next",[]]},
-                "c":{"command":["nextScene","next",[0]]}
-              }
-            },*/
-
-            {"n":"bindRouter","cn":"vjyourself4.ctrl.BindRouter",
-              "setInit":false,
-              "channels":{
-                "ctrlGrammar":{
-                  "ind":0,
-                  "states":[
-                    [
-                      ["ctrlGrammar.trig","AnyRouter"],
-                      ["ctrlGrammar.anal","AnyRouter"],
-                      ],
-                    [
-                      ["ctrlGrammar.trig","globalVary"],
-                      ["ctrlGrammar.anal","scene.anal"],
-                    ]
-                  ],
-                }     
-              }
-            },
-            
-            {"n":"anyRouter","cn":"vjyourself4.ctrl.AnyRouter",
-              "mapTrig":[
-                {"t":"command","command":["globalVary","next",[2]]},
-                {"t":"command","command":["globalVary","next",[0]]},
-              ],
-              "mapAnal":[
-                {"t":"anal","tar":{"obj":"scene.anal","ch":4}},
-                {"t":"anal","tar":{"obj":"scene.anal","ch":5}},
-                {"t":"anal","tar":{"obj":"scene.anal","ch":6}},
-                {"t":"anal","tar":{"obj":"scene.anal","ch":7}},
-                 
-              ]
-            },
+   
 
             {"n":"ctrlMIDI","cn":"vjyourself4.ctrl.CtrlMIDI"},
             
@@ -263,10 +204,10 @@
                 {"n":"A","t":"trigOn","command":["globalVary","next",[6]]},
                 {"n":"B","t":"trigOn","command":["_sys.music.meta.beat","tap",[]]},
 
-                {"n":"Up","t":"trigOn","command":["globalVary","next",[4]]},
-                {"n":"Down","t":"trigOn","command":["globalVary","next",[7]]},
-                {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
-                {"n":"Right","t":"trigOn","command":["globalVary","next",[3]]}
+                 {"n":"Up","t":"trigOn","command":["globalVary","next",[0]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[1]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[8]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","prev",[8]]}
 
               ]
             },
@@ -282,10 +223,12 @@
                 {"n":"A","t":"trigOn","command":["_sys.cloud.R3D","toggleMCLP",[]]},
                 {"n":"B","t":"trigOn","command":["_sys.music.meta.beat","tap",[]]},
 
-                {"n":"Up","t":"trigOn","command":["globalVary","next",[0]]},
-                {"n":"Down","t":"trigOn","command":["globalVary","next",[1]]},
-                {"n":"Right","t":"trigOn","command":["globalVary","next",[8]]},
-                {"n":"Left","t":"trigOn","command":["globalVary","prev",[8]]}
+               
+
+                {"n":"Up","t":"trigOn","command":["globalVary","next",[4]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[7]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[3]]}
                 
               ]
             },
@@ -306,7 +249,9 @@
                 ]
               }
             }
+
             /*
+
             {"n":"ctrlGrammar","cn":"vjyourself4.ctrl.Grammar",
             "bind":{
                 "anal":"anyRouter",
@@ -381,6 +326,67 @@
               ]
             }*/
 
+                       /*
+            {"n":"ctrlKeyVary","cn":"vjyourself4.ctrl.CtrlKey",
+              "map":{
+                "q":{"command":["globalVary","next",[2]]},
+                "w":{"command":["globalVary","next",[0]]},
+                "e":{"command":["globalVary","next",[1]]},
+                "r":{"command":["globalVary","next",[3]]},
+                "t":{"command":["globalVary","next",[7]]},
+                "y":{"command":["globalVary","next",[4]]},
+                "u":{"command":["globalVary","next",[6]]},
+                "i":{"command":["globalVary","next",[5]]},
+                "o":{"command":["globalVary","next",[8]]},
+                "a":{"command":["globalVary","prev",[2]]},
+                "s":{"command":["globalVary","prev",[0]]},
+                "d":{"command":["globalVary","prev",[1]]},
+                "f":{"command":["globalVary","prev",[3]]},
+                "g":{"command":["globalVary","prev",[7]]},
+                "h":{"command":["globalVary","prev",[4]]},
+                "j":{"command":["globalVary","prev",[6]]},
+                "k":{"command":["globalVary","prev",[5]]},
+                "l":{"command":["globalVary","prev",[8]]},
+
+                "z":{"command":["sys.cloud.R3D","toggleBlendAdd",[]]},
+                "x":{"command":["ctrlCameraMode","next",[]]},
+                "c":{"command":["nextScene","next",[0]]}
+              }
+            },*/
+            /*
+            {"n":"bindRouter","cn":"vjyourself4.ctrl.BindRouter",
+              "setInit":false,
+              "channels":{
+                "ctrlGrammar":{
+                  "ind":0,
+                  "states":[
+                    [
+                      ["ctrlGrammar.trig","AnyRouter"],
+                      ["ctrlGrammar.anal","AnyRouter"],
+                      ],
+                    [
+                      ["ctrlGrammar.trig","globalVary"],
+                      ["ctrlGrammar.anal","scene.anal"],
+                    ]
+                  ],
+                }     
+              }
+            },
+            
+            {"n":"anyRouter","cn":"vjyourself4.ctrl.AnyRouter",
+              "mapTrig":[
+                {"t":"command","command":["globalVary","next",[2]]},
+                {"t":"command","command":["globalVary","next",[0]]},
+              ],
+              "mapAnal":[
+                {"t":"anal","tar":{"obj":"scene.anal","ch":4}},
+                {"t":"anal","tar":{"obj":"scene.anal","ch":5}},
+                {"t":"anal","tar":{"obj":"scene.anal","ch":6}},
+                {"t":"anal","tar":{"obj":"scene.anal","ch":7}},
+                 
+              ]
+            },
+            */
            
             
         ]  

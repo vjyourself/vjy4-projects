@@ -21,8 +21,10 @@
 					{"ch":2,"tar":"objBollard","prop":"scale","v0":1,"v1":0}
 				],
 				"streams":[
-					//WF PIPE
+
+					//WF PIPE Vary1
 					{
+						"level":[false,false,true,true],
 						"id":"pipeWF","name":"WF Pipe",
 						"context":{"color":"A","texture":""},
 						"cn":"StreamPipe",
@@ -42,9 +44,13 @@
 								},
 							"wf":{"color":16777215}}
 					},
+
+					//WF PIPE Vary 2
 					{
 						"cn":"StreamPipe",
 						"id":"pipeHose",
+						"level":[false,false,true,true],
+						"context":{"color":"A","texture":""},
 						"elemLength":800,
 						"prgPipe":{
 							"cn":"PathPipe",
@@ -63,63 +69,61 @@
 								
 								"twist0":0 //["Stepper",[0,30,60,90,120,150,180,210,240,270,300,330]]
 							},
-							"wf":{"color":0xaaaaaa,"thickness":1}
-						//"wf_visible":["Stepper",[true,false],{"delay":3}],
-						//"mesh_visible":["Stepper",[false,true],{"delay":3}]
+							"wf":{"color":"#aaaaaa","thickness":1}
 						}
 					},
-					//Spikes
-					{	
-						"id":"objSpike","name":"Spikes",
-						"context":{"color":"","texture":"A"},
-	
-						"cn":"StreamObjs",
-					
-					"prgObj":{
-					 	"cn":"SimpleObj",
-						"geom":"geomSpike",
-						"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}],
-						//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
-						"trans":{
-							"x":["Stepper",[140,-140]],
-							"y":["Stepper",[140,140,-140,-140]],
-							"rotationZ":["Stepper",[135,-135,45,315]],
-							"scale":1.8
-						},
-						"rotZ":0
-					},
-					
-					"gap":120,
-					},
 
-					//Bollards
+					//Bollards Vary 1
 					{	
-
+						"level":[false,false,false,true],
 						"id":"objBollard","name":"Bollards",
 						"context":{"color":"","texture":"A"},
 						"cn":"StreamObjs",
-					
-					"prgObj":{
-					 	"cn":"SimpleObj",
-						"geom":"geomOcta",
-						"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}],
-						//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
-						"trans":{
-							"x":["Stepper",[160,-160]],
-							"y":["Stepper",[160,160,-160,-160]],
-							"z":0,
-							"scale":10
-						},
-						"rotY":["Stepper",[1,-1]],
-						"rotZ":0.5
-					},
-					
-					"gap":120,
+						"gap":120,
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"geomOcta",
+							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}],
+							//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+							"trans":{
+								"x":["Stepper",[160,-160]],
+								"y":["Stepper",[160,160,-160,-160]],
+								"z":0,
+								"scale":10
+							},
+							"rotY":["Stepper",[1,-1]],
+							"rotZ":0.5
+						}
 					},
 
+					// Bollards Vary 2 (Spikes)
+					{	
+						"level":[false,false,false,true],
+						"id":"objSpike","name":"Spikes",
+						"context":{"color":"","texture":"A"},
+						"cn":"StreamObjs",
+						"gap":120,
+
+						"prgObj":{
+						 	"cn":"SimpleObj",
+							"geom":"geomSpike",
+							"mat":["Cloud","C3D",{"q":"multiA"},{"delay":6,"startRnd":true}],
+							//"matColor":["Cloud","CCol",{"q":"warmbow"},{}],
+							"trans":{
+								"x":["Stepper",[140,-140]],
+								"y":["Stepper",[140,140,-140,-140]],
+								"rotationZ":["Stepper",[135,-135,45,315]],
+								"scale":1.8
+							},
+							"rotZ":0
+						}
+					},
+
+					
 					//OBJ Rings
 					{
 
+						"level":[false,true,true,true],
 						"id":"objRing","name":"Rings",
 						"context":{"color":"","texture":""},
 						"cn":"StreamObjs",
@@ -135,8 +139,9 @@
 					},
 
 					//PIPE Music Wave
-					/*
 					{
+						"level":[true,true,true,true],
+						"condition":[{"n":"MM_Wave","v":true}],
 						"id":"pipeMusic","name":"Music Pipe",
 						"context":{"color":"","texture":""},
 						"cn":"StreamPipe",
@@ -155,12 +160,11 @@
 							},
 						"mesh":{"mat":"MusicWaveADD"}
 						}
-					},*/
+					}
 
-					//Hose
-					/*
-					*/
+					
 				]
-			}		}
+			}		
+		}
 	}
 }

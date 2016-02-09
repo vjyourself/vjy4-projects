@@ -1,0 +1,388 @@
+{ 
+    "game":{
+        "backgroundColor":"#000000",      
+        "elems":[
+
+            // --- Scene Struct ----------------------------------------------------------------------------
+            
+            {"n":"me","cn":"vjyourself4.games.Me","gui":{"display":false,"posX":"center","posY":"bottom"}  },
+            {"n":"back","cn":"vjyourself4.comp.CompManager"},
+            {"n":"mid","cn":"vjyourself4.comp.CompManager"},
+            {"n":"fore","cn":"vjyourself4.comp.CompManager"},
+            {"n":"filter","cn":"vjyourself4.games.CompFilters","active":true,"autoOff":{"active":false}},
+            
+            {"n":"scene","cn":"vjyourself4.games.SceneManager",
+                "init":{"flags":{},"scene":"IMV_RedoVas"}
+            },
+            {"n":"ctrlCameraMode","cn":"vjyourself4.ctrl.CtrlCameraMode"},
+            
+            // --- Overlay Extras ----------------------------------------------------------------------------
+
+            // Music Meta
+            {"n":"overlayMusicMeta","cn":"vjyourself4.overlay.OverlayMusicMeta",
+              "visible":false,
+              "show":{
+                "Wave":true,
+                "Beat":true,
+                "Mixer":true,
+                "Keys":true
+              },
+              "keys":[
+                
+                {"ch":"h","desc":"Lit Turbo"},
+                {"ch":"j","desc":"Lit Speed"},
+                {"ch":"","desc":""},
+                {"ch":"k","desc":"Mixer Func"}, 
+                {"ch":"l","desc":"Mixer Mod"}, 
+                {"ch":"","desc":""},
+                {"ch":"x","desc":"MC Func"}, 
+                {"ch":"c","desc":"MC LP"}, 
+                {"ch":"","desc":""},
+                {"ch":"v","desc":"Wave Draw"},
+                {"ch":"b","desc":"Wave Gain -"},
+                {"ch":"n","desc":"Wave Gain +"},
+                {"ch":"","desc":""},
+                {"ch":"m","desc":"Show / Hide"},
+              
+              ]
+
+            },
+
+            // Music Timeline
+            {"n":"overlayMusic","cn":"vjyourself4.overlay.OverlayMusicTimeline"},
+            
+            // Console
+            {"n":"debugConsole","cn":"vjyourself4.overlay.OverlayConsole",
+              "width":300,"height":500,
+              "filter":{
+                "act":true,
+                "rule":{
+                  "def":false,
+                  "listA":[true,true,true,true],
+                  "listB":{"SynthPath":true},
+                  "listAB":[]
+                }
+              }
+            },
+
+
+            // --- Cloud Dynamics ---------------------------------------------------------------------------
+            
+            // {"n":"dynoScene","cn":"vjyourself4.cloud.DynoScene"},
+            {"n":"reloadCloud","cn":"vjyourself4.cloud.ReloadCloud"},
+           
+
+
+            // --- Scene Vary --------------------------------------------------------------------------
+            
+            // Scene Vary
+            {"n":"sceneVary","cn":"vjyourself4.games.SceneVary"},
+
+            // Global Vary
+            {"n":"globalVary","cn":"vjyourself4.games.SceneVary",
+              "channels":[
+                {"n":"Space","n2":"Space Grp","tar":{"obj":"mid","prop":"GP.space"},"nested":true,"vals":"spaceG"},
+                {"n":"Space","link":true,"ch":0,"lev":1},
+                {"n":"Back Tex","tar":{"obj":"back.cs.context.cs.texA","func":"trigRefresh"}},
+                {"n":"Tex A","tar":{"obj":"mid","prop":"context.texA.name"},"vals":"texture"},
+                
+                {"n":"Back Col","tar":{"obj":"back","prop":"context.colA.name"},"vals":"color"},
+                {"n":"Filter","tar":{"obj":"filter","prop":"type"},"vals":["Normal","Shine1","Shine2","Shine3"]},
+                {"n":"Light","tar":{"obj":"mid","prop":"lights.mode"},"vals":"light"},
+                {"n":"Mid Col","tar":{"obj":"mid","prop":"context.colA.name"},"vals":"color"},
+
+                {"n":"Path","tar":{"obj":"mid","prop":"GP.path.type"},"vals":"path"}
+              ]
+            },
+
+            // Next Scene
+            {"n":"nextScene","cn":"vjyourself4.games.SceneVary",
+              "channels":[
+                {"tar":{"obj":"scene","prop":"scene"},"vals":"scene"},
+              ]
+            },
+
+
+
+            // --- Ctrl Inputs ---------------------------------------------------------------------------
+            
+            // Keyboard
+            {"n":"ctrlKey","cn":"vjyourself4.ctrl.CtrlKey",
+              "map":{
+                "1":{"command":["_sys.music","start",[]]},
+                "2":{"command":["_sys.music","pause",[]]},
+                "3":{"command":["reloadCloud","reloadCurrSpace",[]]},
+                //"3":{"command":["dynoScene","saveToHeap",[]]},
+                //"4":{"command":["bindRooter","next",["vary"]]},
+                //"5":{"command":["debugConsole","show",[]]},
+                "6":{"command":["reloadCloud","reloadCurrSpace",[]]},
+                "7":{"command":["game","show",["overlayMusic"]]},
+                //"7":{"command":["game","show",["back"]]},
+                //"8":{"command":["globalVary","next",[3]]}
+                "8":{"command":["mid.cs.GP.synthPath","levelDown",[]]},
+                "9":{"command":["mid.cs.GP.synthPath","levelUp",[]]},
+
+                "m":{"command":["game","show",["overlayMusicMeta"]]},
+                "b":{"command":["_sys.music.meta","addWaveGain",[-0.2]]},
+                "n":{"command":["_sys.music.meta","addWaveGain",[0.2]]},
+                "v":{"command":["_sys.cloud.R3D","nextWaveDrawMode",[]]},
+                "x":{"command":["_sys.music.meta.mixer","next",["peak"]]},
+                "c":{"command":["_sys.cloud.R3D","toggleMCLP",[]]},
+                "l":{"command":["_sys.music.meta.mixer","next",["VaryMod"]]},
+                "k":{"command":["_sys.music.meta.mixer","next",["VaryFunc"]]},
+                "h":{"command":["_sys.music.meta.mixer","next",["litTurbo"]]},
+                "j":{"command":["_sys.music.meta.mixer","next",["lit"]]},
+               
+              }
+            },
+            
+            // LIVE A 
+            {"n":"map_LIVE_A","cn":"vjyourself4.ctrl.GamepadMapper",
+              "map":[
+                {"n":"LeftTrigger","t":"anal","tar":{"obj":"scene.anal","ch":0}},
+                {"n":"RightTrigger","t":"anal","tar":{"obj":"scene.anal","ch":1}},
+                {"n":"LB","t":"anal","tar":{"obj":"scene.anal","ch":6}},
+                {"n":"RB","t":"trigOn","command":["ctrlCameraMode","nextFrontBack",[]]},
+                {"n":"RB","t":"trigOff","command":["ctrlCameraMode","prevFrontBack",[]]},
+               
+                {"n":"Y","t":"trigOn","command":["globalVary","setIndex",[5,3]]},
+                {"n":"Y","t":"trigOff","command":["globalVary","setIndex",[5,0]]},
+                {"n":"A","t":"trigOn","command":["globalVary","setIndex",[6,"inv"]]},
+                {"n":"A","t":"trigOff","command":["globalVary","setIndex",[6,"invBack"]]},
+                {"n":"X","t":"trigOn","command":["sys.cloud.R3D","toggleBlendAdd",[]]},
+                {"n":"X","t":"trigOff","command":["sys.cloud.R3D","toggleBlendAdd",[]]},
+                {"n":"B","t":"anal","tar":{"obj":"scene.anal","ch":7}},
+
+                {"n":"Up","t":"trigOn","command":["globalVary","next",[4]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[7]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[3]]}
+
+              ]
+            },
+
+            // LIVE B
+            {"n":"map_LIVE_B","cn":"vjyourself4.ctrl.GamepadMapper",
+              "map":[
+                {"n":"LeftTrigger","t":"anal","tar":{"obj":"scene.anal","ch":4}},
+                {"n":"RightTrigger","t":"anal","tar":{"obj":"scene.anal","ch":5}},
+                {"n":"LB","t":"anal","tar":{"obj":"scene.anal","ch":2}},
+                {"n":"RB","t":"trigOn","command":["ctrlCameraMode","nextInOut",[]]},
+                {"n":"RB","t":"trigOff","command":["ctrlCameraMode","prevInOut",[]]},
+                
+                {"n":"A","t":"trigOn","command":["globalVary","setIndex",[7,"inv"]]},
+                {"n":"A","t":"trigOff","command":["globalVary","setIndex",[7,"invBack"]]},
+                {"n":"A","t":"trigOn","command":["globalVary","setIndex",[4,"inv"]]},
+                {"n":"A","t":"trigOff","command":["globalVary","setIndex",[4,"invBack"]]},
+                {"n":"B","t":"anal","tar":{"obj":"scene.anal","ch":3}},
+
+                {"n":"Up","t":"trigOn","command":["globalVary","next",[4]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[7]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[3]]}
+              ]
+            },
+
+            // BUILD A
+            {"n":"map_BUILD_A","cn":"vjyourself4.ctrl.GamepadMapper",
+              "map":[
+                {"n":"LeftTrigger","t":"anal","tar":{"obj":"scene.anal","ch":0}},
+                {"n":"RightTrigger","t":"anal","tar":{"obj":"scene.anal","ch":1}},
+                {"n":"LB","t":"anal","tar":{"obj":"scene.anal","ch":2}},
+                
+                {"n":"RB","t":"trigOn","command":["ctrlCameraMode","nextFrontBackInOut",[]]},
+                
+                {"n":"X","t":"trigOn","command":["sys.cloud.R3D","toggleBlendAdd",[]]},
+                {"n":"Y","t":"trigOn","command":["globalVary","next",[5]]},
+                {"n":"A","t":"trigOn","command":["globalVary","next",[6]]},
+                {"n":"B","t":"trigOn","command":["_sys.music.meta.beat","tap",[]]},
+
+               {"n":"Up","t":"trigOn","command":["globalVary","next",[0]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[1]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","next",[2]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[3]]}
+                
+                
+
+              ]
+            },
+
+            // BUILD B
+            {"n":"map_BUILD_B","cn":"vjyourself4.ctrl.GamepadMapper",
+              "map":[
+                {"n":"LeftTrigger","t":"anal","tar":{"obj":"scene.anal","ch":2}},
+                {"n":"RightTrigger","t":"anal","tar":{"obj":"scene.anal","ch":3}},
+
+                {"n":"X","t":"trigOn","command":["_sys.cloud.R3D","nextWaveDrawMode",[]]},
+                {"n":"Y","t":"trigOn","command":["_sys.music.meta.mixer","next",["VaryMod"]]},
+                {"n":"A","t":"trigOn","command":["_sys.cloud.R3D","toggleMCLP",[]]},
+                {"n":"B","t":"trigOn","command":["_sys.music.meta.beat","tap",[]]},
+
+                
+                 {"n":"Up","t":"trigOn","command":["globalVary","next",[4]]},
+                {"n":"Down","t":"trigOn","command":["globalVary","next",[7]]},
+                {"n":"Right","t":"trigOn","command":["globalVary","next",[8]]},
+                {"n":"Left","t":"trigOn","command":["globalVary","prev",[8]]}
+                
+              ]
+            },
+
+            {"n":"liveBuilderManager","cn":"vjyourself4.ctrl.LiveBuilderManager",
+              "player":{
+                "switchMap":"Start",
+                "switchSubMap":"Back",
+                "maps":[
+                  {
+                    "name":"LIVE","mapsInd":0,
+                    "maps":[{"name":"A"},{"name":"B"}]
+                  },
+                  {
+                    "name":"BUILD","mapsInd":0,
+                    "maps":[{"name":"A"},{"name":"B"}]
+                  } 
+                ]
+              }
+            },
+
+
+            // --- TIMELINE ---------------------------------------------------------------------------
+           
+           
+            {"n":"timeline","cn":"vjyourself4.timeline.TimelineMusic",
+              "enabled":true,
+              "pre":0,
+              "defLength":3,
+              "frames":[
+              
+                {"time":"0:0","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]}, 
+                {"time":"0:0","command":["mid.cs.GP.synthPath","setLevel",[0]]},
+                {"time":"0:0","command":["mid.cs.GP","setParams",[{"restart":true,"space":"_B_SpaceBollards"}]]},
+                {"beat":"3.1","command":["mid.cs.GP.synthPath","setLevel",[1,{"progressive":false}]]},
+                //{"beat":"5.1","command":["mid.cs.GP.synthPath","setLevel",[2,{"progressive":false}]]},
+                {"beat":"4.1","command":["mid.cs.GP","setParams",[{"restart":false,"level":2,"space":"_B_HexPipeBall3"}]]},
+                {"beat":"7.1","command":["mid.cs.GP.synthPath","setLevel",[3,{"progressive":false}]]},
+                
+                {"beat":"7.1","command":["mid.cs.GP.synthPath","setLevel",[4,{"progressive":true}]]},
+                {"beat":"12.1","command":["_sys.cloud.R3D","setMCLP",[false]]},
+
+                {"beat":"10.1","command":["mid.cs.context","setParams",[{"texA":{"name":"Pattern Torus","refresh":false}}]]}, 
+                {"beat":"10.1","command":["mid.cs.context","setParams",[{"texB":{"name":"Jungle Leaves","refresh":false}}]]},
+               
+                {"beat":"10.1","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"MutaPatt"}]]},
+                {"beat":"13.1","command":["_sys.cloud.R3D","setMCLP",[true]]},
+                {"beat":"13.1","command":["_sys.cloud.R3D","setBlendAdd",[true]]},
+               
+                {"beat":"14.1","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"EdgyHoles"}]]},
+                
+                {"beat":"16.1","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"FlyingGeom"}]]},
+                
+                {"beat":"17.1","command":["mid.cs.context","setParams",[{"colA":{"name":"Orange","refresh":false}}]]}, 
+                {"beat":"17.1","command":["back.cs.context","setParams",[{"colA":{"name":"Red","refresh":true}}]]}, 
+                {"beat":"17.1","command":["_sys.cloud.R3D","setBlendAdd",[false]]},
+                {"beat":"17.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
+                {"beat":"17.1","command":["filter","setParams",[{"type":"Shine2"}]]},
+
+                {"beat":"17.10","command":["mid.cs.context","setParams",[{"texA":{"name":"Flower Power","refresh":false}}]]},
+                {"beat":"17.10","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"_B_SpaceDoughnuts3"}]]},
+               
+
+                {"beat":"19.1","command":["filter","setParams",[{"type":"Shine1"}]]},
+
+                 
+                
+                {"beat":"21.1","command":["_sys.music.meta.mixer","setVal",["VaryMod",4]]},
+                {"beat":"21.1","command":["mid.cs.context","setParams",[{"colA":{"name":"Pusss1","refresh":true}}]]}, 
+                
+                
+               
+                //{"beat":"7.1","command":["mid.cs.GP.synthPath","setLastLevel",[3,{"progressive":false}]]},
+              //  {"time":"0:0","command":["mid.cs.GP","setParams",[{"restart":true,"space":"_B_SpaceBollards"}]]},
+                
+             
+               // {"time":"0:0","command":["_sys.cloud.R3D","toggleMCLP",[]]},
+              /*
+                {"beat":"3.8","command":["fore.cs.overlay","trig",["TextYOURS"]]},
+                {"beat":"3.12","command":["fore.cs.overlay","trig",["TextYOURS"]]},
+                
+                {"beat":"4.8","command":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+                {"beat":"4.12","command":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+
+               {"beat":"5.1","path_synch":{"pixelShift":300},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RunningUp"}]]}, 
+             
+               // {"beat":"5.4","command":["fore.cs.overlay","trig",["TextFREEDOM"]]},
+                {"beat":"5.9","command":["fore.cs.overlay","trig",["TextDANGER"]]},
+                {"beat":"5.13","command":["fore.cs.overlay","trig",["TextRACE"]]}, 
+                 {"beat":"6.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]}, 
+               
+                {"beat":"6.1","path_synch":{"pixelShift":0},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
+             
+                
+              // {"beat":"6.3","command":["fore.cs.overlay","trig",["TextALIGN"]]},
+              //  {"beat":"6.7","command":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"6.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                
+                {"beat":"7.12","command":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+                {"beat":"9.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
+                {"beat":"9.1","path_synch":{"pixelShift":0},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_EJ2"}]]}, 
+
+               // {"beat":"9.3","command":["fore.cs.overlay","trig",["TextDREAMER"]]},
+               {"beat":"9.8","command":["fore.cs.overlay","trig",["TextSTARS"]]},
+                {"beat":"9.12","command":["fore.cs.overlay","trig",["TextSTARS"]]},
+                {"beat":"10.8","command":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+                {"beat":"10.12","command":["fore.cs.overlay","trig",["TextSOMUCH"]]},
+
+             //   {"beat":"11.4","command":["fore.cs.overlay","trig",["TextFREEDOM"]]},
+             //   {"beat":"11.9","command":["fore.cs.overlay","trig",["TextDANGER"]]},
+
+                {"beat":"11.1","path_synch":{"pixelShift":400},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RunningUp"}]]}, 
+             
+                {"beat":"11.13","command":["fore.cs.overlay","trig",["TextBREAK"]]}, 
+
+                {"beat":"12.1","path_synch":{"pixelShift":0},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom2"}]]}, 
+            
+             //   {"beat":"12.4","command":["fore.cs.overlay","trig",["TextALIGN"]]},
+             //   {"beat":"12.8","command":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"12.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+
+                {"beat":"13.12","command":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+                 {"beat":"14.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]},
+                 {"beat":"14.1","command":["_sys.cloud.R3D","toggleMCLP",[]]},
+                 {"beat":"14.1","path_synch":{"pixelShift":200},"command":["mid.cs.context","setParams",[{"texA":{"name":"Plus","refresh":false}}]]}, 
+               {"beat":"14.1","path_synch":{"pixelShift":200},"command":["mid.cs.context","setParams",[{"texB":{"name":"Plus Inv","refresh":false}}]]}, 
+                {"beat":"14.1","path_synch":{"pixelShift":200},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RandomWires"}]]}, 
+            
+                {"beat":"14.1","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"14.5","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                {"beat":"14.9","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"14.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+
+                {"beat":"15.1","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"15.5","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+                {"beat":"15.9","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               // {"beat":"15.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+               {"beat":"16.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
+               {"beat":"16.1","command":["_sys.cloud.R3D","toggleMCLP",[]]},
+                {"beat":"16.1","path_synch":{"pixelShift":50},"command":["mid.cs.context","setParams",[{"texA":{"name":"Flower Power","refresh":false}}]]}, 
+                {"beat":"16.1","path_synch":{"pixelShift":50},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo2"}]]}, 
+                {"beat":"16.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},                 
+               
+                {"beat":"16.4","command":["fore.cs.overlay","trig",["TextALIGN"]]},
+                {"beat":"16.8","command":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"16.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+
+                {"beat":"17.12","command":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+                
+                {"beat":"18.1","path_synch":{"pixelShift":50},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo1"}]]}, 
+                {"beat":"18.4","command":["fore.cs.overlay","trig",["TextALIGN"]]},
+                {"beat":"18.8","command":["fore.cs.overlay","trig",["TextCOLLIDE"]]},
+                {"beat":"18.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
+
+                {"beat":"19.1","path_synch":{"pixelShift":50},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo0"}]]}, 
+                {"beat":"19.12","command":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
+              */
+              ]
+            },
+        ]  
+    }
+}
+

@@ -1,0 +1,23 @@
+{
+    "sys": {
+        "cloud": {
+            "version": "v4",
+            "world4": [
+                {
+                    "n": "TropicalFunkyHouse",
+                    "online": false,
+                    "active": true,
+                    "syncDate": "2016/Feb/5 Fri 15:51",
+                    "syncStatus": "Success"
+                },
+                {
+                    "n": "SpaceExp",
+                    "online": true,
+                    "active": false,
+                    "syncDate": "2015/Dec/1 Tue 22:10",
+                    "syncStatus": "Success"
+                }
+            ]
+        }
+    }
+}

@@ -64,7 +64,7 @@
               "overlay":{
                 "def":{
                   "length":2,
-                  "trans":["ZoomInLeopard","ZoomInFluid","ZoomInCheetah"],
+                  "trans":["ZoomInLeopard","ZoomInLeopard","ZoomInCheetah","ZoomInCheetah","ZoomInFluid","ZoomInFluid"],
                   //"trans":["ZoomInFadeOut"], //"RightSideRoller","LeftSideRoller"]
                   "transInd":0
                   },

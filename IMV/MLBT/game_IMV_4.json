@@ -103,7 +103,7 @@
                 {"beat":"5.13","command":["fore.cs.overlay","trig",["TextRACE"]]}, 
                  {"beat":"6.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]}, 
                
-                {"beat":"6.1","path_synch":{"pixelShift":0},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom2"}]]}, 
+                {"beat":"6.1","path_synch":{"pixelShift":0},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_BallsSpiralRandom"}]]}, 
              
                 
               // {"beat":"6.3","command":["fore.cs.overlay","trig",["TextALIGN"]]},
@@ -135,6 +135,7 @@
 
                 {"beat":"13.12","command":["fore.cs.overlay","trig",["TextALLTOGETHER"]]},
                  {"beat":"14.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_NormDark"}]]},
+                 {"beat":"14.1","command":["_sys.cloud.R3D","toggleMCLP",[]]},
                  {"beat":"14.1","path_synch":{"pixelShift":200},"command":["mid.cs.context","setParams",[{"texA":{"name":"Plus","refresh":false}}]]}, 
                {"beat":"14.1","path_synch":{"pixelShift":200},"command":["mid.cs.context","setParams",[{"texB":{"name":"Plus Inv","refresh":false}}]]}, 
                 {"beat":"14.1","path_synch":{"pixelShift":200},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_RandomWires"}]]}, 
@@ -149,6 +150,7 @@
                 {"beat":"15.9","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
                // {"beat":"15.13","command":["fore.cs.overlay","trig",["TextBETOGETHER"]]},
                {"beat":"16.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
+               {"beat":"16.1","command":["_sys.cloud.R3D","toggleMCLP",[]]},
                 {"beat":"16.1","path_synch":{"pixelShift":50},"command":["mid.cs.context","setParams",[{"texA":{"name":"Flower Power","refresh":false}}]]}, 
                 {"beat":"16.1","path_synch":{"pixelShift":50},"command":["mid.cs.GP","setParams",[{"restart":false,"space":"MLBT_StairwayTo2"}]]}, 
                 {"beat":"16.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},                 

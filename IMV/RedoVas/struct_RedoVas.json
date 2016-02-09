@@ -1,0 +1,54 @@
+{
+    "sys":{
+            "music":{
+                  "meta":{
+                        "timeline":{
+                              "enabled":true,
+                              "struct":[
+                                    {"ind":1,"b":16,"n":"A 1 beats 1","s":1},
+                                    {"ind":2,"b":16,"n":"A 2 beats 2","s":2},
+                                    {"ind":3,"b":16,"n":"A 3 aaaa 1","s":3},
+                                    {"ind":4,"b":16,"n":"A 4 aaaa 2","s":3},
+                                    {"ind":5,"b":16,"n":"A 5 parrot 1","s":4},
+                                    {"ind":6,"b":16,"n":"A 6 parrot 2","s":5},
+                                    {"ind":7,"b":16,"n":"UP! 1","s":5},
+                                    {"ind":8,"b":16,"n":"UP! 2","s":1},
+                                    {"ind":9,"b":16,"n":"UP! 3","s":3},
+                                    {"ind":10,"b":16,"n":"UP! 4","s":3},
+                                    {"ind":11,"b":16,"n":"UP! 5 top","s":4},
+                                    {"ind":12,"b":16,"n":"UP! 6 top","s":5},
+                                    {"ind":13,"b":16,"n":"LilTop 1 mini","s":5},
+                                    {"ind":14,"b":16,"n":"LilTop 2 mini","s":4},
+                                    {"ind":15,"b":16,"n":"LilTop 3 on","s":4},
+                                    {"ind":16,"b":16,"n":"LilTop 4 on","s":6},
+                                    {"ind":17,"b":16,"n":"LilTop 5 mini","s":6},
+                                    {"ind":18,"b":16,"n":"LilTop 6 mini","s":3},
+                                    {"ind":19,"b":16,"n":"UP!!! 1","s":3},
+                                    {"ind":20,"b":16,"n":"UP!!! 2","s":1},
+                                    {"ind":21,"b":16,"n":"TOP 1 arrive","s":4},
+                                    {"ind":22,"b":16,"n":"TOP 2 climb 1","s":5},
+                                    {"ind":23,"b":16,"n":"TOP 3 climb 2","s":5},
+                                    {"ind":24,"b":16,"n":"TOP 4 climb 3","s":4},
+                                    {"ind":25,"b":16,"n":"TOP 5 TOP","s":4},
+                                    {"ind":26,"b":16,"n":"TOP 6 ","s":6},
+                                    {"ind":27,"b":16,"n":"TOP 7 ","s":6},
+                                    {"ind":28,"b":16,"n":"TOP 8 full","s":3},
+                                    {"ind":29,"b":16,"n":"TOP 9 mini","s":3},
+                                    {"ind":30,"b":16,"n":"TOP 10 mini","s":3},
+                                    {"ind":31,"b":16,"n":"TOP 11 full","s":4},
+                                    {"ind":32,"b":16,"n":"TOP 12 full","s":5},
+                                    {"ind":33,"b":16,"n":"TOP 13 flat hi","s":5},
+                                    {"ind":34,"b":16,"n":"TOP 14 flat hi","s":4},
+                                    {"ind":35,"b":16,"n":"TopDOWN 1","s":4},
+                                    {"ind":36,"b":16,"n":"TopDOWN","s":6},
+                                    {"ind":37,"b":16,"n":"OUT 1","s":6},
+                                    {"ind":38,"b":16,"n":"OUT 2","s":3},
+                                    {"ind":39,"b":16,"n":"MINI 1","s":3},
+                                    {"ind":40,"b":16,"n":"MINI 2","s":3},
+                                    {"ind":41,"b":16,"n":"Echhhooo","s":3}
+                              ]
+                        }
+                }
+          }
+    }
+}

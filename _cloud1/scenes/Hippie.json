@@ -14,8 +14,8 @@
 
           "back":{ "preset":"BackBoxBallGrid","params":{
             "context":{
-              "texA":{"name":"Stars","delay":1},
-              "texB":{"name":"empty","delay":1},
+              "texA":{"name":"#MusicWaveADD","delay":1},
+              "texB":{"name":"#MusicWaveADD","delay":1},
               "colA":{"name":"Klat","delay":1}
             },
             "lights":{

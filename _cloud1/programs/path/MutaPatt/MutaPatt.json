@@ -49,6 +49,7 @@
 						"name":"Multi Balls",
 						"gap":0,
 						"active":true,
+						"musicTrans":false,
 						"prgObj":{
 							"cn":"SimpleObj",
 							"geom":["Stepper",["Sphere","Sphere","FlatRing120"]],
