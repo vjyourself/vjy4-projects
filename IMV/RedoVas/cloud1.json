@@ -73,7 +73,7 @@
         "doughnuts":[
             "Doughnuts/_B_SpaceDoughnuts1",
             "Doughnuts/_B_SpaceDoughnuts2",
-            "Doughnuts/_B_SpaceDoughnuts3",
+            "Doughnuts/SpaceDoughnuts3_AB",
             "Doughnuts/_B_SpaceDoughnuts4",
             "Doughnuts/_B_SpaceDoughnuts5"
         ],
@@ -108,6 +108,7 @@
         "ObjFlow":[
             "ObjFlow/FlyingBars",
             "ObjFlow/FlyingGeom",
+            "ObjFlow/FlyingGeom2",
             "ObjFlow/FlyingAnimals",
             //"ObjFlow/MadBombs",
             //"ObjFlow/MadFrogs",

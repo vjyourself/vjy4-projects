@@ -111,7 +111,8 @@
               "map":{
                 "1":{"command":["_sys.music","start",[]]},
                 "2":{"command":["_sys.music","pause",[]]},
-                "3":{"command":["reloadCloud","reloadCurrSpace",[]]},
+                "3":{"command":["timeline","toggleEnabled",[]]},
+                "4":{"command":["reloadCloud","reloadCurrSpace",[]]},
                 //"3":{"command":["dynoScene","saveToHeap",[]]},
                 //"4":{"command":["bindRooter","next",["vary"]]},
                 //"5":{"command":["debugConsole","show",[]]},
@@ -265,7 +266,7 @@
                 {"beat":"7.1","command":["mid.cs.GP.synthPath","setLevel",[4,{"progressive":true}]]},
                 {"beat":"12.1","command":["_sys.cloud.R3D","setMCLP",[false]]},
 
-                {"beat":"10.1","command":["mid.cs.context","setParams",[{"texA":{"name":"Pattern Torus","refresh":false}}]]}, 
+                {"beat":"10.1","command":["mid.cs.context","setParams",[{"texA":{"name":"Pattern Dots","refresh":false}}]]}, 
                 {"beat":"10.1","command":["mid.cs.context","setParams",[{"texB":{"name":"Jungle Leaves","refresh":false}}]]},
                
                 {"beat":"10.1","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"MutaPatt"}]]},
@@ -274,27 +275,34 @@
                
                 {"beat":"14.1","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"EdgyHoles"}]]},
                 
-                {"beat":"16.1","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"FlyingGeom"}]]},
+                {"beat":"16.1","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"FlyingGeom2"}]]},
                 
                 {"beat":"17.1","command":["mid.cs.context","setParams",[{"colA":{"name":"Orange","refresh":false}}]]}, 
                 {"beat":"17.1","command":["back.cs.context","setParams",[{"colA":{"name":"Red","refresh":true}}]]}, 
                 {"beat":"17.1","command":["_sys.cloud.R3D","setBlendAdd",[false]]},
                 {"beat":"17.1","command":["mid.cs.lights","setParams",[{"mode":"TriRot_Norm"}]]},
-                {"beat":"17.1","command":["filter","setParams",[{"type":"Shine2"}]]},
+                {"beat":"17.1","command":["filter","setParams",[{"type":"Shine1"}]]},
 
-                {"beat":"17.10","command":["mid.cs.context","setParams",[{"texA":{"name":"Flower Power","refresh":false}}]]},
-                {"beat":"17.10","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"_B_SpaceDoughnuts3"}]]},
+                {"beat":"18.1","command":["mid.cs.context","setParams",[{"texA":{"name":"Flower Power","refresh":false}}]]},
+                {"beat":"18.1","command":["mid.cs.context","setParams",[{"texB":{"name":"Empty","refresh":false}}]]},
+                
+                {"beat":"18.1","command":["mid.cs.GP","setParams",[{"restart":false,"level":4,"space":"SpaceDoughnuts3_AB"}]]},
                
 
                 {"beat":"19.1","command":["filter","setParams",[{"type":"Shine1"}]]},
-
-                 
-                
-                {"beat":"21.1","command":["_sys.music.meta.mixer","setVal",["VaryMod",4]]},
-                {"beat":"21.1","command":["mid.cs.context","setParams",[{"colA":{"name":"Pusss1","refresh":true}}]]}, 
-                
-                
+                {"beat":"19.1","command":["_sys.music.meta.mixer","setVal",["VaryMod",4]]},
                
+                 
+                 {"beat":"19.1","command":["mid.cs.context","setParams",[{"texB":{"name":"Parrots","refresh":false}}]]},
+               
+                 {"beat":"21.1","command":["mid.cs.context","setParams",[{"colA":{"name":"Pusss1","refresh":true}}]]}, 
+                
+                
+                {"beat":"23.1","command":["mid.cs.lights","setParams",[{"mode":"Running_Norm"}]]},
+                {"beat":"25.1","command":["mid.cs.lights","setParams",[{"mode":"Flashy_Norm"}]]},
+                {"beat":"27.1","command":["mid.cs.lights","setParams",[{"mode":"Running_Norm"}]]},
+                {"beat":"29.1","command":["mid.cs.lights","setParams",[{"mode":"PointDir_Dark"}]]},
+                
                 //{"beat":"7.1","command":["mid.cs.GP.synthPath","setLastLevel",[3,{"progressive":false}]]},
               //  {"time":"0:0","command":["mid.cs.GP","setParams",[{"restart":true,"space":"_B_SpaceBollards"}]]},
                 

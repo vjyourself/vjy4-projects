@@ -160,8 +160,7 @@
 						"gap":120,
 				},
 
-				//ANI
-				//Balls
+				//ANI Lads
 				{
 					"id":"objBallAni","name":"BallsAni",
 					"context":{"color":"","texture":""},
@@ -173,9 +172,9 @@
 					"prg":{
 					 	"cn":"SimpleObj",
 						"geom":"LongFlat",
-						"mat":{"color":"#ffffff"},
+						"mat":"MusicColorBlack", // {"color":"#ffffff"},
 						"trans":{
-							"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":430,"alpha":15,"alphaStep":150}],
+							"_prg":[["x","y","rotationZ"],"Circle2D",{"radius":430,"alpha":15,"alphaStep":60}],
 							"scale":3
 						},
 						"pathSpeed":10			
@@ -184,7 +183,8 @@
 					"fire":{
 						"sync":"frame",
 						"delay":120,
-						"onlyMe":false
+						"onlyMe":false,
+						"initNum":7
 					}
 
 				}
