@@ -64,7 +64,15 @@
               "overlay":{
                 "def":{
                   "length":2,
-                  "trans":["ZoomInLeopard","ZoomInLeopard","ZoomInCheetah","ZoomInCheetah","ZoomInFluid","ZoomInFluid"],
+                  "trans":[
+                    //"ZoomInSpots","ZoomInTris","ZoomInSymbPlus"], //,"ZoomInLeopard","ZoomInCheetah","ZoomInFluid"],
+                  
+                  "ZoomInLeopard","ZoomInLeopard","ZoomInCheetah","ZoomInCheetah","ZoomInFluid","ZoomInSpots",
+                  "ZoomInLeopard","ZoomInLeopard","ZoomInCheetah","ZoomInCheetah","ZoomInFluid","ZoomInSpots",
+                  "ZoomInTris","ZoomInSymbPlus","ZoomInSpots","ZoomInSymbPlus","ZoomInCheetah","ZoomInSymbPlus","ZoomInCheetah",
+                  "ZoomInLeopard","ZoomInFluid","ZoomInLeopard","ZoomInSpots",
+                  "ZoomInLeopard","ZoomInFluid","ZoomInSpots","ZoomInFluid"
+                  ],
                   //"trans":["ZoomInFadeOut"], //"RightSideRoller","LeftSideRoller"]
                   "transInd":0
                   },
