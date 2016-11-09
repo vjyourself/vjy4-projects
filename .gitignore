@@ -2,7 +2,8 @@
 *.exe
 *.apk
 *.ipa
-*.fla
+*.swf
+*.zip
 /*/*.swf
 /IMV/*/*.swf
 cloud1/
@@ -19,3 +20,4 @@ Thumbs.db
 MIDI2.jar
 VJYSync_Data/
 VJYSync.exe
+Live/VJY-app.xml

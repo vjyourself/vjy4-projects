@@ -53,7 +53,7 @@
 			addEventListener(Event.ENTER_FRAME,onEF,0,0,1);
 			stage.addEventListener(KeyboardEvent.KEY_DOWN,onKeyDown,0,0,1);
 			stage.addEventListener(KeyboardEvent.KEY_UP,onKeyDown,0,0,1);
-			fanA = new Fan();
+			/*fanA = new Fan();
 			visBack.addChild(fanA);
 			fanA.width=960*2;
 			fanA.height=960*2;
@@ -61,10 +61,10 @@
 			visBack.addChild(fanB);
 			fanB.blendMode="add";
 			fanB.width=960*2;
-			fanB.height=960*2;
+			fanB.height=960*2;*/
 			log("Capabilities.os: "+Capabilities.os);
 			log("Capabilities.playerType: "+Capabilities.playerType);
-		
+			trace("START");
 		}
 	
 		function onKeyDown(e:KeyboardEvent){
@@ -76,13 +76,14 @@
 			trace(txt);
 		}
 		function onChange(e){
-			trace("CHANGED");
+			//trace("CHANGED");
 		}
 		
 		
 
 
 		function onEF(e:Event){
+			//trace("ONEF");
 			//trace(microphone.activityLevel);
 			//tfMicLevel.text=""+microphone.activityLevel;
 
