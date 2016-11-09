@@ -1,0 +1,5 @@
+package{
+    public class WaveCirc extends MovieClip{
+    
+    }
+}
