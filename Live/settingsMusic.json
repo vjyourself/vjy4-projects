@@ -1,0 +1,118 @@
+{
+    "sys":{
+
+		//MUSIC SOURCE : Mic / MP3 *****************************************************
+		"music":{
+	    	//"play":{"src":"Mic"},
+	    	"autoStart":false,
+		    "play":{"url":"music/Pisco_Sour.mp3","loop":true},
+		   
+	    	"meta":{
+	    		"wave":{
+	    			"enabled":true,
+	    			"wave_gain":2,
+	    			"peak_gain":1,
+	    			"damping_gain":1,
+	    			"damping_mul":0.7
+	    		},
+
+	    		"beat":{
+	    			"enabled":true,
+	    			"sync":"playback", // tap / playback / (auto)
+	    			"tap":{
+
+	    			},
+	    			"playback":{
+	    				"start":-208.5,
+	    				"tack":461.5
+	    			}
+	    			
+	    		},
+
+	    		/*"beat":{
+	    			"enabled":true,
+	    			"sync":"tap", // tap / playback / (auto)
+	    			"tap":{
+
+	    			},
+	    			"playback":{
+	    				"start":0,
+	    				"tack":1000
+	    			}
+	    			
+	    		},*/
+	    		
+	    		"timeline":{
+	    			"enabled":false,
+	    			"struct":[]
+	    		},
+	    		"mixer":{
+	    			"enabled":true,
+	    			"A":{
+	    				"peak":"beat.Sin1_1",
+	    				"lit":"NORM",
+	    				"Vary":{
+	    					"mod":0,
+	    					"vol":1,
+	    					"func":"Sin"
+	    				}
+	    			}
+	    		}
+	    	}
+		},
+
+
+		//INPUT OUTPUT DEVICES ***************************************************
+		"io":{
+			"lastActiveBase":"gamepad",
+
+	    	"auto":{"enabled":false,"timeout":2400},
+	    	"mkb":{"enabled":true},
+	    	"touch":{"enabled":false},
+	    	"gamepad":{"enabled":true},
+			"midi":{
+	    		"enabled":false,
+	    		"connection":{
+	    			"type":"MIDI2.jar",
+					"url":"127.0.0.1",
+					"port":10000
+	    		},
+	    		"device":{}
+	    	},
+	    	"arduino":{
+	    		"enabled":false,
+	    		"via":"ethernet",
+	    		"ip":"192.168.2.66",
+	    		"map":["A","B","X","Y","LB","RB","LT","RT"]
+	    	}
+	 	},
+
+		//SCREEN SETTINGS **************************************************************
+		"screen":{
+			"In3D":{
+				// none / split / VR
+				"mode":"none",
+				"mode_split":{
+					// horizontal / vertical
+					"split":"horizontal",
+					"eyeDistance":10
+				}
+			},
+
+	    	"fullscreen":true,
+	    	"browser":false,
+	    	"mouse":true,
+	    	//"logo":false,
+	    	//"logoX":"left",
+	    	//"logoY":"top",
+	    	//"fpsmeter":false,
+	    
+	    	"gui":{
+	    		"console":false,
+	    		"consoleMini":false
+	    	},
+	    	"landing":true,
+	    	"saveImage":{"url":"http://localhost/cloud/save/saveImage.php?folder=vjy"}
+	    }
+	}
+}

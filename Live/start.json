@@ -14,6 +14,7 @@
 		//SETTINGS
 		{
 			"url":"[player]settings.json",
+			//"url":"[player]settingsMusic.json",
 			"include":"data",
 			"rule":"over"
 		},
@@ -28,6 +29,7 @@
 		//GAME
 		{
 			"url":"[cloud1]games/game_Live.json",
+			//"url":"[cloud1]games/game_LiveMusic.json",
 			"include":"data",
 			"rule":"over"
 		},

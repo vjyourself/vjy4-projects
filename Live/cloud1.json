@@ -16,6 +16,7 @@
 "load1":[
     //"images/all_stars.json",
     "comp/preset.json",
+    // "FlipFlow/mapsApp.json",
     "R3D/GeomGlobal4.json",
     "R3D/GeomObjBasic.json",
    // "R3D/GeomObj.json",
@@ -32,14 +33,16 @@
     //SPACES ***************************************************************************
     "spaces":{
        
-        //TribalAwakening
+        //Pipes
         "pipe":[
             "Pipe/_B_PipeAB",
             "Pipe/_B_PipeAB_Sewer",
-            "Pipe/_B_PipeAB_Armadillo"
+            "Pipe/_B_PipeAB_Armadillo",
+            "Test/TestMesh2",
+            "Test/TestMesh1",
         ],
 
-        //Retro Regulator
+        //Regulator
         "regulator":[
             "Regulator/_B_Regulator",
             "Regulator/_B_Regulator2",
@@ -58,18 +61,17 @@
         "bollards":[
             "Hose/_B_SpaceBollards",
             "Hose/_B_SpaceBollards2",
-            "Hose/SpiralZoo2",
-            "Hose/SpiralZoo"
+            "Exp/WayWarm"
         ],
         
-        //Semantic GRid
-        "wide":[
+        //Semantic Grid
+        "grid":[
             "Grid/_B_SemanticGrid",
             "Grid/_B_SemanticGrid2",
             "Grid/_B_SemanticGrid3"
         ],
         
-        //Evenly Spaced Doughnuts
+        //Spaced Doughnuts
         "doughnuts":[
             "Doughnuts/_B_SpaceDoughnuts1",
             "Doughnuts/_B_SpaceDoughnuts2",
@@ -78,7 +80,7 @@
             "Doughnuts/_B_SpaceDoughnuts5"
         ],
 
-        //Data Bank
+        //Data Posters
         "posters":[
             "Poster/DataPoster1",
             "Poster/DataPoster2",
@@ -88,7 +90,7 @@
             "Poster/DataBank2"
         ],
 
-        //MAD CUBES
+        //Mad Cubes
         "MadCubes":[
             "ObjField/MadCubes0",
             "ObjField/MadCubes1",
@@ -104,7 +106,7 @@
             "Balls/BallsSpiralRandom"
         ],
 
-        //OBJFLOW
+        //Obj Flow
         "ObjFlow":[
             "ObjFlow/FlyingBars",
             "ObjFlow/FlyingGeom",
@@ -116,39 +118,27 @@
             //"ObjFlow/MadMirage"
         ],
 
-        // ******* UNDER DEV ***********************************************
-        //WIRE
+        //Wire
         "wire":[
             "MinimalWire/EJ1",
             "MinimalWire/EJ2",
-            "MinimalWire/RandomWires"
-            
-        ],
-        
-        //Nyuszi Pagoda
-        "exp":[
-            "Exp/WayWarm"
-        ],
-
-        //Muta Patt
-        "MutaPatt":[
-            "MutaPatt/MutaPatt",
-            "MutaPatt/EdgyHoles"
-        ],
-
-         //Test
-        "test":[
-            "Test/TestObj1",
-            //"Test/TestMesh3", //This is just a road
-            "Test/TestMesh2",
-            "Test/TestMesh1",
             "Test/TestWF1",
             "Test/TestWF2",
             "Test/TestWF3",
             "Test/TestWF4",
             "Test/TestWF5",
-            "Test/TestWF6"
+            "Test/TestWF6",
+            "MinimalWire/RandomWires"
+            
         ],
+        
+        //Zoo
+        "Zoo":[
+           "Hose/SpiralZoo2",
+            "Hose/SpiralZoo",
+            "Test/TestObj1" 
+        ],
+
         //Road
         "road":[
             "Road/Road1",
@@ -157,7 +147,12 @@
             "Road/Road4"
         ],
 
-       
+        //Muta Patt
+        "MutaPatt":[
+            "MutaPatt/MutaPatt",
+            "MutaPatt/EdgyHoles"
+        ]
+
     },
     
     //TEXTURE THEMES ******************************************************************
@@ -192,17 +187,17 @@
     //LIGHTS ********************************************************************
     "lights":[
 
-        "Flashy_Norm",
+        "Flashy",
         
-        "Running_Norm",
-        "Running_Norm_R",
+        "Running",
+        "Running_R",
         
-        "DualRot_Norm",
-        "TriRot_Norm",
+        "DualRot",
+        "TriRot",
 
         "TriDir",
 
-        "PointDir_Norm",
+        "PointDir",
         //"PointDir_Hard",
         "PointDir_Dark",
 
@@ -228,8 +223,8 @@
     "filters":[
         "Normal",
         "Shine1",
-        "Shine2",
-        "Shine3"
+        "Shine2"
+        //"Shine3"
     ],
 
     "blends":[
@@ -239,18 +234,41 @@
     
     //SCENES ********************************************************************
     "scenes":[
-        //"Discovery",
-        //"All4"
-       // "Test",
-        "Minimal",
+        
+        "All",
+
+        "PatternsA",
+        "PatternsB",
+        "PatternsC",
+
         "Hippie",
-        "TropicalFunkyHouse",
-       "SpaceExp/FunkyLadders",
+        "MixTape",
+        "WarmJungle",
+
+        "Tropical",
+        
+        "Gamer",
+        "Afro",
+        "Minimal",
+        //"AlienThreads",
+
+        "SpaceExp/FunkyLadders",
         "SpaceExp/SpaceBollards",
         "SpaceExp/SemanticGrid",
         "SpaceExp/RetroRegulator",
         "SpaceExp/SpacedDoughnuts",
-        "SpaceExp/TribalAwakening"
+        "SpaceExp/TribalAwakening",
+        "SpaceExp/CrashingBalls",
+        "SpaceExp/DataBank",
+        "SpaceExp/MadCubes",
+        "SpaceExp/MutaPatt",
+        "SpaceExp/ObjFlow",
+        
+        //"Mimikri/Mimikri",
+        "Mimikri/KallerA",
+        "Mimikri/KallerB",
+        "Mimikri/KallerC",
+        "Mimikri/KallerD",
     ],
 
     //TIMELINES ****************************************************************

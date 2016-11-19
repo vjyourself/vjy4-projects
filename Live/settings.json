@@ -4,19 +4,23 @@
 		//MUSIC SOURCE : Mic / MP3 *****************************************************
 		"music":{
 	    	"play":{"src":"Mic"},
+	    	//"autoStart":false,
+		    //"play":{"url":"music/Pisco_Sour.mp3","loop":true},
+		  // "play":{"url":"music/AnnaMudekaBand_ MudzimuDzoka.mp3","loop":true},
 	    	"meta":{
 	    		"wave":{
 	    			"enabled":true,
 	    			"wave_gain":2,
 	    			"peak_gain":1,
 	    			"damping_gain":1,
-	    			"damping_mul":0.7
+	    			"damping_mul":0.2
 	    		},
+	    		
 	    		"beat":{
 	    			"enabled":true,
 	    			"sync":"tap", // tap / playback / (auto)
 	    			"tap":{
-
+	    				"bpm":60
 	    			},
 	    			"playback":{
 	    				"start":0,
@@ -24,6 +28,19 @@
 	    			}
 	    			
 	    		},
+/*
+	    		"beat":{
+	    			"enabled":true,
+	    			"sync":"playback", // tap / playback / (auto)
+	    			"tap":{
+
+	    			},
+	    			"playback":{
+	    				"start":270,
+	    				"tack":461.5
+	    			}
+	    			
+	    		},*/
 	    		"timeline":{
 	    			"enabled":false,
 	    			"struct":[]
@@ -91,7 +108,7 @@
 	    
 	    	"gui":{
 	    		"console":false,
-	    		"consoleMini":true
+	    		"consoleMini":false
 	    	},
 	    	"landing":true,
 	    	"saveImage":{"url":"http://localhost/cloud/save/saveImage.php?folder=vjy"}
