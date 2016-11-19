@@ -57,7 +57,7 @@
 		public var speed:Number=0.5;
 		public var maxSpeed:Number=20;
 		public var perform:Boolean=false;
-		public var desktop:Boolean=true;
+		public var desktop:Boolean=false;
 		public var fullscreen:Boolean=false;
 		public var showUI:Boolean=true;
 		public var showDebug:Boolean=false;
@@ -251,7 +251,7 @@
 			compFlipFlow.desktop=desktop;
 			compFlipFlow.musicActive=musicActive;
 			compFlipFlow.mapsName=mapsName;
-			compFlipFlow.upscaling=2;
+			compFlipFlow.upscaling=desktop?1:2;
 			compFlipFlow.init();
 			addChild(compFlipFlow.vis);
 			
